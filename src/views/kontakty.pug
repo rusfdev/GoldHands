@@ -1,0 +1,108 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Контакты'
+  -var breadcrumbs_links = ['Главная', page_title]
+
+block content
+  include blocks/breadcrumbs
+
+  section.section.contacts
+    .container 
+      h1.mb-1.mb-sm-3 Контакты
+      .contacts__blocks.row
+        .contacts__block.col-lg-4
+          .contact-block
+            svg.icon.contact-block__icon.contact-block__icon_1
+              use(xlink:href='./img/icons/icons.svg#map-pin')
+            h2.contact-block__title Адрес магазина
+            p ул. Горбунова д2/3, Сетунь Плаза Москва, Россия, 121596
+        .contacts__block.col-lg-4
+          .contact-block
+            svg.icon.contact-block__icon.contact-block__icon_2
+              use(xlink:href='./img/icons/icons.svg#phone')
+            h2.contact-block__title Телефоны для связи
+            p 
+              strong Служба поддержки 
+              a(href="tel:79092635335") +7 909 263-53-35
+              br
+              strong Интернет-магазин 
+              a(href="tel:79152635355") +7 915 263-53-55
+        .contacts__block.col-lg-4
+          .contact-block
+            svg.icon.contact-block__icon.contact-block__icon_3
+              use(xlink:href='./img/icons/icons.svg#envelope-simple')
+            h2.contact-block__title Напишите нам
+            p 
+              strong
+                a(href="mailto:info@goldhands.ru") info@goldhands.ru 
+              | или обратитесь через 
+              strong форму обратной связи
+              
+      
+      .contacts__map 
+        iframe(src='https://yandex.ru/map-widget/v1/-/CCUmuWA8LB')
+
+
+  section.section.contacts-form 
+    .container 
+      .contacts-form__container.row
+        .contacts-form__image.col-lg-6
+          .image.image_cover 
+            img(data-src="./img/Rectangle 97.jpg", alt="image").lazyload
+        .contacts-form__content.col-lg-6 
+          h2.contacts-form__title.mb-3 Задать вопрос
+          form.form
+            .form__element.mb-2
+              .input
+                input(type="text" required)
+                label Имя
+            .form__element.mb-2
+              .input
+                input(type="text" data-validate='phone')
+                label Телефон
+            .form__element.mb-2
+              .input
+                input(type="email" required)
+                label E-mail
+            .form__element.mb-2
+              .input
+                input(type="text" required)
+                label Тема сообщения
+            .form__element.mb-4
+              .input
+                textarea(type="text" required)
+                label Сообщение
+            .form__element.mb-3
+              +checkbox('Отправляя сообщение, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a>', true)
+            
+            button.button.button_style-2
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Секундочку
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+                
+
+  section.section
+    .container 
+      h2.section__title Рекизиты “Gold Hands”
+      p 
+        strong Наименование организации: 
+        | ИП Юрин Юрий Юрьевич
+      p 
+        strong Юридический адрес: 
+        | 142701, Московская обл., Ленинский р-н, г. Видное, проезд Жуковский, д.1, кв.28
+      p 
+        strong ИНН: 
+        | 500345599389
+      p 
+        strong ОГРН: 
+        | 316500300053971
+      p 
+        strong Банк: 
+        | Филиал «Корпоративный» ПАО «Совкомбанк»  044525360
+      p 
+        strong Расчетный счет: 
+        | 40802810700010030481

@@ -1,0 +1,95 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Контакты'
+  -var breadcrumbs_links = ['Главная', page_title]
+
+block content
+
+  section.section 
+    .container
+      h1.section__title Компоненты
+      .row 
+        .col-auto.d-flex.flex-column
+          h2 Кнопка 1
+          .mb-1
+            //button
+            button.button.button_style-1
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Отправка
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              .button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span Отправлено
+          .mb-1
+            //button
+            button.button.button_style-1.button_in-progress
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Отправка
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              .button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span Отправлено
+          .mb-1
+            //button
+            button.button.button_style-1.button_is-active
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Отправка
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              .button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span Отправлено
+        .col-auto.d-flex.flex-column
+          h2 Кнопка 2
+          .mb-1
+            //button
+            button.button.button_style-2
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Отправка
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              .button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span Отправлено
+          .mb-1
+            //button
+            button.button.button_style-2.button_in-progress
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Отправка
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              .button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span Отправлено
+          .mb-1
+            //button
+            button.button.button_style-2.button_is-active
+              .button__inner.button__default 
+                span Отправить
+              .button__inner.button__in-progress 
+                span Отправка
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              .button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span Отправлено
+        

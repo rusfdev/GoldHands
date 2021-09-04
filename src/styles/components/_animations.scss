@@ -1,0 +1,38 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in, .fade-out {
+  --animation-duration: var(--default-animation-duration);
+}
+
+.fade-in {
+  animation: fadeIn var(--animation-duration) var(--default-animation-easing) forwards;
+}
+
+.fade-out {
+  animation: fadeOut var(--animation-duration) var(--default-animation-easing) forwards;
+}

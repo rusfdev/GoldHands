@@ -1,0 +1,40 @@
+.side-modal.mobile-nav#mobile-nav
+  .side-modal__container.mobile-nav__container
+    .side-modal__head
+      button(data-side-modal="close" aria-label='close mobile nav').close-element.side-modal__close
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#close')
+    .side-modal__content(data-scroll-lock-scrollable)
+      ul.mobile-nav__list 
+        li.mobile-nav__item
+          a(href="#location-modal" data-modal='open').icon-link.mobile-nav__icon-link
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#navigation-arrow')
+            span Санкт-Петербург
+      
+      ul.mobile-nav__list 
+        li.mobile-nav__item
+          button(data-catalog="open" aria-label='open catalog').icon-link.mobile-nav__icon-link
+            svg.icon
+                use(xlink:href='./img/icons/icons.svg#dots-nine')
+            span Каталог товаров
+        li.mobile-nav__item
+          a(href="#").icon-link.mobile-nav__icon-link
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#heart')
+            span Избранное
+        li.mobile-nav__item
+          a(href="#").icon-link.mobile-nav__icon-link
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#percent')
+            span Распродажа
+
+      ul.mobile-nav__list 
+        li.mobile-nav__item
+          a(href="#") Доставка и оплата
+        li.mobile-nav__item
+          a(href="#") Об “Gold Hands”
+        li.mobile-nav__item
+          a(href="#") Блог
+        li.mobile-nav__item
+          a(href="#") Вакансии

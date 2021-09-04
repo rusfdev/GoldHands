@@ -1,0 +1,95 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  //
+  height: 50px;
+  padding: 0 30px;
+  min-width: 210px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  transition: background-color $trs1, border-color $trs1;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $trs1, visibility $trs1;
+  }
+
+  &__in-progress, &__is-active {
+    position: absolute;
+  }
+
+  &:not(.button_in-progress):not(.button_is-active) {
+    .button__default {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  //
+  .icon {
+    width: 24px;
+    height: 24px;
+    &:first-child {
+      margin-right: 12px;
+    }
+    &:last-child {
+      margin-left: 12px;
+    }
+  }
+
+  &_style-1 {
+    background-color: var(--color-3);
+    border-color: var(--color-3);
+    color: #fff;
+    &:not(.button_in-progress):not(.button_is-active) {
+      &[data-touch], &[data-hover] {
+        background-color: var(--color-4);
+        border-color: var(--color-4);
+      }
+    }
+  }
+  &_style-2 {
+    background-color: var(--color-4);
+    border-color: var(--color-4);
+    color: #fff;
+    &:not(.button_in-progress):not(.button_is-active) {
+      &[data-touch], &[data-hover] {
+        background-color: var(--color-6);
+        border-color: var(--color-6);
+      }
+    }
+  }
+
+  &_in-progress {
+    pointer-events: none;
+    background-color: var(--color-3);
+    border-color: var(--color-3);
+    .button__in-progress {
+      opacity: 1;
+      visibility: visible;
+      .icon {
+        animation: rotation 1s linear infinite;
+      }
+    }
+  }
+  &_is-active {
+    color: var(--color-4);
+    border-color: var(--color-4);
+    background-color: transparent;
+    .button__is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

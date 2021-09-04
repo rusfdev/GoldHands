@@ -1,0 +1,30 @@
+.mobile-nav {
+  &__container {
+    width: 266px;
+  }
+  &__list {
+    padding: 20px var(--container-padding-x);
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-1);
+    }
+  }
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__icon-link {
+    font-size: 18px;
+    .icon {
+      width: 20px;
+      height: 20px;
+      stroke-width: 1.5px;
+      transform: translateY(-1px);
+    }
+    span {
+      transform: translateY(1px);
+    }
+  }
+}
+  

@@ -1,0 +1,16 @@
+:root {
+  --color-text: #454545;
+  --color-text-muted: #7F7F7F;
+  --color-text-dark: #131313;
+  --color-text-accent: #CBB06B;
+  --color-1: #E5E5E5;
+  --color-2: #7F7F7F;
+  --color-3: #CBB06B;
+  --color-4: #131313;
+  --color-5: #FF4545;
+  --color-6: #252525;
+  --color-7: #D3D3D3;
+  --color-modal-overlay: rgba(19, 19, 19, 0.35);
+  --color-side-modal-overlay: rgba(19, 19, 19, 0.5); }
+
+/*# sourceMappingURL=maps/theme.css.map */

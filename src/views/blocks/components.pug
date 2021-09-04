@@ -1,0 +1,10 @@
+
+
+mixin checkbox(title, checked)
+  -let index = Math.round(Math.random() * 1000000)
+  .checkbox
+    input(type="checkbox" id=index checked=checked)
+    label(for=index) 
+      svg.icon
+        use(xlink:href='./img/icons/icons.svg#check')
+      span !{title}

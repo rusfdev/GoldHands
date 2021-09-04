@@ -1,0 +1,144 @@
+mixin box(title, items, type)
+  -var index = 0
+  .catalog-block__box.col-sm-6.col-md-4.col-lg-3
+    h4.catalog-block__box-title
+      if type == 'test'
+        a(href="#blagovoniya" data-catalog="trigger")
+          span=title
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+      else 
+        a(href="#")
+          span=title 
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+    ul.catalog-block__box-list.list
+      each val in items
+        li
+          if index < 4
+            
+            if type == 'test' && index == 1
+              a(href="#tibetskie-blagovoniya" data-catalog="trigger")
+                span #{val} (рабочая ссылка)
+                
+            else 
+              a(href="#")
+                span #{val}
+
+          else 
+            if type == 'test'
+              a(href="#blagovoniya" data-catalog="trigger").catalog-block__more-link
+                strong=val
+            else 
+              a(href="#").catalog-block__more-link 
+                strong=val
+        
+        -index++
+
+    if type == 'test'
+      a(href="#blagovoniya" data-catalog="trigger").catalog-block__box-mobile-link
+        each val, index in items
+          if index < items.length - 2
+            | #{val}, 
+          else if index < items.length - 1
+            | #{val} и 
+          else 
+            | #{val}
+    else 
+      a(href="#").catalog-block__box-mobile-link
+        each val, index in items
+          if index < items.length - 2
+            | #{val}, 
+          else if index < items.length - 1
+            | #{val} и 
+          else 
+            | #{val}
+
+
+mixin item(title, type)
+  .catalog-block__item.col-sm-6.col-md-4.col-lg-3
+    if type == 'test'
+      a(href="#tibetskie-blagovoniya" data-catalog="trigger")
+        span #{title} (рабочая ссылка)
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#caret-right')
+    else 
+      a(href="#")
+        span #{title}
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#caret-right')
+
+
+.catalog(data-scroll-lock-scrollable)
+  .catalog__head
+    .container.catalog__head-container
+      .catalog__head-left 
+        a(href="./").logo.catalog__logo
+          img(src="./img/logos/logo.png", alt="logo").logo__image
+
+        a(href="tel:88001000750").catalog__head-phone 8 800 1000 750
+
+      button(data-catalog="close" aria-label='close catalog').close-element.catalog__close
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#close')
+
+  .catalog__content 
+    .container 
+
+      .catalog-block#vse-kategorii.is-active
+        h2.h1.catalog-block__title Каталог
+        .catalog-block__content
+          .catalog-block__boxes.row
+
+            +box('Благовония', ['Индийские благовония', 'Тибетские благовония', 'Бутанские благовония', 'Японские благовония', 'Ещё 5'], 'test')
+            +box('Свечи', ['Свечи цветные', 'Ритуальные свечи', 'Свечи из вощины', 'Ароматические', 'Ещё 3'])
+            +box('Таро и руны', ['Все колоды таро', 'Таро для начинающих', 'Тематические колоды Таро', 'Подарочные наборы Таро', 'Ещё 10'])
+            +box('Здоровое питание', ['Быстрое приготовление', 'Соусы, масла и укусы', 'Вегетарианская колбаса', 'Полезные сладости', 'Ещё 13'])
+            +box('Ароматерапия', ['Масла', 'Аромалампы', 'Аромакулоны', 'Ароматизаторы'])
+            +box('Инструменты биолокации', ['Биолокационные рамки', 'Маятники'])
+            +box('Натуральная косметика', ['Уход за лицом', 'Уход за телом', 'Уход за волосами', 'Уход за полостью рта', 'Ещё 6'])
+            +box('Книги', ['Духовные традиции мира', 'Учения и мастера', 'Эзотерика', 'Самопознание', 'Ещё 7'])
+            +box('Чай', ['Посуда для чая', 'Мате', 'Японский чай', 'Бирюзовый чай', 'Ещё 8'])
+            +box('Предметы для алтаря', ['Буддистские', 'Индуистские', 'Четки', 'Тханки'])
+            +box('Фэн-шуй', ['Божества фэн-шуй', 'Животные фэн-шуй', 'Талисманы фэн-шуй', 'Ловцы снов', 'Ещё 7'])
+
+      .catalog-block#tibetskie-blagovoniya
+        a(href="#blagovoniya" data-catalog="trigger").icon-link.catalog-block__back
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+          span Благовония
+        h2.h1.catalog-block__title 
+          a(href="#") Тибетские благовония
+        .catalog-block__content
+          .catalog-block__items.row
+            +item('Уточки-мандаринки')
+            +item('Трехлапая жаба')
+            +item('Слоны и носороги')
+            +item('Собачки Фу')
+            +item('Манэко-кот')
+            +item('Карпы')
+            +item('Черепахи')
+            +item('Драконы')
+            +item('Пи Яо')
+            +item('Совы и филины')
+            +item('Три обезьяны')
+            +item('Лошади и быки')
+
+      .catalog-block#blagovoniya
+        a(href="#vse-kategorii" data-catalog="trigger").icon-link.catalog-block__back
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+          span Все категории
+        h2.h1.catalog-block__title 
+          a(href="#") Благовония
+        .catalog-block__content
+          .catalog-block__items.row
+            +item('Индийские благовония')
+            +item('Тибетские благовония', 'test')
+            +item('Бутанские благовония')
+            +item('Японские благовония')
+            +item('Категория 5')
+            +item('Категория 6')
+            +item('Категория 7')
+            +item('Категория 8')
+            +item('Категория 9')

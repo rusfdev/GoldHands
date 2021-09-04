@@ -1,0 +1,103 @@
+header.header
+
+  .header__top 
+    .container.header__top-container 
+      ul.header__top-left-list
+        li.header__top-left-item
+          a(href="#location-modal" data-modal='open').icon-link.header__icon-link
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#navigation-arrow')
+            span Санкт-Петербург
+        li.header__top-left-item
+          a(href="tel:88001000750").header__phone 8 800 1000 750
+
+      ul.header__top-right-list
+        li.header__top-right-item
+          a(href="#") Доставка и оплата
+        li.header__top-right-item
+          a(href="#") Об “Gold Hands”
+        li.header__top-right-item
+          a(href="#") Блог
+        li.header__top-right-item
+          a(href="#") Вакансии
+
+  .header__center
+    .container.header__center-container 
+
+      .header__center-left
+        .header__center-left-container 
+
+          .header__mobile-buttons-left-list.d-xl-none
+            a(href="#mobile-nav" data-side-modal="open").header__mobile-button.header__mobile-button-item
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#equals')
+            button(aria-label='toggle mobile search' data-mobile-search='toggle').header__mobile-button.header__mobile-button-item.header__icon-link
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#magnifying-glass')
+
+          button(data-catalog="open" aria-label='open catalog').button.button_style-1.header__catalog-button
+            .button__inner.button__default
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#dots-nine')
+              span Каталог товаров
+
+          a(href="#").icon-link.header__icon-link.header__sale-link
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#percent')
+            span Распродажа
+
+          .header__search
+            .container
+              form.search 
+                .input.search__input
+                  svg.icon 
+                    use(xlink:href='./img/icons/icons.svg#magnifying-glass')
+                  input(type="text" placeholder="Поиск")
+
+          
+
+      a(href="./").logo.header__logo
+        img(src="./img/logos/logo.png", alt="logo").logo__image.d-none.d-xl-block
+        img(src="./img/logos/logo_small.png", alt="logo").logo__image.d-xl-none
+
+      .header__center-right
+        ul.header__center-right-list 
+          li.header__center-right-item.d-none.d-xl-block 
+            a(href="#").icon-link.header__icon-link
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#heart')
+              span Избранное
+          li.header__center-right-item.header__mobile-button-item
+            a(href="#").icon-link.header__icon-link.header__mobile-button
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#user')
+              span Профиль
+          li.header__center-right-item.header__mobile-button-item
+            a(href="#").icon-link.header__icon-link.header__mobile-button
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#shopping-cart')
+              span Корзина
+      
+
+
+
+  .header__categories
+    ul.header__categories-list.container 
+      li.header__categories-item
+        a(href="#") Благовония
+      li.header__categories-item
+        a(href="#") Свечи 
+      li.header__categories-item
+        a(href="#") Таро и руны 
+      li.header__categories-item
+        a(href="#") Здоровое питание 
+      li.header__categories-item
+        a(href="#") Ароматерапия 
+      li.header__categories-item
+        a(href="#") Инструменты биолокации 
+      li.header__categories-item
+        a(href="#") Натуральная косметика 
+      li.header__categories-item
+        a(href="#") Книги 
+      li.header__categories-item
+        a(href="#") Чай 

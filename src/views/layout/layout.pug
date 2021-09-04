@@ -1,0 +1,59 @@
+include ../blocks/variables
+include ../blocks/components
+block variables
+doctype html
+html(lang='ru')
+  head
+    meta(charset="utf-8")
+    title #{sitename + ' - ' + page_title}
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='format-detection' content='telephone=no')
+    meta(name='description' content='Описание текущей страницы...')
+    //theme
+    meta(name="theme-color" content="#fff")
+    //favicons
+    link(rel='apple-touch-icon' sizes='180x180' href='https://ruslanmmr.github.io/GoldHands/img/favicons/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png')
+    //open graph
+    meta(property='og:title' content=page_title)
+    meta(property='og:site_name' content=sitename)
+    meta(property='og:url' content='url текущей страницы...') 
+    meta(property='og:description' content='Описание текущей страницы...')
+    meta(property='og:image' content='https://ruslanmmr.github.io/GoldHands/build/img/logos/logo.png')
+    //fonts
+    link(rel='preload' as='font' crossorigin='anonymous' href='./fonts/MabryPro/Mabry-Pro-Light.woff')
+    link(rel='preload' as='font' crossorigin='anonymous' href='./fonts/MabryPro/Mabry-Pro.woff')
+    link(rel='preload' as='font' crossorigin='anonymous' href='./fonts/MabryPro/Mabry-Pro-Medium.woff')
+    link(rel='preload' as='font' crossorigin='anonymous' href='./fonts/MabryPro/Mabry-Pro-Bold.woff')
+    link(rel='preload' as='font' crossorigin='anonymous' href='./fonts/MabryPro/Mabry-Pro-Bold.woff')
+    link(rel="stylesheet" href="./fonts/MabryPro/stylesheet.css")
+    //styles
+    link(rel="stylesheet" href="./styles/theme.css")
+    link(rel="stylesheet" href="./styles/common.css")
+
+  body
+    .wrapper
+      include ../blocks/header
+      include ../blocks/mobile-nav
+      include ../blocks/catalog
+      main.main
+        block content
+      include ../blocks/footer
+      //scroll-top
+      include ../blocks/scroll-top   
+      //modals
+      include ../blocks/modals
+    
+    //libs
+    script(src="./scripts/libs/lazysizes.min.js")
+    script(src="./scripts/libs/scroll-lock.min.js")
+    script(src="./scripts/libs/validate.min.js")
+    script(src="./scripts/libs/inputmask.min.js")
+    script(src="./scripts/libs/gsap.min.js")
+    script(src="./scripts/libs/ScrollToPlugin.min.js")
+    //scripts
+    script(src="./scripts/scripts.js") 
+
+    //preview only
+    include ../blocks/helper

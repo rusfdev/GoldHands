@@ -1,0 +1,27 @@
+:root {
+  --content-gutter: ((100vw - var(--content-width) + var(--container-padding-x) * 2) / 2);
+  --container-padding-x: #{$container-padding-x};
+  --grid-gutter-width: #{$grid-gutter-width}; 
+
+  --default-animation-duration: 0.15s;
+
+  @include media-breakpoint-up(xxl) {
+    --content-width: #{map-get($container-max-widths, xxl)};
+  }
+  @include media-breakpoint-down(xxl) {
+    --content-width: #{map-get($container-max-widths, xl)};
+  }
+  @include media-breakpoint-down(xl) {
+    --content-width: #{map-get($container-max-widths, lg)};
+  }
+  @include media-breakpoint-down(lg) {
+    --content-width: #{map-get($container-max-widths, md)};
+  }
+  @include media-breakpoint-down(md) {
+    --content-width: #{map-get($container-max-widths, sm)};
+  }
+  @include media-breakpoint-down(sm) {
+    --content-width: 100vw;
+  }
+
+}
