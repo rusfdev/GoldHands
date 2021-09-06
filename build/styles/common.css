@@ -3292,11 +3292,11 @@ img {
   top: 0;
   left: 0;
   overflow: auto;
-  display: none; }
+  display: none;
+  background: var(--color-modal-overlay); }
   .modal.is-active {
     display: flex; }
   .modal__wrapper {
-    background: var(--color-modal-overlay);
     position: relative;
     width: 100%;
     max-width: calc(100vw - var(--scrollbar-width));

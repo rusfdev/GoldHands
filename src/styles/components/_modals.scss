@@ -7,11 +7,11 @@
   left: 0;
   overflow: auto;
   display: none;
+  background: var(--color-modal-overlay);
   &.is-active {
     display: flex;
   }
   &__wrapper {
-    background: var(--color-modal-overlay);
     position: relative;
     width: 100%;
     max-width: calc(100vw - var(--scrollbar-width));
