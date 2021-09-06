@@ -50,6 +50,12 @@ img {
   }
 }
 
+.icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
 .socials {
   display: flex;
   &__list {
@@ -78,23 +84,31 @@ img {
 }
 
 .icon-link {
+  --color: var(--color-text-dark);
+  --color-hover: var(--color-text-accent);
   display: inline-flex;
   align-items: center;
   overflow: hidden;
+  color: var(--color);
   transition: color $trs1;
   .icon {
     width: 1em;
     height: 1em;
-    transform: translateY(-1px);
+    stroke-width: 1.3px;
     &:first-child {
       margin-right: 8px;
+      transform: translateY(-1px);
     }
     &:last-child {
       margin-left: 8px;
     }
   }
+  &_type-2 {
+    --color: var(--color-text-muted);
+    --color-hover: var(--color-text-dark);
+  }
   &[data-touch], &[data-hover] {
-    color: var(--color-3);
+    color: var(--color-hover);
   }
 }
 

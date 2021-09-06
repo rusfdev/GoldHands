@@ -41,5 +41,110 @@ block content
                 p.main-banner__slide-text Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
               a(href="#").button.button_style-1.main-banner__slide-button
                 span Перейти к выбору
-      
     .swiper-pagination
+
+
+  section.section.popular-categories
+    .container 
+      .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
+        h2.mb-0 Популярные категории
+        .d-none.d-md-block
+          a(href="#").icon-link.icon-link_type-2 
+            span Смотреть все
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#caret-right')
+      
+      .row.popular-categories__row 
+        .col-6.col-xl-3.popular-categories__item
+          a(href="#").category-label.large-category-label
+            img(data-src="./img/mk1.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Таро и руны
+        .col-6.col-xl-3.popular-categories__item
+          a(href="#").category-label.large-category-label
+            img(data-src="./img/mk2.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Здоровое питание
+        .col-6.col-xl-3.popular-categories__item
+          a(href="#").category-label.large-category-label
+            img(data-src="./img/mk3.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Ароматерапия
+        .col-6.col-xl-3.popular-categories__item
+          a(href="#").category-label.large-category-label
+            img(data-src="./img/mk4.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Натуральная косметика
+
+      .d-block.d-md-none.mt-2
+        a(href="#").button.button_style-3.button_wide Смотреть все
+
+  section.section
+    .container 
+      .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
+        h2.mb-0 Часто покупаемые товары
+        .d-none.d-md-block
+          a(href="#").icon-link.icon-link_type-2 
+            span Смотреть все
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#caret-right')
+      .swiper.product-slider.slider-constructor(data-slides='2' data-lg-slides='3' data-xl-slides='4') 
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-container
+          .swiper-wrapper 
+            //slide
+            .swiper-slide 
+              +product-card(1)
+            //slide
+            .swiper-slide 
+              +product-card(2)
+            //slide
+            .swiper-slide 
+              +product-card(3)
+            //slide
+            .swiper-slide 
+              +product-card(4)
+            //slide
+            .swiper-slide 
+              +product-card(2)
+
+      .d-block.d-md-none.mt-2
+        a(href="#").button.button_style-3.button_wide Смотреть все
+
+  section.section
+    .container 
+      .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
+        h2.mb-0 Новое поступление
+        .d-none.d-md-block
+          a(href="#").icon-link.icon-link_type-2 
+            span Смотреть все
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#caret-right')
+      .swiper.product-slider.slider-constructor(data-slides='2' data-lg-slides='3' data-xl-slides='4') 
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-container
+          .swiper-wrapper 
+            //slide
+            .swiper-slide 
+              +product-card(1)
+            //slide
+            .swiper-slide 
+              +product-card(2)
+            //slide
+            .swiper-slide 
+              +product-card(3)
+            //slide
+            .swiper-slide 
+              +product-card(4)
+            //slide
+            .swiper-slide 
+              +product-card(2)
+
+      .d-block.d-md-none.mt-2
+        a(href="#").button.button_style-3.button_wide Смотреть новинки

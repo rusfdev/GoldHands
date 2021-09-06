@@ -115,4 +115,9 @@
       visibility: visible;
     }
   }
+
+  &_wide {
+    width: 100%;
+    min-width: initial;
+  }
 }

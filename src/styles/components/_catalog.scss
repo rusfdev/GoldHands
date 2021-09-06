@@ -104,7 +104,9 @@
   &__back {
     color: var(--color-text-muted);
     .icon {
-      transform: translateY(-1px) rotate(180deg);
+      &:first-child {
+        transform: translateY(-1px) rotate(180deg);
+      }
       stroke-width: 1.2px;
     }
   }

@@ -19,7 +19,7 @@ const breakpoints = {
 }
 const $wrapper = document.querySelector('.wrapper');
 
-const swiperSlideSpeed = +getComputedStyle(document.documentElement).getPropertyValue('--slider-animation-duration').replace(/[^\d.-]/g, '');
+const slide_speed = +getComputedStyle(document.documentElement).getPropertyValue('--slider-animation-duration').replace(/[^\d.-]/g, '');
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -42,9 +42,12 @@ document.addEventListener("DOMContentLoaded", function() {
   ScrollTop.init();
   inputs();
 
-  //Main banner
   document.querySelectorAll('.main-banner').forEach($this => {
     new MainBanner($this).init();
+  })
+
+  document.querySelectorAll('.slider-constructor').forEach($this => {
+    new SliderConstructor($this).init();
   })
 
 });
@@ -474,7 +477,7 @@ class MainBanner {
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: 1,
-      speed: swiperSlideSpeed,
+      speed: slide_speed,
       loop: true,
       lazy: {
         loadOnTransitionStart: true,
@@ -487,6 +490,59 @@ class MainBanner {
       }
     });
 
+
+  }
+}
+
+class SliderConstructor {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$slider = this.$parent.querySelector('.swiper-container');
+    this.$pagination = this.$parent.querySelector('.swiper-pagination');
+    this.$prev = this.$parent.querySelector('.swiper-button-prev');
+    this.$next = this.$parent.querySelector('.swiper-button-next');
+
+    let slides_count = +this.$parent.getAttribute('data-slides') || 1,
+        slides_sm_count = +this.$parent.getAttribute('data-sm-slides') || slides_count,
+        slides_md_count = +this.$parent.getAttribute('data-md-slides') || slides_sm_count,
+        slides_lg_count = +this.$parent.getAttribute('data-lg-slides') || slides_md_count,
+        slides_xl_count = +this.$parent.getAttribute('data-xl-slides') || slides_lg_count;
+
+    this.swiper = new Swiper(this.$slider, {
+      touchStartPreventDefault: false,
+      slidesPerView: slides_count,
+      speed: slide_speed,
+      pagination: {
+        el: this.$pagination,
+        clickable: true,
+        bulletElement: 'button'
+      },
+      navigation: {
+        prevEl: this.$prev,
+        nextEl: this.$next
+      },
+      lazy: {
+        loadOnTransitionStart: true,
+        loadPrevNext: true
+      },
+      breakpoints: {
+        [breakpoints.xl]: {
+          slidesPerView: slides_xl_count
+        },
+        [breakpoints.lg]: {
+          slidesPerView: slides_lg_count
+        },
+        [breakpoints.md]: {
+          slidesPerView: slides_md_count
+        },
+        [breakpoints.sm]: {
+          slidesPerView: slides_sm_count
+        }
+      }
+    });
 
   }
 }

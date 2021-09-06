@@ -8,3 +8,95 @@ mixin checkbox(title, checked)
       svg.icon
         use(xlink:href='./img/icons/icons.svg#check')
       span !{title}
+
+mixin product-card(type)
+  .product-card(data-custom-interaction)
+    .product-card__image
+      if type == 1
+        .product-labels.product-card__labels
+          .product-label.product-label_type-bestseller Хит продаж
+          .product-label.product-label_type-new Новинка
+      else if type == 3
+        .product-labels.product-card__labels
+          .product-label.product-label_type-low-price Цена снижена
+
+      a(href="#").image.image_contain 
+        img(data-src=`./img/product-${type}.png`, alt="image").lazyload
+
+      button.product-favourite.product-card__favourite(class=type==3?'is-active':'')
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#heart-fill')
+
+    .product-card__content
+      .product-card__content-top  
+        .product-card__top-content 
+          .product-card__pricing 
+            if type == 3
+              .product-card__price 1100 ₽
+            else 
+              .product-card__price 250 ₽
+            if type == 3
+              .product-card__old-price 1 490 ₽
+          
+          button.product-card__to-card 
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#shopping-cart')
+        
+        a(href="#").product-card__reviews
+          .product-card__reviews-stars
+            .product-card__reviews-star
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#star')
+            .product-card__reviews-star
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#star')
+            .product-card__reviews-star
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#star')
+            .product-card__reviews-star
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#star-half')
+            .product-card__reviews-star
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#star-empty')
+          span 
+            if type == 3 
+             | 16 
+            else 
+              | 100 
+            span.d-none.d-sm-inline отзывов
+
+        a(href="#").product-card__title
+          if type == 2 
+            | Дасамула порошок (Dashamoola Powder) натуральный травяной
+          else if type == 3
+            | Косметическое масло-баттер МАНГО, Крымская роза, 100 г.
+          else 
+            | Дасамула порошок
+
+      .product-card__category-label 
+        if type == 1
+          | Биодобавки и травы
+        else if type == 2
+          | Косметические (базовые) масла
+        else if type == 3
+          | Саморазвитие
+        else  
+          | Биодобавки и травы
+
+    .product-card__button 
+      button.button.button_style-2.button_wide(class=type==2?'button_is-active':'' class=type==4?'button_in-progress':'')
+        .button__inner.button__default 
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#handbag')
+          span В корзину
+        .button__inner.button__in-progress 
+          span Секундочку
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#spinner')
+        .button__inner.button__is-active 
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#check-round')
+          span В корзине
+    
+
