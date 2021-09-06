@@ -64,11 +64,9 @@
                   </button>
                 </div>
                 <button class="button button_style-1 header__catalog-button" data-catalog="open" aria-label="open catalog">
-                  <div class="button__inner button__default">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
-                    </svg><span>Каталог товаров</span>
-                  </div>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
+                  </svg><span>Каталог товаров</span>
                 </button><a class="icon-link header__icon-link header__sale-link" href="#">
                   <svg class="icon">
                     <use xlink:href="./img/icons/icons.svg#percent"></use>
@@ -120,7 +118,7 @@
         </div>
       </header>
       <div class="side-modal mobile-nav" id="mobile-nav">
-        <div class="side-modal__container mobile-nav__container">
+        <div class="side-modal__container mobile-nav__container" data-scroll-lock-scrollable>
           <div class="side-modal__head">
             <button class="close-element side-modal__close" data-side-modal="close" aria-label="close mobile nav">
               <svg class="icon">
@@ -128,7 +126,7 @@
               </svg>
             </button>
           </div>
-          <div class="side-modal__content" data-scroll-lock-scrollable>
+          <div class="side-modal__content">
             <ul class="mobile-nav__list"> 
               <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#location-modal" data-modal="open">
                   <svg class="icon">
@@ -615,6 +613,57 @@
                   </button>
                 </div>
               </div>
+              <div class="col-auto d-flex flex-column">
+                <h2>Кнопка 2</h2>
+                <div class="mb-1">
+                  <!--button-->
+                  <button class="button button_style-3">
+                    <div class="button__inner button__default"> <span>Отправить</span></div>
+                    <div class="button__inner button__in-progress"> <span>Отправка</span>
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                      </svg>
+                    </div>
+                    <div class="button__inner button__is-active"> 
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                      </svg><span>Отправлено</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mb-1">
+                  <!--button-->
+                  <button class="button button_style-3 button_in-progress">
+                    <div class="button__inner button__default"> <span>Отправить</span></div>
+                    <div class="button__inner button__in-progress"> <span>Отправка</span>
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                      </svg>
+                    </div>
+                    <div class="button__inner button__is-active"> 
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                      </svg><span>Отправлено</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mb-1">
+                  <!--button-->
+                  <button class="button button_style-3 button_is-active">
+                    <div class="button__inner button__default"> <span>Отправить</span></div>
+                    <div class="button__inner button__in-progress"> <span>Отправка</span>
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                      </svg>
+                    </div>
+                    <div class="button__inner button__is-active"> 
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                      </svg><span>Отправлено</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -750,6 +799,7 @@
     <script src="./scripts/libs/inputmask.min.js"></script>
     <script src="./scripts/libs/gsap.min.js"></script>
     <script src="./scripts/libs/ScrollToPlugin.min.js"></script>
+    <script src="./scripts/libs/swiper-bundle.min.js"></script>
     <!--scripts-->
     <script src="./scripts/scripts.js"> </script>
     <!--preview only-->

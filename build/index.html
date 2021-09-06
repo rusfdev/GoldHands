@@ -64,11 +64,9 @@
                   </button>
                 </div>
                 <button class="button button_style-1 header__catalog-button" data-catalog="open" aria-label="open catalog">
-                  <div class="button__inner button__default">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
-                    </svg><span>Каталог товаров</span>
-                  </div>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
+                  </svg><span>Каталог товаров</span>
                 </button><a class="icon-link header__icon-link header__sale-link" href="#">
                   <svg class="icon">
                     <use xlink:href="./img/icons/icons.svg#percent"></use>
@@ -120,7 +118,7 @@
         </div>
       </header>
       <div class="side-modal mobile-nav" id="mobile-nav">
-        <div class="side-modal__container mobile-nav__container">
+        <div class="side-modal__container mobile-nav__container" data-scroll-lock-scrollable>
           <div class="side-modal__head">
             <button class="close-element side-modal__close" data-side-modal="close" aria-label="close mobile nav">
               <svg class="icon">
@@ -128,7 +126,7 @@
               </svg>
             </button>
           </div>
-          <div class="side-modal__content" data-scroll-lock-scrollable>
+          <div class="side-modal__content">
             <ul class="mobile-nav__list"> 
               <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#location-modal" data-modal="open">
                   <svg class="icon">
@@ -509,6 +507,49 @@
         </div>
       </div>
       <main class="main">
+        <section class="section main-banner swiper">
+          <div class="swiper-container"> 
+            <div class="swiper-wrapper"> 
+              <!--slide-->
+              <div class="swiper-slide main-banner__slide">
+                <div class="image image_cover"><img class="swiper-lazy" data-src="./img/banner.jpg" alt="image"></div>
+                <div class="container main-banner__slide-container">
+                  <div class="main-banner__slide-text-content"> 
+                    <div class="mb-2 mb-sm-3">
+                      <h2 class="h1 main-banner__slide-title">Большой ассортимент со всеми картами Таро и амулетами из Сибири</h2>
+                      <p class="main-banner__slide-text">Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?</p>
+                    </div><a class="button button_style-1 main-banner__slide-button" href="#"><span>Перейти к выбору</span></a>
+                  </div>
+                </div>
+              </div>
+              <!--slide-->
+              <div class="swiper-slide main-banner__slide">
+                <div class="image image_cover"><img class="swiper-lazy" data-src="./img/banner.jpg" alt="image"></div>
+                <div class="container main-banner__slide-container">
+                  <div class="main-banner__slide-text-content">
+                    <div class="mb-2 mb-sm-3">
+                      <h2 class="h1 main-banner__slide-title">Большой ассортимент</h2>
+                      <p class="main-banner__slide-text">Какие карты Таро для начинающих выбрать?</p>
+                    </div><a class="button button_style-1 main-banner__slide-button" href="#"><span>Перейти к выбору</span></a>
+                  </div>
+                </div>
+              </div>
+              <!--slide-->
+              <div class="swiper-slide main-banner__slide">
+                <div class="image image_cover"><img class="swiper-lazy" data-src="./img/banner.jpg" alt="image"></div>
+                <div class="container main-banner__slide-container">
+                  <div class="main-banner__slide-text-content">
+                    <div class="mb-2 mb-sm-3">
+                      <h2 class="h1 main-banner__slide-title">Большой ассортимент со всеми картами Таро и амулетами из Сибири </h2>
+                      <p class="main-banner__slide-text">Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?</p>
+                    </div><a class="button button_style-1 main-banner__slide-button" href="#"><span>Перейти к выбору</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container"> 
@@ -641,6 +682,7 @@
     <script src="./scripts/libs/inputmask.min.js"></script>
     <script src="./scripts/libs/gsap.min.js"></script>
     <script src="./scripts/libs/ScrollToPlugin.min.js"></script>
+    <script src="./scripts/libs/swiper-bundle.min.js"></script>
     <!--scripts-->
     <script src="./scripts/scripts.js"> </script>
     <!--preview only-->

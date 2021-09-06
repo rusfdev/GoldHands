@@ -1,10 +1,10 @@
 .side-modal.mobile-nav#mobile-nav
-  .side-modal__container.mobile-nav__container
+  .side-modal__container.mobile-nav__container(data-scroll-lock-scrollable)
     .side-modal__head
       button(data-side-modal="close" aria-label='close mobile nav').close-element.side-modal__close
         svg.icon
           use(xlink:href='./img/icons/icons.svg#close')
-    .side-modal__content(data-scroll-lock-scrollable)
+    .side-modal__content
       ul.mobile-nav__list 
         li.mobile-nav__item
           a(href="#location-modal" data-modal='open').icon-link.mobile-nav__icon-link

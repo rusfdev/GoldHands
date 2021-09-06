@@ -12,7 +12,20 @@
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
-  transition: background-color $trs1, border-color $trs1;
+  font-weight: 700;
+  transition: background-color $trs1, border-color $trs1, color $trs1;
+  //
+  background-color: var(--bg);
+  border-color: var(--border);
+  color: var(--color) !important;
+
+  &:not(.button_in-progress):not(.button_is-active) {
+    &[data-touch], &[data-hover] {
+      background-color: var(--bg-hover);
+      border-color: var(--border-hover);
+      color: var(--color-hover) !important;
+    }
+  }
 
   &__inner {
     display: flex;
@@ -29,6 +42,16 @@
     position: absolute;
   }
 
+  &__in-progress {
+    .icon {
+      animation: rotation 1s linear infinite;
+    }
+  }
+
+  &__is-active {
+    font-weight: 500;
+  }
+
   &:not(.button_in-progress):not(.button_is-active) {
     .button__default {
       opacity: 1;
@@ -36,7 +59,6 @@
     }
   }
 
-  //
   .icon {
     width: 24px;
     height: 24px;
@@ -49,44 +71,45 @@
   }
 
   &_style-1 {
-    background-color: var(--color-3);
-    border-color: var(--color-3);
-    color: #fff;
-    &:not(.button_in-progress):not(.button_is-active) {
-      &[data-touch], &[data-hover] {
-        background-color: var(--color-4);
-        border-color: var(--color-4);
-      }
-    }
+    --bg: var(--button-1-bg);
+    --bg-hover: var(--button-1-hover-bg);
+    --border: var(--bg);
+    --border-hover: var(--bg-hover);
+    --color: #fff;
+    --color-hover: var(--color);
   }
+
   &_style-2 {
-    background-color: var(--color-4);
-    border-color: var(--color-4);
-    color: #fff;
-    &:not(.button_in-progress):not(.button_is-active) {
-      &[data-touch], &[data-hover] {
-        background-color: var(--color-6);
-        border-color: var(--color-6);
-      }
-    }
+    --bg: var(--button-2-bg);
+    --bg-hover: var(--button-2-hover-bg);
+    --border: var(--bg);
+    --border-hover: var(--bg-hover);
+    --color: #fff;
+    --color-hover: var(--color);
+  }
+
+  &_style-3 {
+    --bg: transparent;
+    --bg-hover: transparent;
+    --border: var(--button-3-border-color);
+    --border-hover: var(--button-3-hover-border-color);
+    --color: var(--button-3-color);
+    --color-hover: var(--button-3-hover-color);
   }
 
   &_in-progress {
+    --bg: var(--color-3);
+    --color: #fff;
     pointer-events: none;
-    background-color: var(--color-3);
-    border-color: var(--color-3);
     .button__in-progress {
       opacity: 1;
       visibility: visible;
-      .icon {
-        animation: rotation 1s linear infinite;
-      }
     }
   }
   &_is-active {
-    color: var(--color-4);
-    border-color: var(--color-4);
-    background-color: transparent;
+    --bg: transparent;
+    --border: var(--color-4);
+    --color: var(--color-4);
     .button__is-active {
       opacity: 1;
       visibility: visible;

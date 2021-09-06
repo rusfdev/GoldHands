@@ -39,8 +39,8 @@
     <path d="M2.17896 15.1868C2.87052 13.9898 3.86492 12.9959 5.06225 12.3048C6.25958 11.6138 7.61768 11.25 9.00012 11.25C10.3826 11.25 11.7407 11.6138 12.938 12.3049C14.1353 12.996 15.1297 13.9899 15.8212 15.187" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
   <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="close">
-    <path d="M25 7L7 25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-    <path d="M25 25L7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M25 7L7 25" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M25 25L7 7" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
   <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="map-pin">
     <path d="M20 21.25C22.7614 21.25 25 19.0114 25 16.25C25 13.4886 22.7614 11.25 20 11.25C17.2386 11.25 15 13.4886 15 16.25C15 19.0114 17.2386 21.25 20 21.25Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

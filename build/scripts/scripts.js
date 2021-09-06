@@ -1,5 +1,5 @@
 gsap.defaults({
-  duration: +getComputedStyle(document.documentElement).getPropertyValue('--default-animation-duration').replace(/[^\d.-]/g, ''),
+  duration: +getComputedStyle(document.documentElement).getPropertyValue('--default-animation-duration').replace(/[^\d.-]/g, '') / 1000,
   ease: 'power1.inOut'
 });
 
@@ -11,7 +11,6 @@ gsap.registerEffect({
   extendTimeline: true
 });
 
-
 const breakpoints = {
   sm: 576,
   md: 768,
@@ -19,6 +18,8 @@ const breakpoints = {
   xl: 1280
 }
 const $wrapper = document.querySelector('.wrapper');
+
+const swiperSlideSpeed = +getComputedStyle(document.documentElement).getPropertyValue('--slider-animation-duration').replace(/[^\d.-]/g, '');
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -40,6 +41,12 @@ document.addEventListener("DOMContentLoaded", function() {
   SideModals.init();
   ScrollTop.init();
   inputs();
+
+  //Main banner
+  document.querySelectorAll('.main-banner').forEach($this => {
+    new MainBanner($this).init();
+  })
+
 });
 
 function inputs() {
@@ -342,7 +349,7 @@ const Modals = {
         this.close();
       }
     })
-
+    
     //this.open(document.querySelector('#location-modal'))
   }
 }
@@ -394,6 +401,10 @@ const SideModals = {
       } else if ($close || ($parent && !$block)) {
         this.close();
       }
+    })
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > breakpoints.xl && this.$active) this.close();
     })
 
     //this.open(document.querySelector('#mobile-nav'))
@@ -448,5 +459,34 @@ const ScrollTop = {
 
     this.check();
     window.addEventListener('scroll', this.check);
+  }
+}
+
+class MainBanner {
+  constructor($parent) {
+    this.$parent = $parent
+  }
+
+  init() {
+    this.$slider = this.$parent.querySelector('.swiper-container');
+    this.$pagination = this.$parent.querySelector('.swiper-pagination');
+
+    this.swiper = new Swiper(this.$slider, {
+      touchStartPreventDefault: false,
+      slidesPerView: 1,
+      speed: swiperSlideSpeed,
+      loop: true,
+      lazy: {
+        loadOnTransitionStart: true,
+        loadPrevNext: true
+      },
+      pagination: {
+        el: this.$pagination,
+        clickable: true,
+        bulletElement: 'button'
+      }
+    });
+
+
   }
 }

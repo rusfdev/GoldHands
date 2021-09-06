@@ -31,4 +31,7 @@
     width: 30px;
     height: 30px;
   }
+  @include media-breakpoint-up(xl) {
+    display: none !important;
+  }
 }

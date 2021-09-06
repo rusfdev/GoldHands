@@ -4,3 +4,42 @@ block variables
   -var page_title = 'Интернет-магазин эзотерических товаров'
 
 block content
+
+  section.section.main-banner.swiper
+    .swiper-container 
+      .swiper-wrapper 
+        //slide
+        .swiper-slide.main-banner__slide
+          .image.image_cover
+            img(data-src="./img/banner.jpg", alt="image").swiper-lazy
+          .container.main-banner__slide-container
+            .main-banner__slide-text-content 
+              .mb-2.mb-sm-3
+                h2.h1.main-banner__slide-title Большой ассортимент со всеми картами Таро и амулетами из Сибири
+                p.main-banner__slide-text Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+              a(href="#").button.button_style-1.main-banner__slide-button
+                span Перейти к выбору
+        //slide
+        .swiper-slide.main-banner__slide
+          .image.image_cover
+            img(data-src="./img/banner.jpg", alt="image").swiper-lazy
+          .container.main-banner__slide-container
+            .main-banner__slide-text-content
+              .mb-2.mb-sm-3
+                h2.h1.main-banner__slide-title Большой ассортимент
+                p.main-banner__slide-text Какие карты Таро для начинающих выбрать?
+              a(href="#").button.button_style-1.main-banner__slide-button
+                span Перейти к выбору
+        //slide
+        .swiper-slide.main-banner__slide
+          .image.image_cover
+            img(data-src="./img/banner.jpg", alt="image").swiper-lazy
+          .container.main-banner__slide-container
+            .main-banner__slide-text-content
+              .mb-2.mb-sm-3
+                h2.h1.main-banner__slide-title Большой ассортимент со всеми картами Таро и амулетами из Сибири 
+                p.main-banner__slide-text Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+              a(href="#").button.button_style-1.main-banner__slide-button
+                span Перейти к выбору
+      
+    .swiper-pagination

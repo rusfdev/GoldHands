@@ -17,7 +17,12 @@
     max-width: calc(100vw - var(--scrollbar-width));
     margin: auto 0;
     display: flex;
-    padding: 30px var(--container-padding-x);
+    padding: 60px var(--container-padding-x);
+  }
+  @include media-breakpoint-down(sm) {
+    &__wrapper {
+      padding: 40px var(--container-padding-x);
+    }
   }
 }
 
@@ -34,12 +39,23 @@
     width: 32px;
     height: 32px;
   }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 25px;
+    &__close {
+      width: 24px;
+      height: 24px;
+      right: 12px;
+      top: 12px;
+      .icon {
+        stroke-width: 3px;
+      }
+    }
+  }
 }
 
 .modal-location {
   &__block {
     max-width: 810px;
-    padding: 50px 105px 65px 105px;
   }
   &__search {
     max-width: 430px;
@@ -51,5 +67,29 @@
     justify-content: space-between;
     column-gap: var(--grid-gutter-width);
     row-gap: 20px;
+  }
+  &__item {
+    a {
+      display: block;
+      font-weight: 300;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__block {
+      padding: 50px 60px 60px 60px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__block {
+      padding: 50px 105px 65px 105px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__list {
+      grid-template-columns: 100%;
+    }
+    &__search {
+      margin-bottom: 30px;
+    }
   }
 }

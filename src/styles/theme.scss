@@ -3,6 +3,9 @@
   --color-text-muted: #7F7F7F;
   --color-text-dark: #131313;
   --color-text-accent: #CBB06B;
+  --color-text-light: rgba(255, 255, 255, 0.85);
+  --color-text-light-accent: #fff;
+
 
   --color-1: #E5E5E5;
   --color-2: #7F7F7F;
@@ -11,7 +14,21 @@
   --color-5: #FF4545;
   --color-6: #252525;
   --color-7: #D3D3D3;
+  --color-8: #F8F8F8;
 
   --color-modal-overlay: rgba(19, 19, 19, 0.35);
   --color-side-modal-overlay: rgba(19, 19, 19, 0.5);
+
+
+  //buttons
+  --button-1-bg: var(--color-3);
+  --button-1-hover-bg: var(--color-4);
+
+  --button-2-bg: var(--color-4);
+  --button-2-hover-bg: var(--color-6);
+
+  --button-3-color: var(--color-text-dark);
+  --button-3-hover-color: var(--color-3);
+  --button-3-border-color: var(--color-1);
+  --button-3-hover-border-color: var(--color-3);
 }
