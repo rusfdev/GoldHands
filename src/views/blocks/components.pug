@@ -21,7 +21,7 @@ mixin product-card(type)
           .product-label.product-label_type-low-price Цена снижена
 
       a(href="#").image.image_contain 
-        img(data-src=`./img/product-${type}.png`, alt="image").lazyload
+        img(src='#' data-src=`./img/product-${type}.png`, alt="image").lazyload
 
       button.product-favourite.product-card__favourite(class=type==3?'is-active':'')
         svg.icon
@@ -86,15 +86,15 @@ mixin product-card(type)
 
     .product-card__button 
       button.button.button_style-2.button_wide(class=type==2?'button_is-active':'' class=type==4?'button_in-progress':'')
-        .button__inner.button__default 
+        span.button__inner.button__default 
           svg.icon
             use(xlink:href='./img/icons/icons.svg#handbag')
           span В корзину
-        .button__inner.button__in-progress 
+        span.button__inner.button__in-progress 
           span Секундочку
           svg.icon
             use(xlink:href='./img/icons/icons.svg#spinner')
-        .button__inner.button__is-active 
+        span.button__inner.button__is-active 
           svg.icon
             use(xlink:href='./img/icons/icons.svg#check-round')
           span В корзине

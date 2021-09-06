@@ -49,7 +49,7 @@ block content
       .contacts-form__container.row
         .contacts-form__image.col-lg-6
           .image.image_cover 
-            img(data-src="./img/Rectangle 97.jpg", alt="image").lazyload
+            img(src='#' data-src="./img/Rectangle 97.jpg", alt="image").lazyload
         .contacts-form__content.col-lg-6 
           h2.contacts-form__title.mb-3 Задать вопрос
           form.form
@@ -71,15 +71,15 @@ block content
                 label Тема сообщения
             .form__element.mb-4
               .input
-                textarea(type="text" required)
+                textarea(required)
                 label Сообщение
             .form__element.mb-3
               +checkbox('Отправляя сообщение, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a>', true)
             
             button.button.button_style-2
-              .button__inner.button__default 
+              span.button__inner.button__default 
                 span Отправить
-              .button__inner.button__in-progress 
+              span.button__inner.button__in-progress 
                 span Секундочку
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#spinner')
