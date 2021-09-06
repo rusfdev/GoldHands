@@ -5,13 +5,13 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--color-modal-overlay);
   overflow: auto;
   display: none;
   &.is-active {
     display: flex;
   }
   &__wrapper {
+    background: var(--color-modal-overlay);
     position: relative;
     width: 100%;
     max-width: calc(100vw - var(--scrollbar-width));
