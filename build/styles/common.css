@@ -3291,9 +3291,12 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  overflow: auto;
   display: none;
   background: var(--color-modal-overlay); }
+  .modal__test {
+    width: 100%;
+    height: 100%;
+    overflow: auto; }
   .modal.is-active {
     display: flex; }
   .modal__wrapper {
