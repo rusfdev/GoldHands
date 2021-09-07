@@ -46,13 +46,7 @@ block content
 
   section.section.popular-categories
     .container 
-      .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
-        h2.mb-0 Популярные категории
-        .d-none.d-md-block
-          a(href="#").icon-link.icon-link_type-2 
-            span Смотреть все
-            svg.icon
-              use(xlink:href='./img/icons/icons.svg#caret-right')
+      +section-head('Популярные категории', 'Смотреть все')
       
       .row.popular-categories__row 
         .col-6.col-xl-3.popular-categories__item
@@ -77,14 +71,8 @@ block content
 
   section.section
     .container 
-      .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
-        h2.mb-0 Часто покупаемые товары
-        .d-none.d-md-block
-          a(href="#").icon-link.icon-link_type-2 
-            span Смотреть все
-            svg.icon
-              use(xlink:href='./img/icons/icons.svg#caret-right')
-      .swiper.product-slider.slider-constructor(data-slides='2' data-lg-slides='3' data-xl-slides='4') 
+      +section-head('Часто покупаемые товары', 'Смотреть все')
+      .swiper.product-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4') 
         .swiper-button.swiper-button-prev(data-custom-interaction)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -113,15 +101,9 @@ block content
         a(href="#").button.button_style-3.button_wide Смотреть все
 
   section.section
-    .container 
-      .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
-        h2.mb-0 Новое поступление
-        .d-none.d-md-block
-          a(href="#").icon-link.icon-link_type-2 
-            span Смотреть все
-            svg.icon
-              use(xlink:href='./img/icons/icons.svg#caret-right')
-      .swiper.product-slider.slider-constructor(data-slides='2' data-lg-slides='3' data-xl-slides='4') 
+    .container
+      +section-head('Новое поступление', 'Смотреть все')
+      .swiper.product-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
         .swiper-button.swiper-button-prev(data-custom-interaction)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -148,3 +130,49 @@ block content
 
       .d-block.d-md-none.mt-2
         a(href="#").button.button_style-3.button_wide Смотреть новинки
+
+  section.section
+    .container  
+      .row 
+        .col-md-5.order-md-2.mb-2.mb-sm-3.mb-md-0
+          .about-images-grid
+            .about-images-grid__container
+              .image.image_cover 
+                img(src='#' data-src="./img/Rectangle 406.jpg", alt="image").lazyload
+              .image.image_cover  
+                img(src='#' data-src="./img/Rectangle 407.jpg", alt="image").lazyload
+              .image.image_cover  
+                img(src='#' data-src="./img/Rectangle 408.jpg", alt="image").lazyload
+        .col-md-7.order-md-1
+          .pe-0.pe-xl-3 
+            h2.mb-1.mb-sm-2 Интернет-магазин эзотерических товаров
+            p Магазин clouds.ru - это возможность поделиться опытом, накопленным компанией "Clouds.ru" за 18 лет. Все эти годы мы отбирали течения восточной и западной психологии, философии и мистики, безопасно и эффективно поддерживающие личное и духовное развитие человека.
+            p За 18 лет мы убедились, что люди, стоящие за идеями, не менее важны, чем сами идеи. Поэтому мы тщательно выбираем производителей, поставщиков и консультантов, чтобы проверенные и лучшие книги, благовония, предметы для дома и товары для здорового питания и экологичной жизни и многое другое были доступны по всей России. 
+            p Наша цель - собрать в одном месте всё, что можно читать, смотреть, слушать, вдыхать, есть и носить, чтобы поддерживать стиль жизни, наполненный свободой и любовью. 
+            p Внешние проявления нашего выбора - это явное напоминание о том, что мы считаем для себя важным и как мы стремимся жить. Поэтому действительно имеет значение, что мы читаем и какой музыкой наполняем свой досуг, что ставим на праздничный стол и чем украшаем свои дома.
+  
+  section.section
+    .container 
+      +section-head('Последнее из блога', 'Читать всё')
+      .swiper.blog-slider.slider-constructor(data-slides='1' data-sm-slides='2' data-xl-slides='3')
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-container
+          .swiper-wrapper 
+            //slide
+            .swiper-slide 
+              +blog-card(1)
+            //slide
+            .swiper-slide 
+              +blog-card(2)
+            //slide
+            .swiper-slide 
+              +blog-card(1)
+            //slide
+            .swiper-slide 
+              +blog-card(2)
+              

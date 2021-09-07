@@ -8,7 +8,8 @@
   --slider-animation-duration: 500ms;
   --slider-animation-function: ease;
 
-  --mobile-product-card-image-height: 140px;
+  --product-card-image-height: 220px;
+  --blog-card-image-height: 220px;
 
   @include media-breakpoint-up(xl) {
     --content-width: #{map-get($container-max-widths, xl)};
@@ -24,6 +25,7 @@
   }
   @include media-breakpoint-down(sm) {
     --content-width: 100vw;
+    --product-card-image-height: 140px;
   }
 
 }

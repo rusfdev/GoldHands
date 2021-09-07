@@ -98,5 +98,46 @@ mixin product-card(type)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#check-round')
           span В корзине
-    
 
+mixin blog-card(type)
+  article.blog-card(data-custom-interaction)
+    .blog-card__image 
+      a(href="#").image.image_cover 
+        img(src='#' data-src=`./img/blog${type}.jpg`, alt="image").lazyload
+    .blog-card__content
+      .blog-card__content-top 
+        h4.blog-card__title 
+          a(href="#") 
+            if type == 1
+              | Карты Таро и выбор колоды для начинающих
+            else  
+              | 8 вариантов подарков на Китайский Новый год
+        p.blog-card__text 
+          if type == 1
+            | Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+          else  
+            | 3 ноября в Японии отмечают День культуры.
+      .blog-card__content-bottom
+        span.blog-card__comments 19 комментариев
+        .blog-card__info 
+          .blog-card__info-element 
+            svg.icon(stroke-width='1.1')
+              use(xlink:href='./img/icons/icons.svg#heart')
+            span 120
+          .blog-card__info-element 
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#eye')
+            span 9500
+
+
+        
+
+
+mixin section-head(title, link)
+  .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
+    h2.mb-0=title
+    .d-none.d-md-block
+      a(href="#").icon-link.icon-link_type-2 
+        span=link
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#caret-right')

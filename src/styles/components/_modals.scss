@@ -7,7 +7,7 @@
   left: 0;
   display: none;
   background: var(--color-modal-overlay);
-  &__test {
+  &__wrapper {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -15,16 +15,17 @@
   &.is-active {
     display: flex;
   }
-  &__wrapper {
+  &__inner {
     position: relative;
     width: 100%;
+    min-height: 100%;
     max-width: calc(100vw - var(--scrollbar-width));
     margin: auto 0;
     display: flex;
     padding: 60px var(--container-padding-x);
   }
   @include media-breakpoint-down(sm) {
-    &__wrapper {
+    &__inner {
       padding: 40px var(--container-padding-x);
     }
   }
