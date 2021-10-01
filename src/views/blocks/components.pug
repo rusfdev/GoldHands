@@ -23,7 +23,7 @@ mixin product-card(type)
       a(href="#").image.image_contain 
         img(src='#' data-src=`./img/product-${type}.png`, alt="image").lazyload
 
-      button.product-favourite.product-card__favourite(class=type==3?'is-active':'')
+      button.product-favourite.product-card__favourite(class=type==4?'is-active':'')
         svg.icon
           use(xlink:href='./img/icons/icons.svg#heart-fill')
 
@@ -85,7 +85,7 @@ mixin product-card(type)
           | Биодобавки и травы
 
     .product-card__button 
-      button.button.button_style-2.button_wide(class=type==2?'button_is-active':'' class=type==4?'button_in-progress':'')
+      button.button.button_style-2.button_wide(class=type==2?'button_is-active':'' class=type==3?'button_in-progress':'')
         span.button__inner.button__default 
           svg.icon
             use(xlink:href='./img/icons/icons.svg#handbag')

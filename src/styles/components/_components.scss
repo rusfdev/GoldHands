@@ -91,16 +91,21 @@ img {
   overflow: hidden;
   color: var(--color);
   transition: color $trs1;
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   .icon {
     width: 1em;
     height: 1em;
-    stroke-width: 1.3px;
+    stroke-width: 1.5px;
     &:first-child {
       margin-right: 8px;
-      transform: translateY(-1px);
     }
     &:last-child {
       margin-left: 8px;
+      transform: translateY(1px);
     }
   }
   &_type-2 {

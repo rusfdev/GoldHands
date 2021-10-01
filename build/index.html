@@ -19,12 +19,9 @@
     <meta property="og:description" content="Описание текущей страницы...">
     <meta property="og:image" content="https://ruslanmmr.github.io/GoldHands/build/img/logos/logo.png">
     <!--fonts-->
-    <link rel="preload" as="font" crossorigin="anonymous" href="./fonts/MabryPro/Mabry-Pro-Light.woff">
-    <link rel="preload" as="font" crossorigin="anonymous" href="./fonts/MabryPro/Mabry-Pro.woff">
-    <link rel="preload" as="font" crossorigin="anonymous" href="./fonts/MabryPro/Mabry-Pro-Medium.woff">
-    <link rel="preload" as="font" crossorigin="anonymous" href="./fonts/MabryPro/Mabry-Pro-Bold.woff">
-    <link rel="preload" as="font" crossorigin="anonymous" href="./fonts/MabryPro/Mabry-Pro-Bold.woff">
-    <link rel="stylesheet" href="./fonts/MabryPro/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <!--styles-->
     <link rel="stylesheet" href="./styles/theme.css">
     <link rel="stylesheet" href="./styles/common.css">
@@ -378,11 +375,11 @@
                 </div>
               </div>
             </div>
-            <div class="catalog-block" id="tibetskie-blagovoniya"><a class="icon-link catalog-block__back" href="#blagovoniya" data-catalog="trigger">
+            <div class="catalog-block" id="tibetskie-blagovoniya"><a class="icon-link icon-link_type-2 catalog-block__back" href="#blagovoniya" data-catalog="trigger">
                 <svg class="icon">
-                  <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  <use xlink:href="./img/icons/icons.svg#caret-left"></use>
                 </svg><span>Благовония</span></a>
-              <h2 class="h1 catalog-block__title"> <a href="#">Тибетские благовония</a></h2>
+              <h2 class="h1 catalog-block__title"><a href="#">Тибетские благовония</a></h2>
               <div class="catalog-block__content">
                 <div class="catalog-block__items row">
                         <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Уточки-мандаринки</span>
@@ -448,11 +445,11 @@
                 </div>
               </div>
             </div>
-            <div class="catalog-block" id="blagovoniya"><a class="icon-link catalog-block__back" href="#vse-kategorii" data-catalog="trigger">
+            <div class="catalog-block" id="blagovoniya"><a class="icon-link icon-link_type-2 catalog-block__back" href="#vse-kategorii" data-catalog="trigger">
                 <svg class="icon">
-                  <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  <use xlink:href="./img/icons/icons.svg#caret-left"></use>
                 </svg><span>Все категории</span></a>
-              <h2 class="h1 catalog-block__title"> <a href="#">Благовония</a></h2>
+              <h2 class="h1 catalog-block__title"><a href="#">Благовония</a></h2>
               <div class="catalog-block__content">
                 <div class="catalog-block__items row">
                         <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Индийские благовония</span>
@@ -739,7 +736,7 @@
                         <div class="product-labels product-card__labels">
                           <div class="product-label product-label_type-low-price">Цена снижена</div>
                         </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
-                        <button class="product-favourite product-card__favourite is-active">
+                        <button class="product-favourite product-card__favourite">
                           <svg class="icon">
                             <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
                           </svg>
@@ -790,7 +787,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -807,7 +804,7 @@
                   <div class="swiper-slide"> 
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
-                        <button class="product-favourite product-card__favourite">
+                        <button class="product-favourite product-card__favourite is-active">
                           <svg class="icon">
                             <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
                           </svg>
@@ -857,7 +854,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1110,7 +1107,7 @@
                         <div class="product-labels product-card__labels">
                           <div class="product-label product-label_type-low-price">Цена снижена</div>
                         </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
-                        <button class="product-favourite product-card__favourite is-active">
+                        <button class="product-favourite product-card__favourite">
                           <svg class="icon">
                             <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
                           </svg>
@@ -1161,7 +1158,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1178,7 +1175,7 @@
                   <div class="swiper-slide"> 
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
-                        <button class="product-favourite product-card__favourite">
+                        <button class="product-favourite product-card__favourite is-active">
                           <svg class="icon">
                             <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
                           </svg>
@@ -1228,7 +1225,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1624,6 +1621,10 @@
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
           <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="info.html">Гарантии и возврат</a><a class="helper__section-button" href="kontakty.html">Контакты</a><a class="helper__section-button" href="components.html">Компоненты</a></div>
+        </div>
+        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Личный кабинет:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="lk-auth.html">Войти в профиль</a><a class="helper__section-button" href="lk-registration.html">Создать профиль</a><a class="helper__section-button" href="lk-confirm.html">Подтверждение кода</a><a class="helper__section-button" href="lk-zakazy.html">Мои заказы</a><a class="helper__section-button" href="lk-profile.html">Профиль</a><a class="helper__section-button" href="lk-favorites.html">Избранное</a><a class="helper__section-button" href="lk-zakaz.html">Заказ</a></div>
         </div>
       </div>
     </div>

@@ -38,6 +38,10 @@
       box-shadow: 0 0 0px 1000px transparent inset;
       transition: background-color 5000s;
     }
+    &[type="password"] {
+      font-family: small-caption;
+      letter-spacing: 2px;
+    }
   }
 
   textarea {
@@ -62,13 +66,34 @@
   &_focused {
     border-color: var(--color-2);
   }
-  &_filled, &_focused {
+  &_filled, &_focused, input:-webkit-autofill ~ {
     label {
       font-size: 10px;
       line-height: 14px;
       font-weight: 400;
       transform: translate(0.05em, -6px);
     }
+  }
+}
+
+.password-toggle {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color $trs1;
+  color: var(--color-2);
+  .icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  &[data-touch], &[data-hover] {
+    color: var(--color-4);
+  }
+  input[type="text"] ~ & {
+    color: var(--color-4);
   }
 }
 
@@ -93,6 +118,7 @@
 
 .checkbox {
   position: relative;
+  font-weight: 300;
   input {
     display: none;
     &:checked + label {

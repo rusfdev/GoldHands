@@ -1,0 +1,32 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Подтверждение кода'
+
+block content
+
+  section.section.contacts
+    .container 
+      .auth-box
+        h1.auth-box__title.mt-1.mt-sm-0.mb-2.mb-sm-4 На номер 
+          mark +7 999 999-99-99 
+          | отправлен код, введите его:
+        form(action="#").form
+          .form__element.mb-2
+            .input
+              input(type="text")
+              label Код
+          .mb-1.mb-md-2
+            button.button.button_style-2.button_wide.button_large
+              span.button__inner.button__default 
+                span Подтвердить регистрацию
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#ArrowUpRight')
+          
+          .row.justify-content-center
+            .col-auto
+              a(href="#").color-muted.fw-light Код не пришёл 
+
+          
+
+    

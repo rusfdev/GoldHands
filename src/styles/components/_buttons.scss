@@ -8,11 +8,12 @@
   //
   height: 50px;
   padding: 0 30px;
-  min-width: 210px;
+  min-width: 180px;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
   font-weight: 700;
+  font-size: 16px;
   transition: background-color $trs1, border-color $trs1, color $trs1;
   //
   background-color: var(--bg);
@@ -30,12 +31,14 @@
   &__inner {
     display: flex;
     align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     opacity: 0;
     visibility: hidden;
     transition: opacity $trs1, visibility $trs1;
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   &__in-progress, &__is-active {
@@ -119,5 +122,17 @@
   &_wide {
     width: 100%;
     min-width: initial;
+  }
+  &_large {
+    height: 64px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    &_large {
+      font-size: 18px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0 20px;
   }
 }

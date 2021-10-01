@@ -1,0 +1,23 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Избранное'
+  -var lk_page = 3;
+
+block content
+
+  section.section.lk
+    .container 
+      .row 
+        .col-xl-3
+          include blocks/lk-nav
+        .col-xl-9 
+          h1.lk__title Избранное
+
+          .catalog-products-grid
+            +product-card(4)
+            +product-card(4)
+            +product-card(4)
+            +product-card(4)
+
+          

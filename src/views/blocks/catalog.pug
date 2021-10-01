@@ -103,11 +103,11 @@ mixin item(title, type)
             +box('Фэн-шуй', ['Божества фэн-шуй', 'Животные фэн-шуй', 'Талисманы фэн-шуй', 'Ловцы снов', 'Ещё 7'])
 
       .catalog-block#tibetskie-blagovoniya
-        a(href="#blagovoniya" data-catalog="trigger").icon-link.catalog-block__back
+        a(href="#blagovoniya" data-catalog="trigger").icon-link.icon-link_type-2.catalog-block__back
           svg.icon
-            use(xlink:href='./img/icons/icons.svg#caret-right')
+            use(xlink:href='./img/icons/icons.svg#caret-left')
           span Благовония
-        h2.h1.catalog-block__title 
+        h2.h1.catalog-block__title
           a(href="#") Тибетские благовония
         .catalog-block__content
           .catalog-block__items.row
@@ -125,11 +125,11 @@ mixin item(title, type)
             +item('Лошади и быки')
 
       .catalog-block#blagovoniya
-        a(href="#vse-kategorii" data-catalog="trigger").icon-link.catalog-block__back
+        a(href="#vse-kategorii" data-catalog="trigger").icon-link.icon-link_type-2.catalog-block__back
           svg.icon
-            use(xlink:href='./img/icons/icons.svg#caret-right')
+            use(xlink:href='./img/icons/icons.svg#caret-left')
           span Все категории
-        h2.h1.catalog-block__title 
+        h2.h1.catalog-block__title
           a(href="#") Благовония
         .catalog-block__content
           .catalog-block__items.row

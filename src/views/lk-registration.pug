@@ -1,0 +1,30 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Создать профиль'
+
+block content
+
+  section.section.contacts
+    .container 
+      .auth-box
+        h1.auth-box__title.mt-1.mt-sm-0.mb-2.mb-sm-4 Создать профиль
+        form(action="#").form
+          .form__element.mb-2
+            .input
+              input(type="text" data-validate="phone")
+              label Номер телефона
+          .mb-3.mb-md-4
+            button.button.button_style-2.button_wide.button_large
+              span.button__inner.button__default 
+                span Получить код
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#ArrowUpRight')
+
+          .mb-1
+            +checkbox('Получать эксклюзивные скидки в SMS-рассылке от GoldHands', true)
+          
+          +checkbox('Согласен с условиями <a href="#" class="color-dark">Правил пользования интернет-магазином</a>')
+
+
+    

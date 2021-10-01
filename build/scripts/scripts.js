@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
   SideModals.init();
   ScrollTop.init();
   inputs();
+  password_visibility_toggle();
 
   document.querySelectorAll('.main-banner').forEach($this => {
     new MainBanner($this).init();
@@ -84,11 +85,22 @@ function inputs() {
     } 
   }
 
-  
-  
   document.addEventListener('focus', events, true);
   document.addEventListener('input', events, true);
   document.addEventListener('blur', events, true);
+}
+
+function password_visibility_toggle() {
+  document.addEventListener('click', (event) => {
+    let $toggle = event.target.closest('.password-toggle');
+
+    if($toggle) {
+      let $input_element = $toggle.parentNode.querySelector('input'),
+          type = $input_element.getAttribute('type') === 'password' ? 'text' : 'password';
+      
+      $input_element.setAttribute('type', type);
+    }
+  });
 }
 
 const CustomInteractionEvents = Object.create({

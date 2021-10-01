@@ -1,0 +1,82 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Профиль'
+  -var lk_page = 2;
+
+block content
+
+  section.section.lk
+    .container 
+      .row 
+        .col-xl-3
+          include blocks/lk-nav
+        .col-xl-9 
+          h1.lk__title Профиль
+
+          .lk-user-information
+            .lk-user-information__box 
+              h2.mb-2 Личные данные
+              .form.lk-user-information__form.row
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="text")
+                    label Имя
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="text")
+                    label Фамилия
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="text" data-validate="phone")
+                    label Телефон
+                .form__element.col-12
+                  .input
+                    input(type="email")
+                    label E-mail
+
+            .lk-user-information__box
+              h2.mb-2 Адрес доставки
+              .form.lk-user-information__form.row
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="text")
+                    label Имя
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="text")
+                    label Фамилия
+                .form__element.col-lg-8.mb-1
+                  .input
+                    input(type="text")
+                    label Город
+                .form__element.col-lg-4.mb-1
+                  .input
+                    input(type="text")
+                    label Индекс
+                .form__element.col-8
+                  .input
+                    input(type="text")
+                    label Улица
+                .form__element.col-4
+                  .input
+                    input(type="text")
+                    label Дом
+
+            .lk-user-information__box 
+              h2.mb-2 Безопасность
+              .form.lk-user-information__form.row
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="password")
+                    label Текущий пароль
+                .form__element.col-12.mb-1
+                  .input
+                    input(type="password")
+                    label Новый пароль
+                .form__element.col-12
+                  .input
+                    input(type="password")
+                    label Повторите новый пароль
+
+          

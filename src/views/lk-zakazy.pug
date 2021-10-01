@@ -1,0 +1,85 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Мои заказы'
+  -var lk_page = 1;
+
+block content
+
+  section.section.lk
+    .container 
+      .row 
+        .col-xl-3
+          include blocks/lk-nav
+        .col-xl-9 
+          h1.lk__title Мои заказы
+          .lk__orders
+            //block
+            .lk-order-preview.lk__order-preview 
+              .lk-order-preview__head 
+                .lk-order-preview__title Заказ №: 
+                  span.color-dark 68237102587
+                
+                a(href="lk-zakaz.html").icon-link.icon-link_type-2
+                  span Подробнее о заказе
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#caret-right')
+
+              .lk-order-preview__date 
+                | Дата отправки: 
+                span.color-dark 06 окт., 2021
+
+              .lk-order-preview__items 
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-3.png" alt="image").lazyload
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-2.png" alt="image").lazyload
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-3.png" alt="image").lazyload
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-4.png" alt="image").lazyload
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-1.png" alt="image").lazyload
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-2.png" alt="image").lazyload
+
+              .lk-order-preview__detail 
+                //button
+                a(href="#").button.button_style-2.button_large
+                  span.button__inner.button__default 
+                    span Отследить посылку
+                    svg.icon
+                      use(xlink:href='./img/icons/icons.svg#ArrowUpRight')
+
+            //block
+            .lk-order-preview.lk__order-preview 
+              .lk-order-preview__head 
+                .lk-order-preview__title Заказ №: 
+                  span.color-dark 09237102511
+                
+                a(href="lk-zakaz.html").icon-link.icon-link_type-2
+                  span Подробнее о заказе
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#caret-right')
+
+              .lk-order-preview__date 
+                | Дата отправки: 
+                span.color-dark 15 авг., 2021
+
+              .lk-order-preview__items 
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-1.png" alt="image").lazyload
+                .lk-order-preview__item.image.image_contain 
+                  img(src="#" data-src="./img/product-2.png" alt="image").lazyload
+
+              .lk-order-preview__detail 
+                //button
+                a(href="#").button.button_style-2.button_large
+                  span.button__inner.button__default 
+                    span Отследить посылку
+                    svg.icon
+                      use(xlink:href='./img/icons/icons.svg#ArrowUpRight')
+
+  include blocks/mailing-banner
+
+            

@@ -1,9 +1,9 @@
 body {
-  font-family: 'Mabry Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--color-text, #454545);
   font-size: 16px;
   line-height: 1.5;
-  text-rendering: geometricPrecision;
+  text-rendering: optimizeSpeed;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -46,6 +46,11 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+mark {
+  background: initial;
+  color: var(--color-text-accent);
 }
 
 ul, ol {

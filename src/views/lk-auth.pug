@@ -1,0 +1,39 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Войти в профиль'
+
+block content
+
+  section.section.contacts
+    .container 
+      .auth-box
+        h1.auth-box__title.mt-1.mt-sm-0.mb-2.mb-sm-4 Войти в профиль
+        form(action="#").form
+          .form__element.mb-2
+            .input
+              input(type="text" data-validate="phone")
+              label Номер телефона
+          .form__element.mb-2
+            .input
+              input(type="password")
+              label Пароль
+              .password-toggle(data-custom-interaction)
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#eye')
+          .mb-3.mb-md-4
+            button.button.button_style-2.button_wide.button_large
+              span.button__inner.button__default 
+                span Войти в профиль
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#ArrowUpRight')
+
+          .row.flex-column.flex-md-row.justify-content-md-between.align-items-center
+            .col-auto.mb-4.mb-md-0
+              +checkbox('Чужой компьютер')
+            .col-auto 
+              span.color-dark Нет аккаунта? 
+              a(href="lk-registration.html") Регистрация
+
+
+    
