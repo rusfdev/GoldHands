@@ -76,6 +76,29 @@
   }
 }
 
+.filter-input {
+  max-width: 125px;
+  span {
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    pointer-events: none;
+    color: var(--color-text);
+  }
+  input {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 9px var(--px) 9px 34px;
+    font-weight: 400;
+    &::placeholder {
+      color: var(--color-1);
+    }
+  }
+}
+
 .password-toggle {
   position: absolute;
   cursor: pointer;
@@ -118,10 +141,11 @@
 
 .checkbox {
   position: relative;
-  font-weight: 300;
+  cursor: default;
+  display: block;
   input {
     display: none;
-    &:checked + label {
+    &:checked + span {
       color: var(--color-text);
       &:before {
         border-color: var(--color-text-dark);
@@ -131,17 +155,19 @@
         stroke-dashoffset: 0;
       }
     }
-    &:disabled + label {
+    &:disabled + span {
       color: var(--color-7);
-      pointer-events: none;
+      cursor: default;
       &:before {
         border-color: var(--color-7);
       }
     }
   }
-  label {
+  & > span {
+    cursor: pointer;
     display: block;
     position: relative;
+    font-weight: 300;
     padding-left: 30px;
     color: var(--color-text-muted);
     transition: color $trs1;
@@ -169,6 +195,111 @@
       opacity: 0;
       stroke-dasharray: var(--length) var(--length);
       stroke-dashoffset: calc(var(--length) * -1);
+    }
+  }
+  &[data-touch], &[data-hover] {
+    & > span {
+      color: var(--color-text);
+    }
+  }
+}
+
+.select {
+  --text-size: 16px;
+  --line-height: 24px;
+  --py: 12px;
+  --px: 16px;
+  --radius: 4px;
+  --pr: 42px;
+  position: relative;
+  z-index: 100;
+  select, .ss-single-selected {
+    display: block;
+    padding: var(--py) var(--pr) var(--py) var(--px);
+    border: 1px solid var(--color-1);
+    border-radius: var(--radius);
+    font-size: var(--text-size);
+    line-height: var(--line-height);
+    background-color: var(--color-background-1);
+    cursor: pointer;
+    user-select: none;
+    min-width: 250px;
+  }
+
+  .ss-main {
+    position: relative;   
+  }
+  .ss-single-selected {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .ss-arrow {
+    display: block;
+    position: absolute;
+    right: var(--px);
+    top: 50%;
+    transform: translateY(-50%);
+    .icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      stroke-width: 1.5px;
+    }
+    .arrow-down, .arrow-up {
+      display: block;
+      width: 16px;
+      height: 16px;
+      transition: transform var(--trs-1);
+    }
+    .arrow-up {
+      transform: rotate(180deg);
+    }
+  }
+  .ss-deselect, .ss-search {
+    display: none;
+  }
+  .ss-content {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--color-1);
+    border-radius: var(--radius);
+    padding: var(--py) var(--px);
+    top: calc(100% + 10px);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+    z-index: 1000;
+    &.ss-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .ss-list {
+    
+  }
+  
+  .ss-option {
+    cursor: pointer;
+    display: block;
+    transition: color var(--trs-1);
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &[data-touch], &[data-hover] {
+      color: var(--color-text-accent);
+    }
+    &.ss-disabled {
+      color: var(--color-text-muted);
+      cursor: default;
+    }
+    &.ss-option-selected {
+      color: var(--color-text-accent);
     }
   }
 }

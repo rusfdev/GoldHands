@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gold Hands - Интернет-магазин эзотерических товаров</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=375, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
     <!--theme-->
@@ -31,7 +31,7 @@
         <div class="header__top"> 
           <div class="container header__top-container"> 
             <ul class="header__top-left-list">
-              <li class="header__top-left-item"><a class="icon-link header__icon-link" href="#location-modal" data-modal="open">
+              <li class="header__top-left-item"><a class="icon-link header__icon-link" href="#location-modal" data-action="modal_open">
                   <svg class="icon">
                     <use xlink:href="./img/icons/icons.svg#navigation-arrow"></use>
                   </svg><span>Санкт-Петербург</span></a></li>
@@ -49,17 +49,17 @@
           <div class="container header__center-container"> 
             <div class="header__center-left">
               <div class="header__center-left-container"> 
-                <div class="header__mobile-buttons-left-list d-xl-none"><a class="header__mobile-button header__mobile-button-item" href="#mobile-nav" data-side-modal="open">
+                <div class="header__mobile-buttons-left-list d-xl-none"><a class="header__mobile-button header__mobile-button-item" href="#mobile-nav" data-action="side_modal_open">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons.svg#equals"></use>
                     </svg></a>
-                  <button class="header__mobile-button header__mobile-button-item header__icon-link" aria-label="toggle mobile search" data-mobile-search="toggle">
+                  <button class="header__mobile-button header__mobile-button-item header__icon-link" aria-label="Поиск" data-action="mobile-search_toggle">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons.svg#magnifying-glass"></use>
                     </svg>
                   </button>
                 </div>
-                <button class="button button_style-1 header__catalog-button" data-catalog="open" aria-label="open catalog">
+                <button class="button button_style-1 header__catalog-button" data-action="catalog-modal_open" aria-label="Открыть каталог">
                   <svg class="icon">
                     <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
                   </svg><span>Каталог товаров</span>
@@ -116,7 +116,7 @@
       <div class="side-modal mobile-nav" id="mobile-nav">
         <div class="side-modal__container mobile-nav__container" data-scroll-lock-scrollable>
           <div class="side-modal__head">
-            <button class="close-element side-modal__close" data-side-modal="close" aria-label="close mobile nav">
+            <button class="close-element side-modal__close" data-action="side_modal_close" aria-label="Закрыть мобильное меню">
               <svg class="icon">
                 <use xlink:href="./img/icons/icons.svg#close"></use>
               </svg>
@@ -124,14 +124,14 @@
           </div>
           <div class="side-modal__content">
             <ul class="mobile-nav__list"> 
-              <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#location-modal" data-modal="open">
+              <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#location-modal" data-action="modal_open">
                   <svg class="icon">
                     <use xlink:href="./img/icons/icons.svg#navigation-arrow"></use>
                   </svg><span>Санкт-Петербург</span></a></li>
             </ul>
             <ul class="mobile-nav__list"> 
               <li class="mobile-nav__item">
-                <button class="icon-link mobile-nav__icon-link" data-catalog="open" aria-label="open catalog">
+                <button class="icon-link mobile-nav__icon-link" data-action="catalog-modal_open" aria-label="Открыть каталог">
                   <svg class="icon">
                     <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
                   </svg><span>Каталог товаров</span>
@@ -155,49 +155,49 @@
           </div>
         </div>
       </div>
-      <div class="catalog" data-scroll-lock-scrollable>
-        <div class="catalog__head">
-          <div class="container catalog__head-container">
-            <div class="catalog__head-left"> <a class="logo catalog__logo" href="./"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a><a class="catalog__head-phone" href="tel:88001000750">8 800 1000 750</a></div>
-            <button class="close-element catalog__close" data-catalog="close" aria-label="close catalog">
+      <div class="catalog-modal" data-scroll-lock-scrollable>
+        <div class="catalog-modal__head">
+          <div class="container catalog-modal__head-container">
+            <div class="catalog-modal__head-left"> <a class="logo catalog-modal__logo" href="./"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a><a class="catalog-modal__head-phone" href="tel:88001000750">8 800 1000 750</a></div>
+            <button class="close-element catalog-modal__close" data-action="catalog-modal_close" aria-label="Закрыть каталог">
               <svg class="icon">
                 <use xlink:href="./img/icons/icons.svg#close"></use>
               </svg>
             </button>
           </div>
         </div>
-        <div class="catalog__content"> 
+        <div class="catalog-modal__content"> 
           <div class="container"> 
-            <div class="catalog-block is-active" id="vse-kategorii">
-              <h2 class="h1 catalog-block__title">Каталог</h2>
-              <div class="catalog-block__content">
-                <div class="catalog-block__boxes row">
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#blagovoniya" data-catalog="trigger"><span>Благовония</span>
+            <div class="catalog-modal-block d-block" id="vse-kategorii">
+              <h2 class="h1 catalog-modal-block__title">Каталог</h2>
+              <div class="catalog-modal-block__content">
+                <div class="catalog-modal-block__boxes row">
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#blagovoniya" data-action="catalog-modal_trigger"><span>Благовония</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Индийские благовония</span></a>
                             </li>
-                            <li><a href="#tibetskie-blagovoniya" data-catalog="trigger"><span>Тибетские благовония (рабочая ссылка)</span></a>
+                            <li><a href="#tibetskie-blagovoniya" data-action="catalog-modal_trigger"><span>Тибетские благовония (рабочая ссылка)</span></a>
                             </li>
                             <li><a href="#"><span>Бутанские благовония</span></a>
                             </li>
                             <li><a href="#"><span>Японские благовония</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#blagovoniya" data-catalog="trigger"><strong>Ещё 5</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#blagovoniya" data-action="catalog-modal_trigger"><strong>Ещё 5</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#blagovoniya" data-catalog="trigger">Индийские благовония, Тибетские благовония, Бутанские благовония, Японские благовония и Ещё 5</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#blagovoniya" data-action="catalog-modal_trigger">Индийские благовония, Тибетские благовония, Бутанские благовония, Японские благовония и Ещё 5</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Свечи</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Свечи</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Свечи цветные</span></a>
                             </li>
                             <li><a href="#"><span>Ритуальные свечи</span></a>
@@ -206,17 +206,17 @@
                             </li>
                             <li><a href="#"><span>Ароматические</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 3</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 3</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Свечи цветные, Ритуальные свечи, Свечи из вощины, Ароматические и Ещё 3</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Свечи цветные, Ритуальные свечи, Свечи из вощины, Ароматические и Ещё 3</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Таро и руны</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Таро и руны</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Все колоды таро</span></a>
                             </li>
                             <li><a href="#"><span>Таро для начинающих</span></a>
@@ -225,17 +225,17 @@
                             </li>
                             <li><a href="#"><span>Подарочные наборы Таро</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 10</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 10</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Все колоды таро, Таро для начинающих, Тематические колоды Таро, Подарочные наборы Таро и Ещё 10</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Все колоды таро, Таро для начинающих, Тематические колоды Таро, Подарочные наборы Таро и Ещё 10</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Здоровое питание</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Здоровое питание</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Быстрое приготовление</span></a>
                             </li>
                             <li><a href="#"><span>Соусы, масла и укусы</span></a>
@@ -244,17 +244,17 @@
                             </li>
                             <li><a href="#"><span>Полезные сладости</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 13</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 13</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Быстрое приготовление, Соусы, масла и укусы, Вегетарианская колбаса, Полезные сладости и Ещё 13</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Быстрое приготовление, Соусы, масла и укусы, Вегетарианская колбаса, Полезные сладости и Ещё 13</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Ароматерапия</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Ароматерапия</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Масла</span></a>
                             </li>
                             <li><a href="#"><span>Аромалампы</span></a>
@@ -263,28 +263,28 @@
                             </li>
                             <li><a href="#"><span>Ароматизаторы</span></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Масла, Аромалампы, Аромакулоны и Ароматизаторы</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Масла, Аромалампы, Аромакулоны и Ароматизаторы</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Инструменты биолокации</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Инструменты биолокации</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Биолокационные рамки</span></a>
                             </li>
                             <li><a href="#"><span>Маятники</span></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Биолокационные рамки и Маятники</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Биолокационные рамки и Маятники</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Натуральная косметика</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Натуральная косметика</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Уход за лицом</span></a>
                             </li>
                             <li><a href="#"><span>Уход за телом</span></a>
@@ -293,17 +293,17 @@
                             </li>
                             <li><a href="#"><span>Уход за полостью рта</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 6</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 6</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Уход за лицом, Уход за телом, Уход за волосами, Уход за полостью рта и Ещё 6</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Уход за лицом, Уход за телом, Уход за волосами, Уход за полостью рта и Ещё 6</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Книги</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Книги</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Духовные традиции мира</span></a>
                             </li>
                             <li><a href="#"><span>Учения и мастера</span></a>
@@ -312,17 +312,17 @@
                             </li>
                             <li><a href="#"><span>Самопознание</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 7</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 7</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Духовные традиции мира, Учения и мастера, Эзотерика, Самопознание и Ещё 7</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Духовные традиции мира, Учения и мастера, Эзотерика, Самопознание и Ещё 7</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Чай</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Чай</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Посуда для чая</span></a>
                             </li>
                             <li><a href="#"><span>Мате</span></a>
@@ -331,17 +331,17 @@
                             </li>
                             <li><a href="#"><span>Бирюзовый чай</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 8</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 8</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Посуда для чая, Мате, Японский чай, Бирюзовый чай и Ещё 8</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Посуда для чая, Мате, Японский чай, Бирюзовый чай и Ещё 8</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Предметы для алтаря</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Предметы для алтаря</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Буддистские</span></a>
                             </li>
                             <li><a href="#"><span>Индуистские</span></a>
@@ -350,15 +350,15 @@
                             </li>
                             <li><a href="#"><span>Тханки</span></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Буддистские, Индуистские, Четки и Тханки</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Буддистские, Индуистские, Четки и Тханки</a>
                         </div>
-                        <div class="catalog-block__box col-sm-6 col-md-4 col-lg-3">
-                          <h4 class="catalog-block__box-title"><a href="#"><span>Фэн-шуй</span>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Фэн-шуй</span>
                               <svg class="icon">
                                 <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                               </svg></a>
                           </h4>
-                          <ul class="catalog-block__box-list list">
+                          <ul class="catalog-modal-block__box-list list">
                             <li><a href="#"><span>Божества фэн-шуй</span></a>
                             </li>
                             <li><a href="#"><span>Животные фэн-шуй</span></a>
@@ -367,76 +367,76 @@
                             </li>
                             <li><a href="#"><span>Ловцы снов</span></a>
                             </li>
-                            <li><a class="catalog-block__more-link" href="#"> <strong>Ещё 7</strong></a>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 7</strong></a>
                             </li>
-                          </ul><a class="catalog-block__box-mobile-link" href="#">Божества фэн-шуй, Животные фэн-шуй, Талисманы фэн-шуй, Ловцы снов и Ещё 7</a>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Божества фэн-шуй, Животные фэн-шуй, Талисманы фэн-шуй, Ловцы снов и Ещё 7</a>
                         </div>
                 </div>
               </div>
             </div>
-            <div class="catalog-block" id="tibetskie-blagovoniya"><a class="icon-link icon-link_type-2 catalog-block__back" href="#blagovoniya" data-catalog="trigger">
+            <div class="catalog-modal-block" id="tibetskie-blagovoniya"><a class="icon-link icon-link_type-2 catalog-modal-block__back" href="#blagovoniya" data-action="catalog-modal_trigger">
                 <svg class="icon">
                   <use xlink:href="./img/icons/icons.svg#caret-left"></use>
                 </svg><span>Благовония</span></a>
-              <h2 class="h1 catalog-block__title"><a href="#">Тибетские благовония</a></h2>
-              <div class="catalog-block__content">
-                <div class="catalog-block__items row">
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Уточки-мандаринки</span>
+              <h2 class="h1 catalog-modal-block__title"><a href="#">Тибетские благовония</a></h2>
+              <div class="catalog-modal-block__content">
+                <div class="catalog-modal-block__items row">
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Уточки-мандаринки</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Трехлапая жаба</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Трехлапая жаба</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Слоны и носороги</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Слоны и носороги</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Собачки Фу</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Собачки Фу</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Манэко-кот</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Манэко-кот</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Карпы</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Карпы</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Черепахи</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Черепахи</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Драконы</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Драконы</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Пи Яо</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Пи Яо</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Совы и филины</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Совы и филины</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Три обезьяны</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Три обезьяны</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Лошади и быки</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Лошади и быки</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
@@ -444,54 +444,54 @@
                 </div>
               </div>
             </div>
-            <div class="catalog-block" id="blagovoniya"><a class="icon-link icon-link_type-2 catalog-block__back" href="#vse-kategorii" data-catalog="trigger">
+            <div class="catalog-modal-block" id="blagovoniya"><a class="icon-link icon-link_type-2 catalog-modal-block__back" href="#vse-kategorii" data-action="catalog-modal_trigger">
                 <svg class="icon">
                   <use xlink:href="./img/icons/icons.svg#caret-left"></use>
                 </svg><span>Все категории</span></a>
-              <h2 class="h1 catalog-block__title"><a href="#">Благовония</a></h2>
-              <div class="catalog-block__content">
-                <div class="catalog-block__items row">
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Индийские благовония</span>
+              <h2 class="h1 catalog-modal-block__title"><a href="#">Благовония</a></h2>
+              <div class="catalog-modal-block__content">
+                <div class="catalog-modal-block__items row">
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Индийские благовония</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#tibetskie-blagovoniya" data-catalog="trigger"><span>Тибетские благовония (рабочая ссылка)</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#tibetskie-blagovoniya" data-action="catalog-modal_trigger"><span>Тибетские благовония (рабочая ссылка)</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Бутанские благовония</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Бутанские благовония</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Японские благовония</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Японские благовония</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 5</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 5</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 6</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 6</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 7</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 7</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 8</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 8</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
                         </div>
-                        <div class="catalog-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 9</span>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 9</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                             </svg></a>
@@ -577,7 +577,7 @@
                     <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                   </svg></a></div>
             </div>
-            <div class="swiper product-slider slider-constructor" data-slides="2" data-md-slides="3" data-xl-slides="4"> 
+            <div class="swiper product-cards-slider slider-constructor" data-slides="2" data-md-slides="3" data-xl-slides="4"> 
               <div class="swiper-button swiper-button-prev" data-custom-interaction>
                 <svg class="icon">
                   <use xlink:href="./img/icons/icons.svg#caret-right"></use>
@@ -592,6 +592,7 @@
                 <div class="swiper-wrapper"> 
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image">
                         <div class="product-labels product-card__labels">
@@ -660,9 +661,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
@@ -727,9 +730,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image">
                         <div class="product-labels product-card__labels">
@@ -798,9 +803,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite is-active">
@@ -865,9 +872,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
@@ -932,6 +941,7 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                 </div>
               </div>
@@ -948,10 +958,10 @@
                     <use xlink:href="./img/icons/icons.svg#caret-right"></use>
                   </svg></a></div>
             </div>
-            <div class="swiper product-slider slider-constructor" data-slides="2" data-md-slides="3" data-xl-slides="4">
+            <div class="swiper product-cards-slider slider-constructor" data-slides="2" data-md-slides="3" data-xl-slides="4">
               <div class="swiper-button swiper-button-prev" data-custom-interaction>
                 <svg class="icon">
-                  <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  <use xlink:href="./img/icons/icons.svg#caret-left"></use>
                 </svg>
               </div>
               <div class="swiper-button swiper-button-next" data-custom-interaction>
@@ -963,6 +973,7 @@
                 <div class="swiper-wrapper"> 
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image">
                         <div class="product-labels product-card__labels">
@@ -1031,9 +1042,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
@@ -1098,9 +1111,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image">
                         <div class="product-labels product-card__labels">
@@ -1169,9 +1184,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite is-active">
@@ -1236,9 +1253,11 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--product card START-->
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
@@ -1303,6 +1322,7 @@
                             </svg><span>В корзине</span></span></button>
                       </div>
                     </div>
+                    <!--product card END-->
                   </div>
                 </div>
               </div>
@@ -1346,7 +1366,7 @@
             <div class="swiper blog-slider slider-constructor" data-slides="1" data-sm-slides="2" data-xl-slides="3">
               <div class="swiper-button swiper-button-prev" data-custom-interaction>
                 <svg class="icon">
-                  <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  <use xlink:href="./img/icons/icons.svg#caret-left"></use>
                 </svg>
               </div>
               <div class="swiper-button swiper-button-next" data-custom-interaction>
@@ -1358,6 +1378,7 @@
                 <div class="swiper-wrapper"> 
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--blog card START-->
                     <article class="blog-card" data-custom-interaction="data-custom-interaction">
                       <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
                       <div class="blog-card__content">
@@ -1382,9 +1403,11 @@
                         </div>
                       </div>
                     </article>
+                    <!--blog card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--blog card START-->
                     <article class="blog-card" data-custom-interaction="data-custom-interaction">
                       <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog2.jpg" alt="image"/></a></div>
                       <div class="blog-card__content">
@@ -1409,9 +1432,11 @@
                         </div>
                       </div>
                     </article>
+                    <!--blog card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--blog card START-->
                     <article class="blog-card" data-custom-interaction="data-custom-interaction">
                       <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
                       <div class="blog-card__content">
@@ -1436,9 +1461,11 @@
                         </div>
                       </div>
                     </article>
+                    <!--blog card END-->
                   </div>
                   <!--slide-->
                   <div class="swiper-slide"> 
+                    <!--blog card START-->
                     <article class="blog-card" data-custom-interaction="data-custom-interaction">
                       <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog2.jpg" alt="image"/></a></div>
                       <div class="blog-card__content">
@@ -1463,10 +1490,12 @@
                         </div>
                       </div>
                     </article>
+                    <!--blog card END-->
                   </div>
                 </div>
               </div>
             </div>
+            <div class="d-block d-md-none mt-2"><a class="button button_style-3 button_wide" href="#">Читать всё</a></div>
           </div>
         </section>
       </main>
@@ -1531,19 +1560,17 @@
         </div>
       </footer>
       <!--scroll-top-->
-      <div class="scroll-top">
-        <button class="button button_style-2" aria-label="scroll top">
-          <svg class="icon">
-            <use xlink:href="./img/icons/icons.svg#caret-top"></use>
-          </svg>
-        </button>
-      </div>
+      <button class="scroll-top button button_style-2" data-action="scroll-top" aria-label="Прокрутить вверх">
+        <svg class="icon">
+          <use xlink:href="./img/icons/icons.svg#caret-top"></use>
+        </svg>
+      </button>
       <!--modals-->
       <div class="modal modal-location" id="location-modal">
         <div class="modal__wrapper" data-scroll-lock-scrollable>
           <div class="modal__inner">
             <div class="modal-block modal-location__block">
-              <button class="close-element modal-block__close" data-modal="close" aria-label="modal close">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
                 <svg class="icon">
                   <use xlink:href="./img/icons/icons.svg#close"></use>
                 </svg>
@@ -1604,6 +1631,7 @@
     <script src="./scripts/libs/gsap.min.js"></script>
     <script src="./scripts/libs/ScrollToPlugin.min.js"></script>
     <script src="./scripts/libs/swiper-bundle.min.js"></script>
+    <script src="./scripts/libs/slim-select.min.js"></script>
     <!--scripts-->
     <script src="./scripts/scripts.js"> </script>
     <!--preview only-->
@@ -1615,11 +1643,11 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Всплывающие окна:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="#location-modal" data-modal="open">Выбор города</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="#location-modal" data-action="modal_open">Выбор города</a></div>
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="info.html">Гарантии и возврат</a><a class="helper__section-button" href="kontakty.html">Контакты</a><a class="helper__section-button" href="components.html">Компоненты</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product.html">Продукт</a><a class="helper__section-button" href="info.html">Гарантии и возврат</a><a class="helper__section-button" href="kontakty.html">Контакты</a><a class="helper__section-button" href="components.html">Компоненты</a></div>
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Личный кабинет:</span>

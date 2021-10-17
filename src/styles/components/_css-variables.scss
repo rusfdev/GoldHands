@@ -3,13 +3,24 @@
   --grid-gutter-width: #{$grid-gutter-width}; 
   --content-gutter: calc(((100vw - var(--scrollbar-width) - var(--content-width) + var(--container-padding-x) * 2) / 2));
 
-  --default-animation-duration: 150ms;
+  --scrollbar-width: 0px;
 
-  --slider-animation-duration: 500ms;
   --slider-animation-function: ease;
 
   --product-card-image-height: 185px;
   --blog-card-image-height: 220px;
+
+  //animations
+  --animation-duration-1: 150ms;
+  --animation-duration-2: 300ms;
+  --animation-duration-3: 500ms;
+  --trs-1: var(--animation-duration-1) ease-out;
+  --trs-2: var(--animation-duration-2) ease-out;
+  --trs-3: var(--animation-duration-3) ease-out;
+
+
+
+
 
   @include media-breakpoint-up(xl) {
     --content-width: #{map-get($container-max-widths, xl)};

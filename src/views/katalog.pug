@@ -1,0 +1,110 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Амулеты'
+  -var breadcrumbs_links = ['Главная', 'Каталог', page_title]
+
+block content
+
+  include blocks/breadcrumbs
+  
+  section.section.catalog
+    .container
+      h1.mb-1.mb-sm-2 Амулеты
+      .swiper.slider-constructor.catalog-categories-slider.catalog__categories(data-slides='auto' data-free-mode='true')
+        .swiper-container 
+          .swiper-wrapper
+            .swiper-slide
+              a(href="#").category-label.catalog-category-label
+                .image.image_contain.catalog-category-label__image
+                  img(src='#' data-src="./img/label1.png", alt="img").lazyload
+                h5.category-label__title.catalog-category-label__title Славянские амулеты
+            .swiper-slide
+              a(href="#").category-label.catalog-category-label
+                .image.image_contain.catalog-category-label__image
+                  img(src='#' data-src="./img/label2.png", alt="img").lazyload
+                h5.category-label__title.catalog-category-label__title Кельтские и скандинавские амулеты
+            .swiper-slide
+              a(href="#").category-label.catalog-category-label
+                .image.image_contain.catalog-category-label__image
+                  img(src='#' data-src="./img/label3.png", alt="img").lazyload
+                h5.category-label__title.catalog-category-label__title Сакральные символы и знаки
+            .swiper-slide
+              a(href="#").category-label.catalog-category-label
+                .image.image_contain.catalog-category-label__image
+                  img(src='#' data-src="./img/label4.png", alt="img").lazyload
+                h5.category-label__title.catalog-category-label__title Животные-покровители амулеты и знаки
+
+      .catalog__container 
+
+        aside.catalog__aside
+          include blocks/filter
+
+        .catalog__content
+
+          .catalog__sorting
+            a(href="#filter" data-action="side_modal_open").button.button_style-3.catalog__sorting-button.d-xl-none
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#Funnel')
+            .select.flex-grow-1.flex-sm-grow-0
+              select
+                option(value='Цена (по возрастанию)' selected) Цена (по возрастанию)
+                option(value='Цена (по убыванию)') Цена (по убыванию)
+                option(value='По популярности' disabled) По популярности
+          
+          .catalog__items 
+            +product-card(1)
+            +product-card(2)
+            +product-card(3)
+            +product-card(4)
+            +product-card(1)
+            +product-card(2)
+            +product-card(3)
+            +product-card(4)
+            +product-card(1)
+            +product-card(2)
+            +product-card(3)
+            +product-card(4)
+
+          .catalog__more 
+            .visibility-info-module
+              .visibility-info-module__text Отображается <span>12</span> из <span>36</span>
+              .visibility-info-module__scale
+                .visibility-info-module__scale-line(style='width:calc(12 / 36 * 100%)')
+              .visibility-info-module__button 
+                button.button.button_style-3
+                  span.button__inner.button__default 
+                    span Показать больше
+          
+          .catalog__pagination 
+            .pagination
+              a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__prev
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#caret-left')
+                span Предыдущая
+              ul.pagination__list  
+                li.pagination__item 
+                  a(href="#").link.link_type-2.pagination__link 
+                    span 1
+                li.pagination__item 
+                  a(href="javascript:void(0);").link.link_type-2.pagination__link.active
+                    span 2
+                li.pagination__item 
+                  a(href="#").link.link_type-2.pagination__link 
+                    span 3
+                li.pagination__item 
+                  a(href="#").link.link_type-2.pagination__link 
+                    span 4
+                li.pagination__item 
+                  a(href="#").link.link_type-2.pagination__link 
+                    span ...
+                li.pagination__item 
+                  a(href="#").link.link_type-2.pagination__link 
+                    span 15           
+              a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__next
+                span Следующая
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#caret-right')
+
+
+  include blocks/mailing-banner

@@ -1,0 +1,114 @@
+.side-modal.filter#filter
+  .side-modal__container.filter__container(data-scroll-lock-scrollable)
+    .side-modal__head.filter__head
+      button(data-action="side_modal_close" aria-label='Закрыть фильтр').close-element.side-modal__close
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#close')
+
+    form(action="#").side-modal__content.filter__content
+      .filter-box 
+        h6.filter-box__title Цена
+        .filter-box__inputs 
+          .input.filter-input
+            span от
+            input(type="number" placeholder="999")
+          
+          .input.filter-input
+            span до
+            input(type="number" placeholder="9000" value="9000")
+      
+      .filter-box 
+        h6.filter-box__title Тип товара
+        .filter-box__items
+          .filter-box__item
+            +checkbox('Славянские амулеты <span class="color-dark fw-normal">(112)</span>', true)
+          .filter-box__item
+            +checkbox('Тибетские амулеты <span class="color-dark fw-normal">(65)</span>')
+          .filter-box__item
+            +checkbox('Китайские амулеты <span class="color-dark fw-normal">(31)</span>')
+          .filter-box__item
+            +checkbox('Сакральные символы и знаки <span class="color-dark fw-normal">(9)</span>')
+
+          .filter-box__more(data-collapse='parent')
+            .filter-box__more-content.active(data-collapse='content')
+              .filter-box__item
+                +checkbox('Кельтские и скандинавские амулеты <span class="color-dark fw-normal">(179)</span>')
+              .filter-box__item
+                +checkbox('Восточные амулеты <span class="color-dark fw-normal">(100)</span>')
+              .filter-box__item
+                +checkbox('Египетские амулеты <span class="color-dark fw-normal">(28)</span>')
+              .filter-box__item
+                +checkbox('Индейские амулеты <span class="color-dark fw-normal">(3)</span>')
+            button(type='button' data-collapse='toggle').icon-link.filter-box__more-toggle.active
+              span Свернуть
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#caret-bottom')
+
+      .filter-box 
+        h6.filter-box__title Назначение
+        .filter-box__items
+          .filter-box__item
+            +checkbox('Здоровье <span class="color-dark fw-normal">(112)</span>')
+          .filter-box__item
+            +checkbox('Карьера <span class="color-dark fw-normal">(65)</span>')
+          .filter-box__item
+            +checkbox('Богатство <span class="color-dark fw-normal">(31)</span>')
+          .filter-box__item
+            +checkbox('Гармония <span class="color-dark fw-normal">(9)</span>')
+
+          .filter-box__more(data-collapse='parent')
+            .filter-box__more-content(data-collapse='content')
+              .filter-box__item
+                +checkbox('Жизненная энергия <span class="color-dark fw-normal">(179)</span>')
+              .filter-box__item
+                +checkbox('Защита от негатива <span class="color-dark fw-normal">(100)</span>')
+              .filter-box__item
+                +checkbox('Молодость и красота <span class="color-dark fw-normal">(28)</span>')
+            button(type='button' data-collapse='toggle').icon-link.filter-box__more-toggle
+              span Развернуть
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#caret-bottom')
+
+      .filter-box 
+        h6.filter-box__title Материал
+        .filter-box__items
+          .filter-box__item
+            +checkbox('Металл <span class="color-dark fw-normal">(112)</span>')
+          .filter-box__item
+            +checkbox('Кость <span class="color-dark fw-normal">(65)</span>')
+          .filter-box__item
+            +checkbox('Латунь <span class="color-dark fw-normal">(31)</span>')
+          .filter-box__item
+            +checkbox('Медь <span class="color-dark fw-normal">(9)</span>')
+          .filter-box__item
+            +checkbox('Мельхиор <span class="color-dark fw-normal">(112)</span>')
+          .filter-box__item
+            +checkbox('Олово <span class="color-dark fw-normal">(65)</span>')
+
+      .filter-box 
+        h6.filter-box__title Преимущества покупки
+        .filter-box__items
+          .filter-box__item
+            +checkbox('Для спасения <span class="color-dark fw-normal">(112)</span>')
+          .filter-box__item
+            +checkbox('Нумерологический оберег <span class="color-dark fw-normal">(65)</span>')
+          .filter-box__item
+            +checkbox('Дополнительные свойства <span class="color-dark fw-normal">(31)</span>')
+          .filter-box__item
+            +checkbox('Материалы из космоса <span class="color-dark fw-normal">(9)</span>')
+
+          .filter-box__more(data-collapse='parent')
+            .filter-box__more-content(data-collapse='content')
+              .filter-box__item
+                +checkbox('Жизненная энергия <span class="color-dark fw-normal">(179)</span>')
+              .filter-box__item
+                +checkbox('Защита от негатива <span class="color-dark fw-normal">(100)</span>')
+              .filter-box__item
+                +checkbox('Молодость и красота <span class="color-dark fw-normal">(28)</span>')
+            button(type='button' data-collapse='toggle').icon-link.filter-box__more-toggle
+              span Развернуть
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#caret-bottom')
+          
+
+

@@ -43,7 +43,6 @@ block content
                 span Перейти к выбору
     .swiper-pagination
 
-
   section.section.popular-categories
     .container 
       +section-head('Популярные категории', 'Смотреть все')
@@ -72,7 +71,7 @@ block content
   section.section
     .container 
       +section-head('Часто покупаемые товары', 'Смотреть все')
-      .swiper.product-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4') 
+      .swiper.product-cards-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4') 
         .swiper-button.swiper-button-prev(data-custom-interaction)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -103,10 +102,10 @@ block content
   section.section
     .container
       +section-head('Новое поступление', 'Смотреть все')
-      .swiper.product-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
+      .swiper.product-cards-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
         .swiper-button.swiper-button-prev(data-custom-interaction)
           svg.icon
-            use(xlink:href='./img/icons/icons.svg#caret-right')
+            use(xlink:href='./img/icons/icons.svg#caret-left')
         .swiper-button.swiper-button-next(data-custom-interaction)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -157,7 +156,7 @@ block content
       .swiper.blog-slider.slider-constructor(data-slides='1' data-sm-slides='2' data-xl-slides='3')
         .swiper-button.swiper-button-prev(data-custom-interaction)
           svg.icon
-            use(xlink:href='./img/icons/icons.svg#caret-right')
+            use(xlink:href='./img/icons/icons.svg#caret-left')
         .swiper-button.swiper-button-next(data-custom-interaction)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -175,4 +174,7 @@ block content
             //slide
             .swiper-slide 
               +blog-card(2)
+        
+      .d-block.d-md-none.mt-2
+        a(href="#").button.button_style-3.button_wide Читать всё
               

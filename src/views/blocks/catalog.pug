@@ -1,9 +1,9 @@
 mixin box(title, items, type)
   -var index = 0
-  .catalog-block__box.col-sm-6.col-md-4.col-lg-3
-    h4.catalog-block__box-title
+  .catalog-modal-block__box.col-sm-6.col-md-4.col-lg-3
+    h4.catalog-modal-block__box-title
       if type == 'test'
-        a(href="#blagovoniya" data-catalog="trigger")
+        a(href="#blagovoniya" data-action="catalog-modal_trigger")
           span=title
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -12,13 +12,13 @@ mixin box(title, items, type)
           span=title 
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-right')
-    ul.catalog-block__box-list.list
+    ul.catalog-modal-block__box-list.list
       each val in items
         li
           if index < 4
             
             if type == 'test' && index == 1
-              a(href="#tibetskie-blagovoniya" data-catalog="trigger")
+              a(href="#tibetskie-blagovoniya" data-action="catalog-modal_trigger")
                 span #{val} (рабочая ссылка)
                 
             else 
@@ -27,16 +27,16 @@ mixin box(title, items, type)
 
           else 
             if type == 'test'
-              a(href="#blagovoniya" data-catalog="trigger").catalog-block__more-link
+              a(href="#blagovoniya" data-action="catalog-modal_trigger").catalog-modal-block__more-link
                 strong=val
             else 
-              a(href="#").catalog-block__more-link 
+              a(href="#").catalog-modal-block__more-link 
                 strong=val
         
         -index++
 
     if type == 'test'
-      a(href="#blagovoniya" data-catalog="trigger").catalog-block__box-mobile-link
+      a(href="#blagovoniya" data-action="catalog-modal_trigger").catalog-modal-block__box-mobile-link
         each val, index in items
           if index < items.length - 2
             | #{val}, 
@@ -45,7 +45,7 @@ mixin box(title, items, type)
           else 
             | #{val}
     else 
-      a(href="#").catalog-block__box-mobile-link
+      a(href="#").catalog-modal-block__box-mobile-link
         each val, index in items
           if index < items.length - 2
             | #{val}, 
@@ -56,9 +56,9 @@ mixin box(title, items, type)
 
 
 mixin item(title, type)
-  .catalog-block__item.col-sm-6.col-md-4.col-lg-3
+  .catalog-modal-block__item.col-sm-6.col-md-4.col-lg-3
     if type == 'test'
-      a(href="#tibetskie-blagovoniya" data-catalog="trigger")
+      a(href="#tibetskie-blagovoniya" data-action="catalog-modal_trigger")
         span #{title} (рабочая ссылка)
         svg.icon
           use(xlink:href='./img/icons/icons.svg#caret-right')
@@ -69,26 +69,26 @@ mixin item(title, type)
           use(xlink:href='./img/icons/icons.svg#caret-right')
 
 
-.catalog(data-scroll-lock-scrollable)
-  .catalog__head
-    .container.catalog__head-container
-      .catalog__head-left 
-        a(href="./").logo.catalog__logo
+.catalog-modal(data-scroll-lock-scrollable)
+  .catalog-modal__head
+    .container.catalog-modal__head-container
+      .catalog-modal__head-left 
+        a(href="./").logo.catalog-modal__logo
           img(src="./img/logos/logo.png", alt="logo").logo__image
 
-        a(href="tel:88001000750").catalog__head-phone 8 800 1000 750
+        a(href="tel:88001000750").catalog-modal__head-phone 8 800 1000 750
 
-      button(data-catalog="close" aria-label='close catalog').close-element.catalog__close
+      button(data-action="catalog-modal_close" aria-label='Закрыть каталог').close-element.catalog-modal__close
         svg.icon
           use(xlink:href='./img/icons/icons.svg#close')
 
-  .catalog__content 
+  .catalog-modal__content 
     .container 
 
-      .catalog-block#vse-kategorii.is-active
-        h2.h1.catalog-block__title Каталог
-        .catalog-block__content
-          .catalog-block__boxes.row
+      .catalog-modal-block#vse-kategorii.d-block
+        h2.h1.catalog-modal-block__title Каталог
+        .catalog-modal-block__content
+          .catalog-modal-block__boxes.row
 
             +box('Благовония', ['Индийские благовония', 'Тибетские благовония', 'Бутанские благовония', 'Японские благовония', 'Ещё 5'], 'test')
             +box('Свечи', ['Свечи цветные', 'Ритуальные свечи', 'Свечи из вощины', 'Ароматические', 'Ещё 3'])
@@ -102,15 +102,15 @@ mixin item(title, type)
             +box('Предметы для алтаря', ['Буддистские', 'Индуистские', 'Четки', 'Тханки'])
             +box('Фэн-шуй', ['Божества фэн-шуй', 'Животные фэн-шуй', 'Талисманы фэн-шуй', 'Ловцы снов', 'Ещё 7'])
 
-      .catalog-block#tibetskie-blagovoniya
-        a(href="#blagovoniya" data-catalog="trigger").icon-link.icon-link_type-2.catalog-block__back
+      .catalog-modal-block#tibetskie-blagovoniya
+        a(href="#blagovoniya" data-action="catalog-modal_trigger").icon-link.icon-link_type-2.catalog-modal-block__back
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-left')
           span Благовония
-        h2.h1.catalog-block__title
+        h2.h1.catalog-modal-block__title
           a(href="#") Тибетские благовония
-        .catalog-block__content
-          .catalog-block__items.row
+        .catalog-modal-block__content
+          .catalog-modal-block__items.row
             +item('Уточки-мандаринки')
             +item('Трехлапая жаба')
             +item('Слоны и носороги')
@@ -124,15 +124,15 @@ mixin item(title, type)
             +item('Три обезьяны')
             +item('Лошади и быки')
 
-      .catalog-block#blagovoniya
-        a(href="#vse-kategorii" data-catalog="trigger").icon-link.icon-link_type-2.catalog-block__back
+      .catalog-modal-block#blagovoniya
+        a(href="#vse-kategorii" data-action="catalog-modal_trigger").icon-link.icon-link_type-2.catalog-modal-block__back
           svg.icon
             use(xlink:href='./img/icons/icons.svg#caret-left')
           span Все категории
-        h2.h1.catalog-block__title
+        h2.h1.catalog-modal-block__title
           a(href="#") Благовония
-        .catalog-block__content
-          .catalog-block__items.row
+        .catalog-modal-block__content
+          .catalog-modal-block__items.row
             +item('Индийские благовония')
             +item('Тибетские благовония', 'test')
             +item('Бутанские благовония')

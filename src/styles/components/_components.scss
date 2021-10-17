@@ -88,7 +88,6 @@ img {
   --color-hover: var(--color-text-accent);
   display: inline-flex;
   align-items: center;
-  overflow: hidden;
   color: var(--color);
   transition: color $trs1;
   span {
@@ -105,7 +104,6 @@ img {
     }
     &:last-child {
       margin-left: 8px;
-      transform: translateY(1px);
     }
   }
   &_type-2 {
@@ -114,6 +112,21 @@ img {
   }
   &[data-touch], &[data-hover] {
     color: var(--color-hover);
+  }
+}
+
+.link {
+  --color: var(--color-text-dark);
+  --color-hover: var(--color-text-accent);
+  color: var(--color);
+  transition: color $trs1;
+  display: inline-block;
+  &[data-touch], &[data-hover] {
+    color: var(--color-hover);
+  }
+  &_type-2 {
+    --color: var(--color-text-muted);
+    --color-hover: var(--color-text-dark);
   }
 }
 
@@ -128,5 +141,14 @@ img {
   }
   &[data-touch], &[data-hover] {
     color: var(--color-3);
+  }
+}
+
+
+[data-collapse='content'] {
+  overflow: hidden;
+  height: 0;
+  &.active {
+    height: auto;
   }
 }

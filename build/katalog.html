@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gold Hands - Избранное</title>
+    <title>Gold Hands - Амулеты</title>
     <meta name="viewport" content="width=375, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png">
     <!--open graph-->
-    <meta property="og:title" content="Избранное">
+    <meta property="og:title" content="Амулеты">
     <meta property="og:site_name" content="Gold Hands">
     <meta property="og:url" content="url текущей страницы...">
     <meta property="og:description" content="Описание текущей страницы...">
@@ -503,28 +503,362 @@
         </div>
       </div>
       <main class="main">
-        <section class="section lk">
-          <div class="container"> 
-            <div class="row"> 
-              <div class="col-xl-3">
-                <div class="lk-nav"><a class="lk-nav__link" href="lk-zakazy.html">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#ShoppingBagOpen"></use>
-                    </svg>Мои заказы </a><a class="lk-nav__link" href="lk-profile.html">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#LockLaminated"></use>
-                    </svg>Профиль</a><a class="lk-nav__link active" href="lk-favorites.html">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#BookmarksSimple"></use>
-                    </svg>Избранное</a></div>
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container">
+            <ul class="breadcrumbs__list"> 
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="./">Главная
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="#">Каталог
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumbs__item">Амулеты</li>
+            </ul>
+          </div>
+        </div>
+        <section class="section catalog">
+          <div class="container">
+            <h1 class="mb-1 mb-sm-2">Амулеты</h1>
+            <div class="swiper slider-constructor catalog-categories-slider catalog__categories" data-slides="auto" data-free-mode="true">
+              <div class="swiper-container"> 
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label1.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Славянские амулеты</h5></a></div>
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label2.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Кельтские и скандинавские амулеты</h5></a></div>
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label3.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Сакральные символы и знаки</h5></a></div>
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label4.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Животные-покровители амулеты и знаки</h5></a></div>
+                </div>
               </div>
-              <div class="col-xl-9"> 
-                <h1 class="lk__title">Избранное</h1>
-                <div class="catalog-products-grid">
+            </div>
+            <div class="catalog__container"> 
+              <aside class="catalog__aside">
+                <div class="side-modal filter" id="filter">
+                  <div class="side-modal__container filter__container" data-scroll-lock-scrollable>
+                    <div class="side-modal__head filter__head">
+                      <button class="close-element side-modal__close" data-action="side_modal_close" aria-label="Закрыть фильтр">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <form class="side-modal__content filter__content" action="#">
+                      <div class="filter-box"> 
+                        <h6 class="filter-box__title">Цена</h6>
+                        <div class="filter-box__inputs"> 
+                          <div class="input filter-input"><span>от</span>
+                            <input type="number" placeholder="999">
+                          </div>
+                          <div class="input filter-input"><span>до</span>
+                            <input type="number" placeholder="9000" value="9000">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-box"> 
+                        <h6 class="filter-box__title">Тип товара</h6>
+                        <div class="filter-box__items">
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox" checked="checked"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Славянские амулеты <span class="color-dark fw-normal">(112)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Тибетские амулеты <span class="color-dark fw-normal">(65)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Китайские амулеты <span class="color-dark fw-normal">(31)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Сакральные символы и знаки <span class="color-dark fw-normal">(9)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__more" data-collapse="parent">
+                            <div class="filter-box__more-content active" data-collapse="content">
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Кельтские и скандинавские амулеты <span class="color-dark fw-normal">(179)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Восточные амулеты <span class="color-dark fw-normal">(100)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Египетские амулеты <span class="color-dark fw-normal">(28)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Индейские амулеты <span class="color-dark fw-normal">(3)</span></span>
+                                </label>
+                              </div>
+                            </div>
+                            <button class="icon-link filter-box__more-toggle active" type="button" data-collapse="toggle"><span>Свернуть</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-box"> 
+                        <h6 class="filter-box__title">Назначение</h6>
+                        <div class="filter-box__items">
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Здоровье <span class="color-dark fw-normal">(112)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Карьера <span class="color-dark fw-normal">(65)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Богатство <span class="color-dark fw-normal">(31)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Гармония <span class="color-dark fw-normal">(9)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__more" data-collapse="parent">
+                            <div class="filter-box__more-content" data-collapse="content">
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Жизненная энергия <span class="color-dark fw-normal">(179)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Защита от негатива <span class="color-dark fw-normal">(100)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Молодость и красота <span class="color-dark fw-normal">(28)</span></span>
+                                </label>
+                              </div>
+                            </div>
+                            <button class="icon-link filter-box__more-toggle" type="button" data-collapse="toggle"><span>Развернуть</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-box"> 
+                        <h6 class="filter-box__title">Материал</h6>
+                        <div class="filter-box__items">
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Металл <span class="color-dark fw-normal">(112)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Кость <span class="color-dark fw-normal">(65)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Латунь <span class="color-dark fw-normal">(31)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Медь <span class="color-dark fw-normal">(9)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Мельхиор <span class="color-dark fw-normal">(112)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Олово <span class="color-dark fw-normal">(65)</span></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-box"> 
+                        <h6 class="filter-box__title">Преимущества покупки</h6>
+                        <div class="filter-box__items">
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Для спасения <span class="color-dark fw-normal">(112)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Нумерологический оберег <span class="color-dark fw-normal">(65)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Дополнительные свойства <span class="color-dark fw-normal">(31)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__item">
+                            <label class="checkbox">
+                              <input type="checkbox"/><span>
+                                <svg class="icon">
+                                  <use xlink:href="./img/icons/icons.svg#check"></use>
+                                </svg>Материалы из космоса <span class="color-dark fw-normal">(9)</span></span>
+                            </label>
+                          </div>
+                          <div class="filter-box__more" data-collapse="parent">
+                            <div class="filter-box__more-content" data-collapse="content">
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Жизненная энергия <span class="color-dark fw-normal">(179)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Защита от негатива <span class="color-dark fw-normal">(100)</span></span>
+                                </label>
+                              </div>
+                              <div class="filter-box__item">
+                                <label class="checkbox">
+                                  <input type="checkbox"/><span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons.svg#check"></use>
+                                    </svg>Молодость и красота <span class="color-dark fw-normal">(28)</span></span>
+                                </label>
+                              </div>
+                            </div>
+                            <button class="icon-link filter-box__more-toggle" type="button" data-collapse="toggle"><span>Развернуть</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </aside>
+              <div class="catalog__content">
+                <div class="catalog__sorting"><a class="button button_style-3 catalog__sorting-button d-xl-none" href="#filter" data-action="side_modal_open">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#Funnel"></use>
+                    </svg></a>
+                  <div class="select flex-grow-1 flex-sm-grow-0">
+                    <select>
+                      <option value="Цена (по возрастанию)" selected>Цена (по возрастанию)</option>
+                      <option value="Цена (по убыванию)">Цена (по убыванию)</option>
+                      <option value="По популярности" disabled>По популярности</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="catalog__items"> 
                   <!--product card START-->
                   <div class="product-card" data-custom-interaction="data-custom-interaction">
-                    <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
-                      <button class="product-favourite product-card__favourite is-active">
+                    <div class="product-card__image">
+                      <div class="product-labels product-card__labels">
+                        <div class="product-label product-label_type-bestseller">Хит продаж</div>
+                        <div class="product-label product-label_type-new">Новинка</div>
+                      </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
                         <svg class="icon">
                           <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
                         </svg>
@@ -575,6 +909,142 @@
                     </div>
                     <div class="product-card__button"> 
                       <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">250 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 100 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок (Dashamoola Powder) натуральный травяной</a>
+                      </div>
+                      <div class="product-card__category-label"> Косметические (базовые) масла
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image">
+                      <div class="product-labels product-card__labels">
+                        <div class="product-label product-label_type-low-price">Цена снижена</div>
+                      </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">1100 ₽</div>
+                            <div class="product-card__old-price">1 490 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Косметическое масло-баттер МАНГО, Крымская роза, 100 г.</a>
+                      </div>
+                      <div class="product-card__category-label"> Саморазвитие
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
                           <svg class="icon">
                             <use xlink:href="./img/icons/icons.svg#handbag"></use>
                           </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -655,6 +1125,212 @@
                   <!--product card END-->
                   <!--product card START-->
                   <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image">
+                      <div class="product-labels product-card__labels">
+                        <div class="product-label product-label_type-bestseller">Хит продаж</div>
+                        <div class="product-label product-label_type-new">Новинка</div>
+                      </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">250 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 100 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                      </div>
+                      <div class="product-card__category-label"> Биодобавки и травы
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">250 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 100 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок (Dashamoola Powder) натуральный травяной</a>
+                      </div>
+                      <div class="product-card__category-label"> Косметические (базовые) масла
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image">
+                      <div class="product-labels product-card__labels">
+                        <div class="product-label product-label_type-low-price">Цена снижена</div>
+                      </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">1100 ₽</div>
+                            <div class="product-card__old-price">1 490 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Косметическое масло-баттер МАНГО, Крымская роза, 100 г.</a>
+                      </div>
+                      <div class="product-card__category-label"> Саморазвитие
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
                     <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
                       <button class="product-favourite product-card__favourite is-active">
                         <svg class="icon">
@@ -707,6 +1383,212 @@
                     </div>
                     <div class="product-card__button"> 
                       <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image">
+                      <div class="product-labels product-card__labels">
+                        <div class="product-label product-label_type-bestseller">Хит продаж</div>
+                        <div class="product-label product-label_type-new">Новинка</div>
+                      </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">250 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 100 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                      </div>
+                      <div class="product-card__category-label"> Биодобавки и травы
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">250 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 100 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок (Dashamoola Powder) натуральный травяной</a>
+                      </div>
+                      <div class="product-card__category-label"> Косметические (базовые) масла
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                          </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                          </svg></span><span class="button__inner button__is-active"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                          </svg><span>В корзине</span></span></button>
+                    </div>
+                  </div>
+                  <!--product card END-->
+                  <!--product card START-->
+                  <div class="product-card" data-custom-interaction="data-custom-interaction">
+                    <div class="product-card__image">
+                      <div class="product-labels product-card__labels">
+                        <div class="product-label product-label_type-low-price">Цена снижена</div>
+                      </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
+                      <button class="product-favourite product-card__favourite">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__content">
+                      <div class="product-card__content-top"> 
+                        <div class="product-card__top-content"> 
+                          <div class="product-card__pricing"> 
+                            <div class="product-card__price">1100 ₽</div>
+                            <div class="product-card__old-price">1 490 ₽</div>
+                          </div>
+                          <button class="product-card__to-card"> 
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                          </button>
+                        </div><a class="product-card__reviews" href="#">
+                          <div class="product-card__reviews-stars">
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                              </svg>
+                            </div>
+                            <div class="product-card__reviews-star">
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#star-empty"></use>
+                              </svg>
+                            </div>
+                          </div><span> 16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Косметическое масло-баттер МАНГО, Крымская роза, 100 г.</a>
+                      </div>
+                      <div class="product-card__category-label"> Саморазвитие
+                      </div>
+                    </div>
+                    <div class="product-card__button"> 
+                      <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
                           <svg class="icon">
                             <use xlink:href="./img/icons/icons.svg#handbag"></use>
                           </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -786,10 +1668,49 @@
                   </div>
                   <!--product card END-->
                 </div>
+                <div class="catalog__more"> 
+                  <div class="visibility-info-module">
+                    <div class="visibility-info-module__text">Отображается <span>12</span> из <span>36</span></div>
+                    <div class="visibility-info-module__scale">
+                      <div class="visibility-info-module__scale-line" style="width:calc(12 / 36 * 100%)"></div>
+                    </div>
+                    <div class="visibility-info-module__button"> 
+                      <button class="button button_style-3"><span class="button__inner button__default"> <span>Показать больше</span></span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__pagination"> 
+                  <div class="pagination"><a class="icon-link icon-link_type-2 pagination__link pagination__prev" href="#">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#caret-left"></use>
+                      </svg><span>Предыдущая</span></a>
+                    <ul class="pagination__list"> 
+                      <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>1</span></a></li>
+                      <li class="pagination__item"> <a class="link link_type-2 pagination__link active" href="javascript:void(0);"><span>2</span></a></li>
+                      <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>3</span></a></li>
+                      <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>4</span></a></li>
+                      <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>...</span></a></li>
+                      <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>15           </span></a></li>
+                    </ul><a class="icon-link icon-link_type-2 pagination__link pagination__next" href="#"><span>Следующая</span>
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
+        <div class="mailing-banner"> 
+          <div class="container mailing-banner__container"><img class="lazyload mailing-banner__image" src="#" data-src="./img/phone.png" alt="image">
+            <div class="mailing-banner__text-content"> 
+              <h2 class="mailing-banner__title">Подпишитесь на нашу рассылку и получайте бонусы!</h2>
+              <div class="mailing-banner__text">
+                <p>Для всех подписчиков действуют премиальные скидки и закрытые распродажи!<br> Мы не спамим и отправляем всего по 1 письму в неделю!</p>
+              </div><a class="button button_style-2 mailing-banner__button" href="#"><span class="button__inner button__default"> <span>Подписаться</span></span></a>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="container"> 

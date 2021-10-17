@@ -45,9 +45,6 @@ $utilities: map-get-multiple($utilities, ("display", "order", "flex", "flex-dire
 /*========== Components ==========*/
 @import "./components/components";
 
-/*========== Blocks ==========*/
-@import 'components/blocks';
-
 /*========== Modals ==========*/
 @import "./components/modals";
 
@@ -65,6 +62,9 @@ $utilities: map-get-multiple($utilities, ("display", "order", "flex", "flex-dire
 
 /*========== Footer ==========*/
 @import 'components/footer';
+
+/*========== Blocks ==========*/
+@import 'components/blocks';
 
 /*========== Lk ==========*/
 @import 'components/lk';

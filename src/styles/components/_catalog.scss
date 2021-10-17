@@ -1,4 +1,4 @@
-.catalog {
+.catalog-modal {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -8,9 +8,6 @@
   left: 0;
   overflow: auto;
   display: none;
-  &.is-active {
-    display: block;
-  }
   &__head {
     position: sticky;
     top: 0;
@@ -65,13 +62,10 @@
   }
 }
 
-.catalog-block {
+.catalog-modal-block {
   padding: 60px 0;
   position: relative;
   display: none;
-  &.is-active {
-    display: block;
-  }
   &__title {
     margin-top: 0;
   }

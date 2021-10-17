@@ -2,14 +2,15 @@
 
 mixin checkbox(title, checked)
   -let index = Math.round(Math.random() * 1000000)
-  .checkbox
-    input(type="checkbox" id=index checked=checked)
-    label(for=index) 
+  label.checkbox
+    input(type="checkbox" checked=checked)
+    span
       svg.icon
         use(xlink:href='./img/icons/icons.svg#check')
-      span !{title}
+      | !{title}
 
 mixin product-card(type)
+  //product card START
   .product-card(data-custom-interaction)
     .product-card__image
       if type == 1
@@ -98,8 +99,10 @@ mixin product-card(type)
           svg.icon
             use(xlink:href='./img/icons/icons.svg#check-round')
           span В корзине
+  //product card END
 
 mixin blog-card(type)
+  //blog card START
   article.blog-card(data-custom-interaction)
     .blog-card__image 
       a(href="#").image.image_cover 
@@ -128,7 +131,7 @@ mixin blog-card(type)
             svg.icon
               use(xlink:href='./img/icons/icons.svg#eye')
             span 9500
-
+  //blog card END
 
         
 

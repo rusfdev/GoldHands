@@ -48,8 +48,6 @@
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 100%;
-  height: 100%;
   position: relative;
   transition-property: transform;
 }
@@ -157,9 +155,6 @@
   &-wrapper {
     transition-timing-function: var(--slider-animation-function);
   }
-  &-slide {
-    height: initial;
-  }
   &-button {
     position: absolute;
     z-index: 2;
@@ -181,9 +176,6 @@
     }
     &-prev {
       left: calc(var(--button-size) / -2);
-      .icon {
-        transform: rotate(180deg);
-      }
     }
     &-next {
       right: calc(var(--button-size) / -2);
@@ -205,7 +197,7 @@
       height: var(--pagination-height);
       border-radius: calc(var(--pagination-height) / 2);
       background-color: var(--pagination-color);
-      transition: width var(--slider-animation-duration) var(--slider-animation-function), background-color $trs1;
+      transition: width var(--animation-duration-3) var(--slider-animation-function), background-color var(--trs-1);
       will-change: width;
       &:not(:last-child) {
         margin-right: 5px;

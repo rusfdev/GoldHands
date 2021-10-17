@@ -1,26 +1,60 @@
-gsap.defaults({
-  duration: +getComputedStyle(document.documentElement).getPropertyValue('--default-animation-duration').replace(/[^\d.-]/g, '') / 1000,
-  ease: 'power1.inOut'
-});
-
-gsap.registerEffect({
-  name: "fadeIn",
-  effect: ($element) => {
-    return gsap.fromTo($element, {autoAlpha: 0}, {immediateRender: false, autoAlpha:1})
-  },
-  extendTimeline: true
-});
-
 const breakpoints = {
   sm: 576,
   md: 768,
   lg: 1024,
   xl: 1280
 }
+
 const $wrapper = document.querySelector('.wrapper');
 
-const slide_speed = +getComputedStyle(document.documentElement).getPropertyValue('--slider-animation-duration').replace(/[^\d.-]/g, '');
+//animation duration
+const animation_duration_1 = parseInt(getComputedStyle(document.documentElement)
+  .getPropertyValue('--animation-duration-1')
+  .replace(/[^\d.-]/g, ''));
+const animation_duration_2 = parseInt(getComputedStyle(document.documentElement)
+  .getPropertyValue('--animation-duration-2')
+  .replace(/[^\d.-]/g, ''));
+const animation_duration_3 = parseInt(getComputedStyle(document.documentElement)
+  .getPropertyValue('--animation-duration-3')
+  .replace(/[^\d.-]/g, ''));
 
+gsap.defaults({
+  ease: "power2.inOut",
+  duration: animation_duration_1 / 1000
+});
+
+//animations
+gsap.registerEffect({
+  name: "fadeIn",
+  effect: ($element, config) => {
+    return gsap.fromTo($element, {autoAlpha: 0}, {immediateRender: false, autoAlpha: 1, duration: config.duration || animation_duration_1 / 1000,
+      onStart: () => {
+        $element.forEach($this => {
+          $this.classList.add('d-block');
+        })
+      },
+      onComplete: () => {
+        $element.forEach($this => {
+          gsap.set($this, {clearProps: "all"});
+        })
+      },
+      onReverseComplete: () => {
+        $element.forEach($this => {
+          gsap.set($this, {clearProps: "all"});
+          $this.classList.remove('d-block');
+        })
+      }
+    })
+  },
+  extendTimeline: true
+});
+gsap.registerEffect({
+  name: "slide",
+  effect: ($element, config) => {
+    return gsap.fromTo($element, {css: {height:'0px'}}, {css: {height:'auto'}, duration: config.duration || animation_duration_1 / 1000})
+  },
+  extendTimeline: true
+});
 
 document.addEventListener("DOMContentLoaded", function() {
   //set scrollbar width
@@ -35,12 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   CustomInteractionEvents.init();
   Header.init();
-  Catalog.init();
+  CatalogModal.init();
   MobileSearch.init();
   Modals.init();
   SideModals.init();
   ScrollTop.init();
   inputs();
+  collapse();
   password_visibility_toggle();
 
   document.querySelectorAll('.main-banner').forEach($this => {
@@ -49,6 +84,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelectorAll('.slider-constructor').forEach($this => {
     new SliderConstructor($this).init();
+  })
+
+  document.querySelectorAll('.product-slider').forEach($this => {
+    new ProductSlider($this).init();
+  })
+
+  document.querySelectorAll('.select select').forEach($this => {
+    new Select($this).init();
   })
 
 });
@@ -90,6 +133,37 @@ function inputs() {
   document.addEventListener('blur', events, true);
 }
 
+function collapse() {
+  let _toggle = '[data-collapse="toggle"]',
+      _parent = '[data-collapse="parent"]',
+      _content = '[data-collapse="content"]';
+
+  document.addEventListener('click', function(event) {
+    let $toggle = event.target.closest(_toggle);
+
+    if (!$toggle) return;
+
+    let $parent = $toggle.closest(_parent),
+        $content = $parent.querySelector(_content);
+
+    let state = () => {
+      return $content.classList.contains('active');
+    }
+
+    if (state()) {
+      gsap.effects.slide($content).reverse(0);
+      $content.classList.remove('active');
+      $toggle.classList.remove('active');
+      $toggle.querySelector('span').textContent = 'Развернуть';
+    } else {
+      gsap.effects.slide($content);
+      $content.classList.add('active');
+      $toggle.classList.add('active');
+      $toggle.querySelector('span').textContent = 'Свернуть';
+    }
+  })
+}
+
 function password_visibility_toggle() {
   document.addEventListener('click', (event) => {
     let $toggle = event.target.closest('.password-toggle');
@@ -105,7 +179,7 @@ function password_visibility_toggle() {
 
 const CustomInteractionEvents = Object.create({
   targets: {
-    value: 'a, button, [data-custom-interaction]'
+    value: 'a, button, label, .ss-option, [data-custom-interaction]'
   },
   touchEndDelay: {
     value: 100
@@ -212,7 +286,7 @@ const Header = {
 const MobileSearch = {
   init: function() {
     this.$element = document.querySelector('.header__search');
-    this.$toggle = document.querySelectorAll('[data-mobile-search="toggle"]');
+    this.$toggle = document.querySelectorAll('[data-action="mobile-search_toggle"]');
 
     this.animation = gsap.timeline({paused:true})
       .fadeIn(this.$element);
@@ -250,25 +324,24 @@ const MobileSearch = {
   }
 }
 
-const Catalog = {
+const CatalogModal = {
   init: function() {
-    this.$element = document.querySelector('.catalog');
-    this.$open = document.querySelectorAll('[data-catalog="open"]');
-    this.$close = document.querySelectorAll('[data-catalog="close"]');
+    this.$element = document.querySelector('.catalog-modal');
+    this.$open = document.querySelectorAll('[data-action="catalog-modal_open"]');
+    this.$close = document.querySelectorAll('[data-action="catalog-modal_close"]');
 
-    this.$category_triggers = this.$element.querySelectorAll('[data-catalog="trigger"]');
-    this.$active_category = this.$element.querySelector('.is-active');
+    this.$category_triggers = this.$element.querySelectorAll('[data-action="catalog-modal_trigger"]');
+    this.$active_category = this.$element.querySelector('.d-block');
 
-    this.animation = gsap.timeline({paused:true})
+    this.animation = gsap.timeline({paused: true})
       .fadeIn(this.$element);
 
     this.state = () => {
-      return this.$element.classList.contains('is-active');
+      return this.$element.classList.contains('d-block');
     }
 
     this.open = () => {
       this.animation.play().eventCallback('onStart', () => {
-        this.$element.classList.add('is-active');
         this.$element.scrollTop = '0';
         scrollLock.disablePageScroll(); 
       }); 
@@ -276,7 +349,6 @@ const Catalog = {
 
     this.close = () => {
       this.animation.reverse().eventCallback('onReverseComplete', () => {
-        this.$element.classList.remove('is-active');
         scrollLock.enablePageScroll();
       });
     }
@@ -302,9 +374,10 @@ const Catalog = {
             $target = this.$element.querySelector(target);
 
         if($target) {
-          this.$active_category.classList.remove('is-active');
-          gsap.effects.fadeIn($target).eventCallback('onStart', () => {
-            $target.classList.add('is-active');
+          this.$active_category.classList.remove('d-block');
+          gsap.timeline()
+            .fadeIn($target)
+          .eventCallback('onStart', () => {
             this.$element.scrollTop = '0';
             this.$active_category = $target;
           });
@@ -328,7 +401,6 @@ const Modals = {
           .fadeIn($modal)
           .fromTo($block, {y:20}, {y:0, ease:'power1.out'}, '<')
         .eventCallback('onStart', () => {
-          $modal.classList.add('is-active');
           $modal.scrollTop = '0';
           scrollLock.disablePageScroll();
         });
@@ -344,7 +416,6 @@ const Modals = {
       if(!this.$active || (this.animation && this.animation.isActive())) return;
 
       this.animation.reverse().eventCallback('onReverseComplete', () => {
-        this.$active.classList.remove('is-active');
         scrollLock.enablePageScroll();
         delete this.$active;
         if(callback) callback();
@@ -352,8 +423,8 @@ const Modals = {
     }
 
     document.addEventListener('click', (event) => {
-      let $open = event.target.closest('[data-modal="open"]'),
-          $close = event.target.closest('[data-modal="close"]'),
+      let $open = event.target.closest('[data-action="modal_open"]'),
+          $close = event.target.closest('[data-action="modal_close"]'),
           $parent = event.target.closest('.modal'),
           $block = event.target.closest('.modal-block');
 
@@ -381,10 +452,9 @@ const SideModals = {
         this.animation = gsap.timeline()
           .fadeIn($modal)
           .fromTo($block, {x:-50}, {x:0, ease:'power1.out'}, '<')
-        .eventCallback('onStart', () => {
-          $modal.classList.add('is-active');
-          scrollLock.disablePageScroll();
-        });;
+          .eventCallback('onStart', () => {
+            scrollLock.disablePageScroll();
+          });
 
         this.$active = $modal;
       }
@@ -397,7 +467,9 @@ const SideModals = {
       if(!this.$active || (this.animation && this.animation.isActive())) return;
 
       this.animation.reverse().eventCallback('onReverseComplete', () => {
-        this.$active.classList.remove('is-active');
+        let $block = this.$active.querySelector('.side-modal__container');
+        gsap.set($block, {clearProps: "all"});
+
         scrollLock.enablePageScroll();
         delete this.$active;
         if(callback) callback();
@@ -405,8 +477,8 @@ const SideModals = {
     }
 
     document.addEventListener('click', (event) => {
-      let $open = event.target.closest('[data-side-modal="open"]'),
-          $close = event.target.closest('[data-side-modal="close"]'),
+      let $open = event.target.closest('[data-action="side_modal_open"]'),
+          $close = event.target.closest('[data-action="side_modal_close"]'),
           $parent = event.target.closest('.side-modal'),
           $block = event.target.closest('.side-modal__container');
 
@@ -422,32 +494,27 @@ const SideModals = {
       if(window.innerWidth > breakpoints.xl && this.$active) this.close();
     })
 
-    //this.open(document.querySelector('#mobile-nav'))
   }
 }
 
 const ScrollTop = {
   init: function() {
     this.$element = document.querySelector('.scroll-top');
-    this.$button = this.$element.querySelector('.button');
+    this.$triggers = document.querySelectorAll('[data-action="scroll-top"]');
 
     this.animation = gsap.timeline({paused:true})
       .fadeIn(this.$element);
     
     this.state = () => {
-      return this.$element.classList.contains('is-active');
+      return this.$element.classList.contains('d-block');
     }
 
     this.show = () => {
-      this.animation.play().eventCallback('onStart', () => {
-        this.$element.classList.add('is-active');
-      });
+      this.animation.play();
     }
 
     this.hide = () => {
-      this.animation.reverse().eventCallback('onReverseComplete', () => {
-        this.$element.classList.remove('is-active');
-      });
+      this.animation.reverse();
     }
 
     this.check = () => {
@@ -462,14 +529,15 @@ const ScrollTop = {
       }
     }
 
-    this.$button.addEventListener('click', () => {
-      if(this.inScroll) return;
-
-      this.hide();
-      this.inScroll = true;
-      gsap.to(window, {scrollTo:0, duration:0.5, onComplete: () => {
-        this.inScroll = false;
-      }});
+    this.$triggers.forEach($trigger => {
+      $trigger.addEventListener('click', () => {
+        if(this.inScroll) return;
+        this.hide();
+        this.inScroll = true;
+        gsap.to(window, {scrollTo: 0, duration: animation_duration_3 / 1000, onComplete: () => {
+          this.inScroll = false;
+        }});
+      })
     })
 
     this.check();
@@ -489,7 +557,7 @@ class MainBanner {
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: 1,
-      speed: slide_speed,
+      speed: animation_duration_3,
       loop: true,
       lazy: {
         loadOnTransitionStart: true,
@@ -517,16 +585,20 @@ class SliderConstructor {
     this.$prev = this.$parent.querySelector('.swiper-button-prev');
     this.$next = this.$parent.querySelector('.swiper-button-next');
 
-    let slides_count = +this.$parent.getAttribute('data-slides') || 1,
-        slides_sm_count = +this.$parent.getAttribute('data-sm-slides') || slides_count,
-        slides_md_count = +this.$parent.getAttribute('data-md-slides') || slides_sm_count,
-        slides_lg_count = +this.$parent.getAttribute('data-lg-slides') || slides_md_count,
-        slides_xl_count = +this.$parent.getAttribute('data-xl-slides') || slides_lg_count;
+    let slides_count = this.$parent.getAttribute('data-slides') || 1,
+        slides_sm_count = this.$parent.getAttribute('data-sm-slides') || slides_count,
+        slides_md_count = this.$parent.getAttribute('data-md-slides') || slides_sm_count,
+        slides_lg_count = this.$parent.getAttribute('data-lg-slides') || slides_md_count,
+        slides_xl_count = this.$parent.getAttribute('data-xl-slides') || slides_lg_count,
+        free_mode = this.$parent.getAttribute('data-free-mode') || false;
+
+    console.log(slides_count)
 
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: slides_count,
-      speed: slide_speed,
+      freeMode: free_mode,
+      speed: animation_duration_3,
       pagination: {
         el: this.$pagination,
         clickable: true,
@@ -556,5 +628,63 @@ class SliderConstructor {
       }
     });
 
+  }
+}
+
+class Select {
+  constructor($select) {
+    this.$select = $select;
+  }
+
+  init() {
+    this.select = new SlimSelect({
+      select: this.$select,
+      showSearch: false,
+      showContent: 'down'
+    })
+
+    let $arrow = this.select.slim.container.querySelector('.ss-arrow span');
+
+    //add custom arrow
+    $arrow.insertAdjacentHTML('afterbegin', `
+      <svg class="icon" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <path d="M13,5.5l-5,5l-5-5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    `);
+  }
+}
+
+class ProductSlider {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$slider = this.$parent.querySelector('.swiper-container');
+    this.$miniature = this.$parent.querySelectorAll('.product-slider__miniature');
+
+    console.log(this.$miniature)
+
+    this.slider = new Swiper(this.$slider, {
+      touchStartPreventDefault: false,
+      speed: animation_duration_3
+    });
+
+    this.$miniature[0].classList.add('active');
+    this.slider.on('slideChange', (event) => {
+      this.$miniature.forEach($this => {
+        $this.classList.remove('active')
+      })
+      this.$miniature[event.realIndex].classList.add('active');
+    })
+
+    this.$miniature.forEach(($this, index) => {
+      $this.addEventListener('mouseenter', () => {
+        this.slider.slideTo(index);
+      })
+      $this.addEventListener('click', () => {
+        this.slider.slideTo(index);
+      })
+    })
   }
 }

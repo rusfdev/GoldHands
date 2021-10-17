@@ -4,7 +4,7 @@ header.header
     .container.header__top-container 
       ul.header__top-left-list
         li.header__top-left-item
-          a(href="#location-modal" data-modal='open').icon-link.header__icon-link
+          a(href="#location-modal" data-action='modal_open').icon-link.header__icon-link
             svg.icon
               use(xlink:href='./img/icons/icons.svg#navigation-arrow')
             span Санкт-Петербург
@@ -28,14 +28,14 @@ header.header
         .header__center-left-container 
 
           .header__mobile-buttons-left-list.d-xl-none
-            a(href="#mobile-nav" data-side-modal="open").header__mobile-button.header__mobile-button-item
+            a(href="#mobile-nav" data-action="side_modal_open").header__mobile-button.header__mobile-button-item
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#equals')
-            button(aria-label='toggle mobile search' data-mobile-search='toggle').header__mobile-button.header__mobile-button-item.header__icon-link
+            button(aria-label='Поиск' data-action="mobile-search_toggle").header__mobile-button.header__mobile-button-item.header__icon-link
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#magnifying-glass')
 
-          button(data-catalog="open" aria-label='open catalog').button.button_style-1.header__catalog-button
+          button(data-action="catalog-modal_open" aria-label='Открыть каталог').button.button_style-1.header__catalog-button
             svg.icon
               use(xlink:href='./img/icons/icons.svg#dots-nine')
             span Каталог товаров
