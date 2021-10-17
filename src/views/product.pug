@@ -1,0 +1,104 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Триглав Амулет защитный Берегиня №10 Aztek'
+  -var breadcrumbs_links = ['Главная', 'Каталог', 'Амулеты', 'Славянские амулеты', page_title]
+
+block content
+
+  include blocks/breadcrumbs
+  
+  section.section.product
+    .container
+      .product-head
+        //картинки
+        .product-slider.product-head__slider
+          .product-slider__miniatures
+            //small
+            .product-slider__miniature
+              .image.image_contain
+                img(data-src="./img/product-1.png", alt="image").lazyload
+            //small
+            .product-slider__miniature
+              .image.image_contain
+                img(data-src="./img/product-2.png", alt="image").lazyload
+            //small
+            .product-slider__miniature
+              .image.image_contain
+                img(data-src="./img/product-3.png", alt="image").lazyload
+          .swiper-container 
+            .swiper-wrapper
+              //large
+              .swiper-slide
+                .image.image_contain 
+                  img(data-src="./img/product-1.png", alt="image").lazyload
+              //large
+              .swiper-slide
+                .image.image_contain
+                  img(data-src="./img/product-2.png", alt="image").lazyload
+              //large
+              .swiper-slide
+                .image.image_contain
+                  img(data-src="./img/product-3.png", alt="image").lazyload
+
+        .product-head__content 
+          .product-head__article Арт. 18475338
+          h1.product-head__title Триглав Амулет защитный Берегиня №10 Aztek
+          .product-head__
+
+
+  
+  section.section
+    .container 
+      +section-head('Рекомендуемое из блога', 'Читать всё')
+      .swiper.blog-slider.slider-constructor(data-slides='1' data-sm-slides='2' data-xl-slides='3')
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-left')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-container
+          .swiper-wrapper 
+            //slide
+            .swiper-slide 
+              +blog-card(1)
+            //slide
+            .swiper-slide 
+              +blog-card(2)
+      
+
+      .d-block.d-md-none.mt-2
+        a(href="#").button.button_style-3.button_wide Читать всё
+
+  section.section
+    .container
+      .section__head.mb-1.mb-sm-2
+        h2.mb-0 Ранее просмотренные товары
+      .swiper.product-cards-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-left')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-container
+          .swiper-wrapper 
+            //slide
+            .swiper-slide 
+              +product-card(1)
+            //slide
+            .swiper-slide 
+              +product-card(2)
+            //slide
+            .swiper-slide 
+              +product-card(3)
+            //slide
+            .swiper-slide 
+              +product-card(4)
+            //slide
+            .swiper-slide 
+              +product-card(2)
+
+
+      
