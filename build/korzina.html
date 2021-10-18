@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gold Hands - Гарантии и возврат</title>
+    <title>Gold Hands - Корзина</title>
     <meta name="viewport" content="width=400, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png">
     <!--open graph-->
-    <meta property="og:title" content="Гарантии и возврат">
+    <meta property="og:title" content="Корзина">
     <meta property="og:site_name" content="Gold Hands">
     <meta property="og:url" content="url текущей страницы...">
     <meta property="og:description" content="Описание текущей страницы...">
@@ -503,52 +503,305 @@
         </div>
       </div>
       <main class="main">
-        <div class="breadcrumbs">
-          <div class="container breadcrumbs__container">
-            <ul class="breadcrumbs__list"> 
-              <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="./">Главная
-                  <svg class="icon">
-                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
-                  </svg></a></li>
-              <li class="breadcrumbs__item">Гарантии и возврат</li>
-            </ul>
-          </div>
-        </div>
-        <section class="section"> 
-          <div class="container"> 
-            <h1 class="mb-1 mb-sm-3">Гарантии и возврат</h1>
-            <div class="section__container row"> 
-              <div class="col-xl-8">
-                <h2>Возврат товара:</h2>
-                <p>Замена или возврат товара надлежащего качества возможен в течение 14 дней после получения товара покупателем при соблюдении условий:</p>
-                <ol> 
-                  <li>Сохранены его товарный вид и потребительские свойства (упаковка не нарушена, товаром не пользовались, товар без механических повреждений)</li>
-                  <li>Товар не входил в «Перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размеров, формы, габарита, фасона, расцветки или комплектации» (утв. Постановлением Правительства РФ от 19.01.1998г № 55)*</li>
-                </ol>
-                <p> <strong>Возврат товара может быть осуществлен как по желанию Покупателя, так и из-за ошибки со стороны продавца (неправильная комплектация, брак).</strong></p>
-                <h2>Способы осуществления возврата</h2>
-                <p>Обратите внимание, вернуть товар можно следующими способами:</p>
-                <ol> 
-                  <li>В Москве по адресу ул Покровка дом 4 магазин "Clouds.ru" с пн - пт с 11 00 до 19 00</li>
-                  <li>Почтой России (При возврате обратная пересылка оплачивается клиентом; адрес для возврата: 101000, г.Москва ул.Покровка, д.4, стр.1. На почте обязательно должен быть заполнен бланк описи в двух экземплярах. Без описи товара возврат не осуществляется)</li>
-                </ol>
-                <p>В случае возврата по вине Продавца, деньги за почтовые расходы возвращаются в течение 5-10 рабочих дней.</p>
-                <h2>Возврат денежных средств</h2>
-                <p>Возврат денежных средств Покупателю осуществляется тремя способами:</p>
-                <ol> 
-                  <li>Наличным расчетом (на месте оформления возврата)</li>
-                  <li>Банковским переводом (до 7 календарных дней) </li>
-                  <li>Почтовым переводом (до 7 календарных дней)</li>
-                </ol>
-                <p>Для банковского перевода необходимо отправить письмо с темой «возврат» и следующую информацию:</p>
-                <p> <strong>Расчетный счет Клиента</strong><br><strong>БИК банка</strong><br><strong>Номер карты</strong><br><strong>ФИО</strong></p>
-                <p>Срок зачисления денежных средств на расчетный счет Клиента зависит от внутреннего регламента банка-получателя.</p>
-                <h2>Товары, которые не подлежат возврату</h2>
-                <p>*Товары надлежащего качества, которые нельзя обменять (вернуть), перечислены в Перечне, утвержденном постановлением Правительства РФ от 19 января 1998 г. № 55. Приводим его полностью.</p>
-                <ol> 
-                  <li>Сохранены его товарный вид и потребительские свойства (упаковка не нарушена, товаром не пользовались, товар без механических повреждений)</li>
-                  <li>Товар не входил в «Перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размеров, формы, габарита, фасона, расцветки или комплектации» (утв. Постановлением Правительства РФ от 19.01.1998г № 55)*</li>
-                </ol>
+        <section class="section cart">
+          <div class="container cart__container"> 
+            <div class="cart__content">
+              <div class="section__head mb-2 mb-sm-3 d-flex align-items-end justify-content-between">
+                <h1 class="mb-0">Корзина</h1>
+                <button class="icon-link icon-link_type-2 cart__clear"> <span>Очистить корзину</span></button>
+              </div>
+              <table class="products-preview-list cart__products-preview-list">
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> Крем дневной увлажняющий 50 гр Aasha Herbals</a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="3" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>1 100 ₽</span>
+                                      <div class="products-preview-item__price"> <span>352 ₽ / шт</span></div>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе </a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="1" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>11 100 ₽</span>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> Крем дневной увлажняющий 50 гр Aasha Herbals</a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="3" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>1 100 ₽</span>
+                                      <div class="products-preview-item__price"> <span>352 ₽ / шт</span></div>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе </a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="1" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>11 100 ₽</span>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> Крем дневной увлажняющий 50 гр Aasha Herbals</a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="3" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>1 100 ₽</span>
+                                      <div class="products-preview-item__price"> <span>352 ₽ / шт</span></div>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе </a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="1" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>11 100 ₽</span>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> Крем дневной увлажняющий 50 гр Aasha Herbals</a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="3" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>1 100 ₽</span>
+                                      <div class="products-preview-item__price"> <span>352 ₽ / шт</span></div>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <!--item-->
+                                <tr class="products-preview-item"> 
+                                  <td class="products-preview-item__item products-preview-item__image"> 
+                                    <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image">
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#"> НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе </a></td>
+                                  <td class="products-preview-item__item products-preview-item__calculator"> 
+                                    <div class="product-calculator" data-custom-interaction>
+                                      <button class="product-calculator__button product-calculator__button_minus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#minus"></use>
+                                        </svg>
+                                      </button>
+                                      <input class="product-calculator__input" type="text" value="1" data-min="1">
+                                      <button class="product-calculator__button product-calculator__button_plus" type="button">
+                                        <svg class="icon"> 
+                                          <use xlink:href="./img/icons/icons.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__pricing"> 
+                                    <div class="products-preview-item__cost"> <span>11 100 ₽</span>
+                                    </div>
+                                  </td>
+                                  <td class="products-preview-item__item products-preview-item__remove"> 
+                                    <button class="products-preview-item__remove-button" type="button">
+                                      <svg class="icon"> 
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+              </table>
+            </div>
+            <div class="cart__aside">
+              <div class="cart-detail-box cart__cart-detail-box">
+                <div class="cart-detail-box__top"> 
+                  <div class="cart-detail-box__item"> <span>Товары (8)</span><span>77 940 ₽</span></div>
+                  <div class="cart-detail-box__item"> <span>Доставка</span><span>300 ₽</span></div>
+                </div>
+                <div class="cart-detail-box__bottom"> 
+                  <div class="cart-detail-box__total"> <span>Итого</span><span>78 240 ₽</span></div>
+                  <div class="cart-detail-box__buttons"> <a class="button button_style-2 button_wide button_large" href="#"><span class="button__inner button__default"> <span>Оформить заказ</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#arrow-up-right"></use>
+                        </svg></span></a><a class="button button_style-3 button_wide" href="#"><span class="button__inner button__default"> <span>Продолжить покупки</span></span></a></div>
+                </div>
               </div>
             </div>
           </div>

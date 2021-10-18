@@ -17,15 +17,7 @@
   &__icon-link {
     font-size: 18px;
     line-height: 26px;
-    .icon {
-      width: 20px;
-      height: 20px;
-      stroke-width: 1.5px;
-      transform: translateY(-1px);
-    }
-    span {
-      transform: translateY(1px);
-    }
+    --icon-size: 20px;
   }
 }
   

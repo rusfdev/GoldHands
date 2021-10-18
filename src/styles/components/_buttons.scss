@@ -126,6 +126,12 @@
   &_large {
     height: 64px;
   }
+  &_cart {
+    .icon {
+      width: 30px;
+      height: 25px;
+    }
+  }
 
   @include media-breakpoint-up(sm) {
     &_large {

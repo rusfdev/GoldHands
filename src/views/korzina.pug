@@ -1,0 +1,90 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Корзина'
+
+block content
+
+  section.section.cart
+    .container.cart__container 
+      .cart__content
+        .section__head.mb-2.mb-sm-3.d-flex.align-items-end.justify-content-between
+          h1.mb-0 Корзина
+          button.icon-link.icon-link_type-2.cart__clear 
+            span Очистить корзину
+
+        table.products-preview-list.cart__products-preview-list
+          mixin item(type)
+            //item
+            tr.products-preview-item 
+              td.products-preview-item__item.products-preview-item__image 
+                .image.image_contain 
+                  if type == 2
+                    img(src="#" data-src="./img/product-3.png", alt="image").lazyload
+                  else 
+                    img(src="#" data-src="./img/product-1.png", alt="image").lazyload
+              td.products-preview-item__item.products-preview-item__text 
+                span.products-preview-item__article Арт. 18475338
+                a(href="#").products-preview-item__title 
+                  if type == 2
+                    | Крем дневной увлажняющий 50 гр Aasha Herbals
+                  else 
+                    | НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе 
+              td.products-preview-item__item.products-preview-item__calculator 
+                .product-calculator(data-custom-interaction)
+                  button(type='button').product-calculator__button.product-calculator__button_minus
+                    svg.icon 
+                      use(xlink:href="./img/icons/icons.svg#minus")
+                  input(type="text" value=type==2?'3':'1' data-min='1').product-calculator__input
+                  button(type='button').product-calculator__button.product-calculator__button_plus
+                    svg.icon 
+                      use(xlink:href="./img/icons/icons.svg#plus")
+              td.products-preview-item__item.products-preview-item__pricing 
+                .products-preview-item__cost 
+                  if type == 2
+                    span 1 100 ₽
+                  else 
+                    span 11 100 ₽
+                  if type == 2
+                    .products-preview-item__price 
+                      span 352 ₽ / шт
+              td.products-preview-item__item.products-preview-item__remove 
+                button(type='button').products-preview-item__remove-button
+                  svg.icon 
+                    use(xlink:href="./img/icons/icons.svg#trash")
+
+          +item(2)
+          +item(1)
+          +item(2)
+          +item(1)
+          +item(2)
+          +item(1)
+          +item(2)
+          +item(1)
+          
+
+
+      .cart__aside
+
+        .cart-detail-box.cart__cart-detail-box
+          .cart-detail-box__top 
+            .cart-detail-box__item 
+              span Товары (8)
+              span 77 940 ₽
+            .cart-detail-box__item 
+              span Доставка
+              span 300 ₽
+          .cart-detail-box__bottom 
+            .cart-detail-box__total 
+              span Итого
+              span 78 240 ₽
+            .cart-detail-box__buttons 
+              a(href="#").button.button_style-2.button_wide.button_large
+                span.button__inner.button__default 
+                  span Оформить заказ
+                  svg(style='stroke-width:2px;').icon
+                    use(xlink:href='./img/icons/icons.svg#arrow-up-right')
+              a(href="#").button.button_style-3.button_wide
+                span.button__inner.button__default 
+                  span Продолжить покупки
+                

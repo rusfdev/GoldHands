@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
   inputs();
   collapse();
   password_visibility_toggle();
+  calculator();
 
   document.querySelectorAll('.main-banner').forEach($this => {
     new MainBanner($this).init();
@@ -162,6 +163,42 @@ function collapse() {
       $toggle.querySelector('span').textContent = 'Свернуть';
     }
   })
+}
+
+function calculator() {
+  let _button_ = '.product-calculator__button',
+      _input_ = '.product-calculator__input',
+      _minus_ = '.product-calculator__button_minus',
+      _plus_ = '.product-calculator__button_plus';
+
+  let click_buttons = (event) => {
+    let $button = event.target.closest(_button_);
+
+    if ($button) {
+      let $parent = $button.parentNode,
+          $input = $parent.querySelector(_input_),
+          $minus = event.target.closest(_minus_),
+          $plus = event.target.closest(_plus_);
+
+      if ($minus) $input.value = parseInt($input.value) - 1;
+      else if ($plus) $input.value = parseInt($input.value) + 1;
+
+      $input.dispatchEvent(new Event("change", {bubbles: true}));
+    }
+  }
+
+  let input_change = (event) => {
+    let $input = event.target.closest(_input_);
+
+    if($input) {
+      let min = $input.getAttribute('data-min') || 1;
+      $input.value = Math.max(min, $input.value.replace(/[^\d.]/g, ''));
+    }
+  }
+
+  document.addEventListener('click', click_buttons);
+  document.addEventListener('input', input_change);
+  document.addEventListener('change', input_change);
 }
 
 function password_visibility_toggle() {
@@ -256,24 +293,22 @@ const Header = {
 
     this.animation = gsap.timeline({paused:true})
       .fadeIn(this.$element)
-      .fromTo(this.$element, {yPercent:-100}, {immediateRender: false, yPercent:0, ease:'power1.out'}, '<')
+      .fromTo(this.$element, {yPercent:-100}, {immediateRender:false, yPercent:0, ease:'power2.out'}, '<')
 
     this.getHeight = () => {
       return +getComputedStyle($wrapper).getPropertyValue('--header-height').replace(/[^\d.-]/g, '');
     } 
 
-    this.isFixed = () => {
-      return this.$element.classList.contains('header_fixed');
-    }
-
     this.checkState = () => {
       if(window.innerWidth < breakpoints.xl) return;
 
-      if (window.pageYOffset > this.getHeight() && !this.isFixed()) {
+      if (window.pageYOffset > this.getHeight() && !this.fixed) {
+        this.fixed = true;
         this.animation.play(0).eventCallback('onStart', () => {
           this.$element.classList.add('header_fixed');
         })
-      } else if (window.pageYOffset <= this.getHeight() && this.isFixed()) {
+      } else if (window.pageYOffset <= this.getHeight() && this.fixed) {
+        this.fixed = false;
         this.$element.classList.remove('header_fixed');
       }
     }

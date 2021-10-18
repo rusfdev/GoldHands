@@ -25,8 +25,8 @@ mixin product-card(type)
         img(src='#' data-src=`./img/product-${type}.png`, alt="image").lazyload
 
       button.product-favourite.product-card__favourite(class=type==4?'is-active':'')
-        svg.icon
-          use(xlink:href='./img/icons/icons.svg#heart-fill')
+        svg(fill='currentColor').icon
+          use(xlink:href='./img/icons/icons.svg#heart')
 
     .product-card__content
       .product-card__content-top  
@@ -42,22 +42,21 @@ mixin product-card(type)
           button.product-card__to-card 
             svg.icon
               use(xlink:href='./img/icons/icons.svg#shopping-cart')
-        
-        a(href="#").product-card__reviews
-          .product-card__reviews-stars
-            .product-card__reviews-star
+        a(href="#").rate-item.product-card__reviews
+          .rate-item__stars
+            .rate-item__star
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#star')
-            .product-card__reviews-star
+            .rate-item__star
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#star')
-            .product-card__reviews-star
+            .rate-item__star
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#star')
-            .product-card__reviews-star
+            .rate-item__star
               svg.icon
-                use(xlink:href='./img/icons/icons.svg#star-half')
-            .product-card__reviews-star
+                use(xlink:href='./img/icons/icons.svg#star-empty')
+            .rate-item__star
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#star-empty')
           span 
@@ -93,7 +92,7 @@ mixin product-card(type)
           span В корзину
         span.button__inner.button__in-progress 
           span Секундочку
-          svg.icon
+          svg(style="stroke-width:2px;").icon
             use(xlink:href='./img/icons/icons.svg#spinner')
         span.button__inner.button__is-active 
           svg.icon
@@ -124,7 +123,7 @@ mixin blog-card(type)
         span.blog-card__comments 19 комментариев
         .blog-card__info 
           .blog-card__info-element 
-            svg.icon(stroke-width='1.1')
+            svg(fill='none').icon
               use(xlink:href='./img/icons/icons.svg#heart')
             span 120
           .blog-card__info-element 

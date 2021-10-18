@@ -1,5 +1,4 @@
 header.header
-
   .header__top 
     .container.header__top-container 
       ul.header__top-left-list
@@ -63,7 +62,7 @@ header.header
         ul.header__center-right-list 
           li.header__center-right-item.d-none.d-xl-block 
             a(href="#").icon-link.header__icon-link
-              svg.icon
+              svg(fill='none').icon
                 use(xlink:href='./img/icons/icons.svg#heart')
               span Избранное
           li.header__center-right-item.header__mobile-button-item
@@ -72,10 +71,11 @@ header.header
                 use(xlink:href='./img/icons/icons.svg#user')
               span Профиль
           li.header__center-right-item.header__mobile-button-item
-            a(href="#").icon-link.header__icon-link.header__mobile-button
+            a(href="#").icon-link.header__icon-link.header__mobile-button.header__cart
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#shopping-cart')
               span Корзина
+              span.header__cart-count 8
       
 
 

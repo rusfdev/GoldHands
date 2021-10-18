@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gold Hands - Интернет-магазин эзотерических товаров</title>
-    <meta name="viewport" content="width=375, initial-scale=1">
+    <meta name="viewport" content="width=400, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
     <!--theme-->
@@ -84,17 +84,17 @@
             <div class="header__center-right">
               <ul class="header__center-right-list"> 
                 <li class="header__center-right-item d-none d-xl-block"> <a class="icon-link header__icon-link" href="#">
-                    <svg class="icon">
+                    <svg class="icon" fill="none">
                       <use xlink:href="./img/icons/icons.svg#heart"></use>
                     </svg><span>Избранное</span></a></li>
                 <li class="header__center-right-item header__mobile-button-item"><a class="icon-link header__icon-link header__mobile-button" href="#">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons.svg#user"></use>
                     </svg><span>Профиль</span></a></li>
-                <li class="header__center-right-item header__mobile-button-item"><a class="icon-link header__icon-link header__mobile-button" href="#">
+                <li class="header__center-right-item header__mobile-button-item"><a class="icon-link header__icon-link header__mobile-button header__cart" href="#">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
-                    </svg><span>Корзина</span></a></li>
+                    </svg><span>Корзина</span><span class="header__cart-count">8</span></a></li>
               </ul>
             </div>
           </div>
@@ -138,7 +138,7 @@
                 </button>
               </li>
               <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#">
-                  <svg class="icon">
+                  <svg class="icon" fill="none">
                     <use xlink:href="./img/icons/icons.svg#heart"></use>
                   </svg><span>Избранное</span></a></li>
               <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#">
@@ -600,8 +600,8 @@
                           <div class="product-label product-label_type-new">Новинка</div>
                         </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -616,29 +616,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -653,7 +653,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -669,8 +669,8 @@
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -685,29 +685,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -722,7 +722,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -741,8 +741,8 @@
                           <div class="product-label product-label_type-low-price">Цена снижена</div>
                         </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -758,29 +758,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -795,7 +795,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -811,8 +811,8 @@
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite is-active">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -827,29 +827,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -864,7 +864,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -880,8 +880,8 @@
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -896,29 +896,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -933,7 +933,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -981,8 +981,8 @@
                           <div class="product-label product-label_type-new">Новинка</div>
                         </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -997,29 +997,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -1034,7 +1034,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -1050,8 +1050,8 @@
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -1066,29 +1066,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -1103,7 +1103,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -1122,8 +1122,8 @@
                           <div class="product-label product-label_type-low-price">Цена снижена</div>
                         </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -1139,29 +1139,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -1176,7 +1176,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -1192,8 +1192,8 @@
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite is-active">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -1208,29 +1208,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -1245,7 +1245,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -1261,8 +1261,8 @@
                     <div class="product-card" data-custom-interaction="data-custom-interaction">
                       <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
                         <button class="product-favourite product-card__favourite">
-                          <svg class="icon">
-                            <use xlink:href="./img/icons/icons.svg#heart-fill"></use>
+                          <svg class="icon" fill="currentColor">
+                            <use xlink:href="./img/icons/icons.svg#heart"></use>
                           </svg>
                         </button>
                       </div>
@@ -1277,29 +1277,29 @@
                                 <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
                               </svg>
                             </button>
-                          </div><a class="product-card__reviews" href="#">
-                            <div class="product-card__reviews-stars">
-                              <div class="product-card__reviews-star">
+                          </div><a class="rate-item product-card__reviews" href="#">
+                            <div class="rate-item__stars">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#star-half"></use>
+                                  <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
                               </div>
-                              <div class="product-card__reviews-star">
+                              <div class="rate-item__star">
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#star-empty"></use>
                                 </svg>
@@ -1314,7 +1314,7 @@
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon">
+                            <svg class="icon" style="stroke-width:2px;">
                               <use xlink:href="./img/icons/icons.svg#spinner"></use>
                             </svg></span><span class="button__inner button__is-active"> 
                             <svg class="icon">
@@ -1390,7 +1390,7 @@
                         <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
                           <div class="blog-card__info"> 
                             <div class="blog-card__info-element"> 
-                              <svg class="icon" stroke-width="1.1">
+                              <svg class="icon" fill="none">
                                 <use xlink:href="./img/icons/icons.svg#heart"></use>
                               </svg><span>120</span>
                             </div>
@@ -1419,7 +1419,7 @@
                         <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
                           <div class="blog-card__info"> 
                             <div class="blog-card__info-element"> 
-                              <svg class="icon" stroke-width="1.1">
+                              <svg class="icon" fill="none">
                                 <use xlink:href="./img/icons/icons.svg#heart"></use>
                               </svg><span>120</span>
                             </div>
@@ -1448,7 +1448,7 @@
                         <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
                           <div class="blog-card__info"> 
                             <div class="blog-card__info-element"> 
-                              <svg class="icon" stroke-width="1.1">
+                              <svg class="icon" fill="none">
                                 <use xlink:href="./img/icons/icons.svg#heart"></use>
                               </svg><span>120</span>
                             </div>
@@ -1477,7 +1477,7 @@
                         <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
                           <div class="blog-card__info"> 
                             <div class="blog-card__info-element"> 
-                              <svg class="icon" stroke-width="1.1">
+                              <svg class="icon" fill="none">
                                 <use xlink:href="./img/icons/icons.svg#heart"></use>
                               </svg><span>120</span>
                             </div>
@@ -1647,7 +1647,7 @@
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product.html">Продукт</a><a class="helper__section-button" href="info.html">Гарантии и возврат</a><a class="helper__section-button" href="kontakty.html">Контакты</a><a class="helper__section-button" href="components.html">Компоненты</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product.html">Продукт</a><a class="helper__section-button" href="korzina.html">Корзина</a><a class="helper__section-button" href="info.html">Гарантии и возврат</a><a class="helper__section-button" href="kontakty.html">Контакты</a><a class="helper__section-button" href="components.html">Компоненты</a></div>
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Личный кабинет:</span>

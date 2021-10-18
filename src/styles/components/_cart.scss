@@ -1,0 +1,40 @@
+.cart {
+  &__clear {
+    margin-bottom: 3px;
+  }
+  &__cart-detail-box {
+    --px: 20px;
+  }
+  @include media-breakpoint-up(xl) {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: var(--grid-gutter-width);
+    }
+    &__content {
+      grid-column: span 8;
+    }
+    &__aside {
+      grid-column: span 4;
+      padding-left: 50px;
+    }
+    &__cart-detail-box {
+      position: sticky;
+      top: 25px;
+      transition: top var(--trs-1);
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__clear {
+      margin-bottom: 1px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .header_fixed ~ .main {
+    .cart__cart-detail-box {
+      top: calc(var(--fixed-header-height) + 25px);
+    }
+  }
+}

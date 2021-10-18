@@ -17,35 +17,102 @@ block content
             //small
             .product-slider__miniature
               .image.image_contain
-                img(data-src="./img/product-1.png", alt="image").lazyload
+                img(data-src="./img/image 60.jpg", alt="image").lazyload
             //small
             .product-slider__miniature
               .image.image_contain
-                img(data-src="./img/product-2.png", alt="image").lazyload
+                img(data-src="./img/image 60.jpg", alt="image").lazyload
             //small
             .product-slider__miniature
               .image.image_contain
-                img(data-src="./img/product-3.png", alt="image").lazyload
+                img(data-src="./img/image 60.jpg", alt="image").lazyload
+            //small
+            .product-slider__miniature
+              .image.image_contain
+                img(data-src="./img/image 60.jpg", alt="image").lazyload
           .swiper-container 
             .swiper-wrapper
               //large
               .swiper-slide
                 .image.image_contain 
-                  img(data-src="./img/product-1.png", alt="image").lazyload
+                  img(data-src="./img/image 60.jpg", alt="image").lazyload
               //large
               .swiper-slide
                 .image.image_contain
-                  img(data-src="./img/product-2.png", alt="image").lazyload
+                  img(data-src="./img/image 60.jpg", alt="image").lazyload
               //large
               .swiper-slide
                 .image.image_contain
-                  img(data-src="./img/product-3.png", alt="image").lazyload
+                  img(data-src="./img/image 60.jpg", alt="image").lazyload
+              //large
+              .swiper-slide
+                .image.image_contain
+                  img(data-src="./img/image 60.jpg", alt="image").lazyload
 
         .product-head__content 
           .product-head__article Арт. 18475338
           h1.product-head__title Триглав Амулет защитный Берегиня №10 Aztek
-          .product-head__
+          .product-head__info-items
+            a(href="#").rate-item
+              .rate-item__stars
+                .rate-item__star
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#star')
+                .rate-item__star
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#star')
+                .rate-item__star
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#star')
+                .rate-item__star
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#star-empty')
+                .rate-item__star
+                  svg.icon
+                    use(xlink:href='./img/icons/icons.svg#star-empty')
+              span 
+                | 16 отзывов
+                
 
+            .availability-label.availability-label_true
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#check')
+              span В наличии
+
+            //<div class="availability-label availability-label_false"><span>Нет в наличии</span></div>
+          
+          .product-head__description 
+            | Триглав олицетворяет творческую силу Сварога, законы Перуна и божественный Свет Семаргла. Он неусыпно следит за тремя царствами: Правью, Явью и Навью.
+          
+          form(action="#").product-head__to-cart 
+            .product-head__pricing 
+              .product-head__price 2500 ₽
+              .product-head__old-price 3000 ₽
+            
+            button.button.button_style-2.button_large.button_cart.product-head__to-cart-button
+              span.button__inner.button__default 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#handbag')
+                span Добавить в корзину
+
+            .product-calculator(data-custom-interaction)
+              button(type='button').product-calculator__button.product-calculator__button_minus
+                svg.icon 
+                  use(xlink:href="./img/icons/icons.svg#minus")
+              input(type="text" value='1' data-min='1').product-calculator__input
+              button(type='button').product-calculator__button.product-calculator__button_plus
+                svg.icon 
+                  use(xlink:href="./img/icons/icons.svg#plus")
+          
+          .product-head__links 
+            a(href="#").icon-link.icon-link_type-2.product-head__link
+              svg(fill='none').icon
+                use(xlink:href='./img/icons/icons.svg#heart')
+              span В избранное
+            a(href="#").icon-link.icon-link_type-2.product-head__link
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#megaphone')
+              span Поделиться
 
   
   section.section
