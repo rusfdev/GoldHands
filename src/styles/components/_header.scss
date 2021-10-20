@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
-  max-width: calc(100vw - var(--scrollbar-width));
+  max-width: var(--content-max-width);
   &.d-block {
     display: flex !important;
   }

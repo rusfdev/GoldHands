@@ -58,8 +58,8 @@ gsap.registerEffect({
 
 document.addEventListener("DOMContentLoaded", function() {
   //set scrollbar width
-  document.documentElement.style.setProperty('--scrollbar-width', `${scrollLock.getPageScrollBarWidth()}px`);
-  
+  document.documentElement.style.setProperty('--scrollbar-width', `${getScrollBarWidth()}px`);
+
   //mask
   Inputmask({
     mask: "+7 (999) 999-99-99",
@@ -96,6 +96,21 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 
 });
+
+function getScrollBarWidth() {
+  let $test = document.createElement('div');
+  
+  $test.style.cssText = 'position:fixed;width:100%;';
+  document.body.insertAdjacentElement('afterbegin', $test);
+
+  let test_width = $test.getBoundingClientRect().width,
+      window_width = window.innerWidth,
+      value = window_width - test_width;
+
+  $test.remove();
+
+  return value;
+}
 
 function inputs() {
 

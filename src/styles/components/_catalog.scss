@@ -15,7 +15,7 @@
     z-index: 2;
     background-color: #fff;
     width: 100%;
-    max-width: calc(100vw - var(--scrollbar-width));
+    max-width: var(--content-max-width);
   }
   &__head-container {
     display: flex;
@@ -39,7 +39,7 @@
     height: 32px;
   }
   &__content {
-    max-width: calc(100vw - var(--scrollbar-width));
+    max-width: var(--content-max-width);
   }
   @include media-breakpoint-up(sm) {
     &__head-phone {

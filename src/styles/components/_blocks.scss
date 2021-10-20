@@ -218,7 +218,7 @@
   left: 0;
   z-index: 1000;
   display: none;
-  left: calc(100vw - var(--scrollbar-width) - var(--gutter) - var(--width));
+  left: calc(max(var(--page-min-width), 100vw) - var(--scrollbar-width) - var(--gutter) - var(--width));
   bottom: var(--gutter);
   min-width: initial;
   width: var(--width);

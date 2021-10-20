@@ -19,7 +19,7 @@
     position: relative;
     width: 100%;
     min-height: 100%;
-    max-width: calc(100vw - var(--scrollbar-width));
+    max-width: var(--content-max-width);
     margin: auto 0;
     display: flex;
     padding: 60px var(--container-padding-x);

@@ -18,7 +18,10 @@
   --trs-2: var(--animation-duration-2) ease-out;
   --trs-3: var(--animation-duration-3) ease-out;
 
-
+  //
+  --page-min-width: 400px;
+  --content-min-width: var(--page-min-width);
+  --content-max-width: calc(max(100vw, var(--page-min-width)) - var(--scrollbar-width));
 
 
 
