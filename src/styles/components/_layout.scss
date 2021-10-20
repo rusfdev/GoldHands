@@ -7,8 +7,10 @@
   padding: var(--header-height) 0 0 0;
   max-width: calc(100vw - var(--scrollbar-width));
   @include media-breakpoint-down(xl) {
-    overflow: hidden;
     --header-height: 90px;
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
   }
 }
 

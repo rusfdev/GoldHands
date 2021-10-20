@@ -84,6 +84,11 @@ img {
   }
 }
 
+.link-bordered {
+  border-bottom: 1px solid currentColor;
+  line-height: 1.3;
+}
+
 .icon-link {
   --color: var(--color-text-dark);
   --color-hover: var(--color-text-accent);
