@@ -40,12 +40,12 @@
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
-.swiper-container-pointer-events {
+/* .swiper-container-pointer-events {
   touch-action: pan-y;
   &.swiper-container-vertical {
     touch-action: pan-x;
   }
-}
+} */
 .swiper-slide {
   flex-shrink: 0;
   position: relative;
