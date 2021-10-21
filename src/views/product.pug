@@ -53,25 +53,10 @@ block content
           .product-head__article Арт. 18475338
           h1.product-head__title Триглав Амулет защитный Берегиня №10 Aztek
           .product-head__info-items
-            a(href="#").rate-item
-              .rate-item__stars
-                .rate-item__star
-                  svg.icon
-                    use(xlink:href='./img/icons/icons.svg#star')
-                .rate-item__star
-                  svg.icon
-                    use(xlink:href='./img/icons/icons.svg#star')
-                .rate-item__star
-                  svg.icon
-                    use(xlink:href='./img/icons/icons.svg#star')
-                .rate-item__star
-                  svg.icon
-                    use(xlink:href='./img/icons/icons.svg#star-empty')
-                .rate-item__star
-                  svg.icon
-                    use(xlink:href='./img/icons/icons.svg#star-empty')
-              span 
-                | 16 отзывов
+            a(href="#").product-head__rating
+              +rating-list()
+              span 26 отзывов
+              
                 
 
             .availability-label.availability-label_true
@@ -187,7 +172,7 @@ block content
       
       section.section
         .container
-          .section__head.mb-1.mb-sm-2
+          .section__head.mb-20.mb-sm-25
             h2.mb-0 Сопутствующие товары
           .swiper.product-cards-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
             .swiper-button.swiper-button-prev(data-custom-interaction)
@@ -216,7 +201,7 @@ block content
       
       section.section
         .container
-          .section__head.mb-1.mb-sm-2
+          .section__head.mb-20.mb-sm-25
             h2.mb-0 Рекомендуемые товары
           .swiper.product-cards-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
             .swiper-button.swiper-button-prev(data-custom-interaction)
@@ -245,8 +230,17 @@ block content
 
     section.section
       .container 
-        .section__head.mb-1.mb-sm-2
+        .section__head.mb-20.mb-sm-25
           h2.mb-0 Отзывы и оценка
+        
+        .product-rating-head.mb-20.mb-sm-25
+          +rating-list()
+          span.product-rating-head__value 4.5
+          span.product-rating-head__count 26 отзывов
+
+        a(href="#review-modal" data-action="modal_open").button.button_style-2
+          span.button__inner.button__default Оставить отзыв
+        
 
 
   
@@ -270,12 +264,12 @@ block content
               +blog-card(2)
       
 
-      .d-block.d-md-none.mt-2
+      .d-block.d-md-none.mt-25
         a(href="#").button.button_style-3.button_wide Читать всё
 
   section.section
     .container
-      .section__head.mb-1.mb-sm-2
+      .section__head.mb-20.mb-sm-25
         h2.mb-0 Ранее просмотренные товары
       .swiper.product-cards-slider.slider-constructor(data-slides='2' data-md-slides='3' data-xl-slides='4')
         .swiper-button.swiper-button-prev(data-custom-interaction)

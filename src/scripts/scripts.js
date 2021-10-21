@@ -33,11 +33,6 @@ gsap.registerEffect({
           $this.classList.add('d-block');
         })
       },
-      onComplete: () => {
-        $element.forEach($this => {
-          gsap.set($this, {clearProps: "all"});
-        })
-      },
       onReverseComplete: () => {
         $element.forEach($this => {
           gsap.set($this, {clearProps: "all"});
@@ -78,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
   collapse();
   password_visibility_toggle();
   calculator();
+  rating();
 
   document.querySelectorAll('.main-banner').forEach($this => {
     new MainBanner($this).init();
@@ -124,7 +120,6 @@ function inputs() {
 
     if(event.type=='focus') {
       $input.classList.add('input_focused');
-      console.log('!')
     } 
     
     else if(event.type=='input') {
@@ -227,6 +222,70 @@ function password_visibility_toggle() {
       $input_element.setAttribute('type', type);
     }
   });
+}
+
+function rating() {
+  let _rating_ = '.rating-selection',
+      _input_ = '.rating-selection__input',
+      _star_ = '.rating-selection__star';
+
+  let rating_events = (event) => {
+    let $target = event.target !== document ? event.target.closest(`${_input_}, ${_star_}`) : false;
+
+    if ($target) {
+      let $rating = {};
+      $rating.$parent = $target.closest(_rating_);
+      $rating.$input = $rating.$parent.querySelector(_input_);
+      $rating.$stars = $rating.$parent.querySelectorAll(_star_);
+      $rating.value = parseInt($rating.$input.value) || 0;
+
+      if ($target.closest(_star_) && $target == event.target && event.type=='mouseenter' && !CustomInteractionEvents.touched) {
+        rating_mouseenter($target, $rating, event);
+      } else if ($target.closest(_rating_) && $target == event.target  && event.type=='mouseleave' && !CustomInteractionEvents.touched) {
+        rating_mouseleave($target, $rating, event);
+      } else if ($target.closest(_star_) && event.type=='click') {
+        rating_click($target, $rating, event);
+      }
+    }
+  }
+
+  let rating_click = ($target, $rating, event) => {
+    for (let i in [...$rating.$stars]) {
+      if ($target == $rating.$stars[i]) {
+        $rating.$input.value = parseInt(i) + 1;
+        break;
+      }
+    }
+  }
+
+  let rating_mouseleave = ($target, $rating, event) => {
+    $rating.$stars.forEach(($this, index) => {
+      if (index + 1 <= $rating.value) {
+        $this.classList.add('active');
+      } else {
+        $this.classList.remove('active');
+      }
+    })
+  }
+
+  let rating_mouseenter = ($target, $rating, event) => {
+
+    let i = $rating.$stars.length;
+
+    $rating.$stars.forEach(($this, index) => {
+      if ($this == $target) i = index;
+      if (i >= index) {
+        $this.classList.add('active');
+      } else {
+        $this.classList.remove('active');
+      }
+    })
+
+  }
+
+  document.addEventListener('mouseenter', rating_events, true);
+  document.addEventListener('mouseleave', rating_events, true);
+  document.addEventListener('click', rating_events);
 }
 
 const CustomInteractionEvents = Object.create({
@@ -486,7 +545,7 @@ const Modals = {
       }
     })
     
-    //this.open(document.querySelector('#location-modal'))
+    /* this.open(document.querySelector('#success-review-modal')); */
   }
 }
 
@@ -642,8 +701,6 @@ class SliderConstructor {
         slides_xl_count = this.$parent.getAttribute('data-xl-slides') || slides_lg_count,
         free_mode = this.$parent.getAttribute('data-free-mode') || false;
 
-    console.log(slides_count)
-
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: slides_count,
@@ -712,8 +769,6 @@ class ProductSlider {
   init() {
     this.$slider = this.$parent.querySelector('.swiper-container');
     this.$miniature = this.$parent.querySelectorAll('.product-slider__miniature');
-
-    console.log(this.$miniature)
 
     this.slider = new Swiper(this.$slider, {
       touchStartPreventDefault: false,

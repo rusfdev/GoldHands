@@ -5,12 +5,16 @@ $container-padding-x: 16px;
 
 $spacers: (
   0: 0,
-  1: 20px,
-  2: 25px,
-  3: 30px,
-  4: 35px,
-  5: 40px,
-) !default;
+  15: 15px,
+  20: 20px,
+  25: 25px,
+  30: 30px,
+  35: 35px,
+  40: 40px,
+  45: 45px
+);
+
+$rfs-unit: px;
 
 $trs1: .15s ease-out;
 $trs2: .3s ease-out;

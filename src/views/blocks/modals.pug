@@ -76,3 +76,81 @@
               a(href="#") Хабаровск
           
         
+.modal.review-modal#review-modal
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal__inner
+      .modal-block.review-modal__block
+        button(data-action='modal_close' aria-label='Закрыть модальное окно').close-element.modal-block__close
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#close')
+        .modal-block__container 
+          h2.h1.text-center Оставить отзыв
+          form.form
+            .form__element.mb-20.mb-sm-25
+              .review-modal__rating
+                span.review-modal__rating-title Оцените товар
+                .rating-selection
+                  .rating-selection__stars
+                    svg.icon.rating-selection__star
+                      use(xlink:href='./img/icons/icons.svg#star')
+                    svg.icon.rating-selection__star
+                      use(xlink:href='./img/icons/icons.svg#star')
+                    svg.icon.rating-selection__star
+                      use(xlink:href='./img/icons/icons.svg#star')
+                    svg.icon.rating-selection__star
+                      use(xlink:href='./img/icons/icons.svg#star')
+                    svg.icon.rating-selection__star
+                      use(xlink:href='./img/icons/icons.svg#star')
+                  input(type="text" name='' value='' hidden).rating-selection__input
+            .form__element.mb-20.mb-sm-25
+              .input
+                input(type="text" required)
+                label Ваше имя
+            .form__element.mb-20.mb-sm-25
+              .input
+                input(type="email" required)
+                label E-mail
+            .form__element.mb-20.mb-sm-25
+              .input
+                textarea(required)
+                label Текст отзыва
+            .form__element.mb-20.mb-sm-25
+              +checkbox('Отправляя отзыв, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a>', true)
+            .form__element
+              button.button.button_style-2.button_wide
+                span.button__inner.button__default 
+                  span Отправить
+
+.modal.success-modal#success-review-modal
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal__inner
+      .modal-block.success-modal__block
+        button(data-action='modal_close' aria-label='Закрыть модальное окно').close-element.modal-block__close
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#close')
+        .modal-block__container.text-center
+          .success-modal__check 
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#check')
+          h2.h1.mb-15.mt-30.mt-sm-35 Мы получили ваш отзыв!
+          p.mb-25.mb-sm-35 В ближайшее время наша служба поддержки проверит отзыв и разместит его на сайте.
+          button(data-action='modal_close' aria-label='Закрыть модальное окно').button.button_style-3
+            span.button__inner.button__default
+              span Вернуться к товару
+
+.modal.success-modal#success-message-modal
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal__inner
+      .modal-block.success-modal__block
+        button(data-action='modal_close' aria-label='Закрыть модальное окно').close-element.modal-block__close
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#close')
+        .modal-block__container.text-center
+          .success-modal__check 
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#check')
+          h2.h1.mb-15.mt-30.mt-sm-35 Мы получили ваше сообщение!
+          p.mb-25.mb-sm-35 В ближайшее время наша служба поддержки свяжется с вами следуя деталям, указанным в соответствующих полях
+          button(data-action='modal_close' aria-label='Закрыть модальное окно').button.button_style-3
+            span.button__inner.button__default
+              span Вернуться к сайту

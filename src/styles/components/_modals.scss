@@ -37,6 +37,7 @@
   background-color: #fff;
   border-radius: 5px;
   width: 100%;
+  padding: 50px 90px;
   &__close {
     position: absolute;
     top: 40px;
@@ -96,5 +97,106 @@
     &__search {
       margin-bottom: 30px;
     }
+  }
+}
+
+.review-modal {
+  &__block {
+    max-width: 650px;
+  }
+  &__rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 15px;
+    font-size: 18px;
+    &-title {
+      color: var(--color-text-dark);
+    }
+  }
+}
+
+.success-modal {
+  &__block {
+    max-width: 810px;
+  }
+  &__check {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    .icon {
+      width: 50px;
+      height: 50px;
+      stroke-width: 3px;
+      margin: auto;
+      position: relative;
+      z-index: 3;
+      color: #fff;
+      opacity: 0;
+      animation: var(--trs-2) calc(var(--animation-duration-1) * 2) success-modal_fade1 forwards paused;
+    }
+    &::before, &::after {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0;
+      animation-duration: var(--animation-duration-2);
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      background-color: var(--color-3);
+      width: 100%;
+      height: 100%;
+      animation-name: success-modal_fade2;
+      animation-delay: var(--animation-duration-1);
+
+    }
+    &::after {
+      background-color: var(--color-3);
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+      left: 15px;
+      top: 15px;
+      animation-name: success-modal_fade1;
+    }
+  }
+  &.d-block {
+    .success-modal__check {
+      &::before, &::after {
+        animation-play-state: running;
+      }
+      .icon {
+        animation-play-state: running;
+      }
+    }
+  }
+}
+
+@keyframes success-modal_fade1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes success-modal_fade2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
   }
 }

@@ -9,7 +9,7 @@ block content
 
   section.section.contacts
     .container 
-      h1.mb-1.mb-sm-3 Контакты
+      h1.mb-25.mb-sm-30 Контакты
       .contacts__blocks.row
         .contacts__block.col-lg-4
           .contact-block
@@ -51,38 +51,34 @@ block content
           .image.image_cover 
             img(src='#' data-src="./img/Rectangle 97.jpg", alt="image").lazyload
         .contacts-form__content.col-lg-6 
-          h2.contacts-form__title.mb-3 Задать вопрос
+          h2.contacts-form__title.mb-30 Задать вопрос
           form.form
-            .form__element.mb-2
+            .form__element.mb-25
               .input
                 input(type="text" required)
                 label Имя
-            .form__element.mb-2
+            .form__element.mb-25
               .input
                 input(type="text" data-validate='phone')
                 label Телефон
-            .form__element.mb-2
+            .form__element.mb-25
               .input
                 input(type="email" required)
                 label E-mail
-            .form__element.mb-2
+            .form__element.mb-25
               .input
                 input(type="text" required)
                 label Тема сообщения
-            .form__element.mb-4
+            .form__element.mb-35
               .input
                 textarea(required)
                 label Сообщение
-            .form__element.mb-3
+            .form__element.mb-30
               +checkbox('Отправляя сообщение, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a>', true)
             
             button.button.button_style-2
               span.button__inner.button__default 
                 span Отправить
-              span.button__inner.button__in-progress 
-                span Секундочку
-                svg.icon
-                  use(xlink:href='./img/icons/icons.svg#spinner')
                 
 
   section.section

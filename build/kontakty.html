@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gold Hands - Контакты</title>
-    <meta name="viewport" content="width=400, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
     <!--theme-->
@@ -516,7 +516,7 @@
         </div>
         <section class="section contacts">
           <div class="container"> 
-            <h1 class="mb-1 mb-sm-3">Контакты</h1>
+            <h1 class="mb-25 mb-sm-30">Контакты</h1>
             <div class="contacts__blocks row">
               <div class="contacts__block col-lg-4">
                 <div class="contact-block">
@@ -558,39 +558,39 @@
                 <div class="image image_cover"> <img class="lazyload" src="#" data-src="./img/Rectangle 97.jpg" alt="image"></div>
               </div>
               <div class="contacts-form__content col-lg-6"> 
-                <h2 class="contacts-form__title mb-3">Задать вопрос</h2>
+                <h2 class="contacts-form__title mb-30">Задать вопрос</h2>
                 <form class="form">
-                  <div class="form__element mb-2">
+                  <div class="form__element mb-25">
                     <div class="input">
                       <input type="text" required>
                       <label>Имя</label>
                     </div>
                   </div>
-                  <div class="form__element mb-2">
+                  <div class="form__element mb-25">
                     <div class="input">
                       <input type="text" data-validate="phone">
                       <label>Телефон</label>
                     </div>
                   </div>
-                  <div class="form__element mb-2">
+                  <div class="form__element mb-25">
                     <div class="input">
                       <input type="email" required>
                       <label>E-mail</label>
                     </div>
                   </div>
-                  <div class="form__element mb-2">
+                  <div class="form__element mb-25">
                     <div class="input">
                       <input type="text" required>
                       <label>Тема сообщения</label>
                     </div>
                   </div>
-                  <div class="form__element mb-4">
+                  <div class="form__element mb-35">
                     <div class="input">
                       <textarea required></textarea>
                       <label>Сообщение</label>
                     </div>
                   </div>
-                  <div class="form__element mb-3">
+                  <div class="form__element mb-30">
                     <label class="checkbox">
                       <input type="checkbox" checked="checked"/><span>
                         <svg class="icon">
@@ -598,10 +598,7 @@
                         </svg>Отправляя сообщение, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a></span>
                     </label>
                   </div>
-                  <button class="button button_style-2"><span class="button__inner button__default"> <span>Отправить</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                      <svg class="icon">
-                        <use xlink:href="./img/icons/icons.svg#spinner"></use>
-                      </svg></span></button>
+                  <button class="button button_style-2"><span class="button__inner button__default"> <span>Отправить</span></span></button>
                 </form>
               </div>
             </div>
@@ -742,6 +739,123 @@
           </div>
         </div>
       </div>
+      <div class="modal review-modal" id="review-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block review-modal__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container"> 
+                <h2 class="h1 text-center">Оставить отзыв</h2>
+                <form class="form">
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="review-modal__rating"><span class="review-modal__rating-title">Оцените товар</span>
+                      <div class="rating-selection">
+                        <div class="rating-selection__stars">
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div>
+                        <input class="rating-selection__input" type="text" name="" value="" hidden>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="input">
+                      <input type="text" required>
+                      <label>Ваше имя</label>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="input">
+                      <input type="email" required>
+                      <label>E-mail</label>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="input">
+                      <textarea required></textarea>
+                      <label>Текст отзыва</label>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <label class="checkbox">
+                      <input type="checkbox" checked="checked"/><span>
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check"></use>
+                        </svg>Отправляя отзыв, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a></span>
+                    </label>
+                  </div>
+                  <div class="form__element">
+                    <button class="button button_style-2 button_wide"><span class="button__inner button__default"> <span>Отправить</span></span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal success-modal" id="success-review-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block success-modal__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container text-center">
+                <div class="success-modal__check"> 
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                  </svg>
+                </div>
+                <h2 class="h1 mb-15 mt-30 mt-sm-35">Мы получили ваш отзыв!</h2>
+                <p class="mb-25 mb-sm-35">В ближайшее время наша служба поддержки проверит отзыв и разместит его на сайте.</p>
+                <button class="button button_style-3" data-action="modal_close" aria-label="Закрыть модальное окно"><span class="button__inner button__default"><span>Вернуться к товару</span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal success-modal" id="success-message-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block success-modal__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container text-center">
+                <div class="success-modal__check"> 
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                  </svg>
+                </div>
+                <h2 class="h1 mb-15 mt-30 mt-sm-35">Мы получили ваше сообщение!</h2>
+                <p class="mb-25 mb-sm-35">В ближайшее время наша служба поддержки свяжется с вами следуя деталям, указанным в соответствующих полях</p>
+                <button class="button button_style-3" data-action="modal_close" aria-label="Закрыть модальное окно"><span class="button__inner button__default"><span>Вернуться к сайту</span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--libs-->
     <script src="./scripts/libs/lazysizes.min.js"></script>
@@ -763,7 +877,7 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Всплывающие окна:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="#location-modal" data-action="modal_open">Выбор города</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="#location-modal" data-action="modal_open">Выбор города</a><a class="helper__section-button" href="#review-modal" data-action="modal_open">Оставить отзыв</a><a class="helper__section-button" href="#success-review-modal" data-action="modal_open">Отзыв отправлен</a><a class="helper__section-button" href="#success-message-modal" data-action="modal_open">Сообщение отправлено</a></div>
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>

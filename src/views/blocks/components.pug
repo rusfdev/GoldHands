@@ -1,4 +1,15 @@
-
+mixin rating-list()
+  .rating-list
+    svg.icon.active
+      use(xlink:href='./img/icons/icons.svg#star')
+    svg.icon.active
+      use(xlink:href='./img/icons/icons.svg#star')
+    svg.icon.active
+      use(xlink:href='./img/icons/icons.svg#star')
+    svg.icon
+      use(xlink:href='./img/icons/icons.svg#star')
+    svg.icon
+      use(xlink:href='./img/icons/icons.svg#star')
 
 mixin checkbox(title, checked)
   -let index = Math.round(Math.random() * 1000000)
@@ -42,28 +53,9 @@ mixin product-card(type)
           button.product-card__to-card 
             svg.icon
               use(xlink:href='./img/icons/icons.svg#shopping-cart')
-        a(href="#").rate-item.product-card__reviews
-          .rate-item__stars
-            .rate-item__star
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#star')
-            .rate-item__star
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#star')
-            .rate-item__star
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#star')
-            .rate-item__star
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#star-empty')
-            .rate-item__star
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#star-empty')
-          span 
-            if type == 3 
-             | 16 
-            else 
-              | 100 
+        a(href="#").product-card__reviews  
+          +rating-list()
+          span 16 
             span.d-none.d-sm-inline отзывов
 
         a(href="#").product-card__title
@@ -136,7 +128,7 @@ mixin blog-card(type)
 
 
 mixin section-head(title, link)
-  .section__head.mb-1.mb-sm-2.d-flex.align-items-center.justify-content-between
+  .section__head.mb-20.mb-sm-25.d-flex.align-items-center.justify-content-between
     h2.mb-0=title
     .d-none.d-md-block
       a(href="#").icon-link.icon-link_type-2 

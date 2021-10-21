@@ -17,7 +17,7 @@ $font2: 'Open Sans', sans-serif;
 .helper {
   font-family: $font1;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   left: 0;
   top: 50%;
   transform: translate(-100%, -50%);
