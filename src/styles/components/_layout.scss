@@ -1,14 +1,9 @@
 .wrapper {
-  --header-height: 268px;
-  --fixed-header-height: 135px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   padding: var(--header-height) 0 0 0;
   max-width: var(--content-max-width);
-  @include media-breakpoint-down(xl) {
-    --header-height: 90px;
-  }
   @include media-breakpoint-down(sm) {
     overflow: hidden;
   }

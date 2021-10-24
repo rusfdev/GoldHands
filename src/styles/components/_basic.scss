@@ -6,6 +6,7 @@ body {
   padding: 0 !important;
   overflow-y: scroll;
   min-width: var(--page-min-width);
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;

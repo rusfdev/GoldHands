@@ -23,6 +23,25 @@
   --content-min-width: var(--page-min-width);
   --content-max-width: calc(max(100vw, var(--page-min-width)) - var(--scrollbar-width));
 
+  //header
+  --header-height: 268px;
+  --fixed-header-height: 135px;
+  @include media-breakpoint-down(xl) {
+    --header-height: 90px;
+    --fixed-header-height: var(--header-height);
+  }
+
+  //scroll
+  --scroll-to-content-gap: 35px;
+  @include media-breakpoint-down(sm) {
+    --scroll-to-content-gap: 25px;
+  }
+
+  //tab-head
+  --tab-head-height: 60px;
+  --tab-head-margin: var(--scroll-to-content-gap);
+  
+
 
 
   @include media-breakpoint-up(xl) {

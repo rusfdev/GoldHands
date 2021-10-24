@@ -52,6 +52,8 @@ gsap.registerEffect({
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+  check_anchor();
+
   //set scrollbar width
   document.documentElement.style.setProperty('--scrollbar-width', `${getScrollBarWidth()}px`);
 
@@ -69,11 +71,13 @@ document.addEventListener("DOMContentLoaded", function() {
   Modals.init();
   SideModals.init();
   ScrollTop.init();
+  ScrollAnchors.init();
   inputs();
   collapse();
   password_visibility_toggle();
   calculator();
   rating();
+  
 
   document.querySelectorAll('.main-banner').forEach($this => {
     new MainBanner($this).init();
@@ -89,6 +93,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelectorAll('.select select').forEach($this => {
     new Select($this).init();
+  })
+
+  document.querySelectorAll('.tab-head').forEach($this => {
+    new TabHead($this).init();
   })
 
 });
@@ -237,14 +245,14 @@ function rating() {
       $rating.$parent = $target.closest(_rating_);
       $rating.$input = $rating.$parent.querySelector(_input_);
       $rating.$stars = $rating.$parent.querySelectorAll(_star_);
-      $rating.value = parseInt($rating.$input.value) || 0;
 
       if ($target.closest(_star_) && $target == event.target && event.type=='mouseenter' && !CustomInteractionEvents.touched) {
         rating_mouseenter($target, $rating, event);
       } else if ($target.closest(_rating_) && $target == event.target  && event.type=='mouseleave' && !CustomInteractionEvents.touched) {
-        rating_mouseleave($target, $rating, event);
+        rating_check_view($rating, parseInt($rating.$input.value) || 0);
       } else if ($target.closest(_star_) && event.type=='click') {
         rating_click($target, $rating, event);
+        rating_check_view($rating, parseInt($rating.$input.value) || 0);
       }
     }
   }
@@ -258,9 +266,9 @@ function rating() {
     }
   }
 
-  let rating_mouseleave = ($target, $rating, event) => {
+  let rating_check_view = ($rating, value) => {
     $rating.$stars.forEach(($this, index) => {
-      if (index + 1 <= $rating.value) {
+      if (index + 1 <= value) {
         $this.classList.add('active');
       } else {
         $this.classList.remove('active');
@@ -269,23 +277,79 @@ function rating() {
   }
 
   let rating_mouseenter = ($target, $rating, event) => {
-
-    let i = $rating.$stars.length;
-
+    let value;
     $rating.$stars.forEach(($this, index) => {
-      if ($this == $target) i = index;
-      if (i >= index) {
-        $this.classList.add('active');
-      } else {
-        $this.classList.remove('active');
-      }
+      if ($this == $target) value = index + 1;
     })
-
+    rating_check_view($rating, value);
   }
 
   document.addEventListener('mouseenter', rating_events, true);
   document.addEventListener('mouseleave', rating_events, true);
   document.addEventListener('click', rating_events);
+}
+
+function check_anchor() {
+  let anchor = new URLSearchParams(location.search).get('anchor');
+
+  if (anchor) {
+    let $target = document.querySelector(`#${anchor}`);
+
+    if (!$target) return;
+
+    
+
+    setTimeout(() => {
+      let ty = $target.getBoundingClientRect().top + window.pageYOffset,
+          hh = Header.getFixedHeight(),
+          gap = parseInt(getComputedStyle(document.documentElement)
+            .getPropertyValue('--scroll-to-content-gap')
+            .replace(/[^\d.-]/g, '')),
+          y = ty - hh - gap;
+
+      window.scrollTo(0, y);
+    }, 0);
+
+  }
+}
+
+function addParameter(url, param, value) {
+  // Using a positive lookahead (?=\=) to find the
+  // given parameter, preceded by a ? or &, and followed
+  // by a = with a value after than (using a non-greedy selector)
+  // and then followed by a & or the end of the string
+  var val = new RegExp('(\\?|\\&)' + param + '=.*?(?=(&|$))'),
+      parts = url.toString().split('#'),
+      url = parts[0],
+      hash = parts[1]
+      qstring = /\?.+$/,
+      newURL = url;
+
+  // Check if the parameter exists
+  if (val.test(url))
+  {
+      // if it does, replace it, using the captured group
+      // to determine & or ? at the beginning
+      newURL = url.replace(val, '$1' + param + '=' + value);
+  }
+  else if (qstring.test(url))
+  {
+      // otherwise, if there is a query string at all
+      // add the param to the end of it
+      newURL = url + '&' + param + '=' + value;
+  }
+  else
+  {
+      // if there's no query string, add one
+      newURL = url + '?' + param + '=' + value;
+  }
+
+  if (hash)
+  {
+      newURL += '#' + hash;
+  }
+
+  return newURL;
 }
 
 const CustomInteractionEvents = Object.create({
@@ -361,17 +425,73 @@ const CustomInteractionEvents = Object.create({
   }
 })
 
+const ScrollAnchors = {
+  init: function() {
+    let _scroll_ = '[data-action="scroll_to_anchor"]';
+
+    let click_event = (event) => {
+      let $link = event.target.closest(`${_scroll_}`);
+
+      if (!$link) return;
+
+      event.preventDefault();
+
+      let attr = $link.getAttribute('href'),
+          $target = document.querySelector(`${attr}`);
+
+      if (!$target) return;
+
+      scroll_event($target, $link);
+
+      if (history.pushState) {
+        history.pushState(null, null, addParameter(window.location.href, 'anchor', attr.replace(/[#]/g, '')));
+      }
+    }
+
+    let scroll_event = ($target, $link) => {
+      let ty = $target.getBoundingClientRect().top + window.pageYOffset,
+          hh = Header.getFixedHeight(),
+          gap = parseInt(getComputedStyle(document.documentElement)
+            .getPropertyValue('--scroll-to-content-gap')
+            .replace(/[^\d.-]/g, '')),
+          y = ty - hh - gap;
+        
+      window.dispatchEvent(new CustomEvent("scroll_to_anchor_start", {
+        detail:{
+          $target: $target,
+          $link: $link
+        }
+      }));
+
+      gsap.to(window, {scrollTo: y, duration: animation_duration_3 / 1000, onComplete: () => {
+        window.dispatchEvent(new CustomEvent("scroll_to_anchor_end"));
+      }});
+    }
+
+    window.onpopstate = function() {
+      if(history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+      }
+
+      let anchor = new URLSearchParams(location.search).get('anchor');
+      if (!anchor) return;
+      let $target = document.querySelector(`#${anchor}`);
+      if (!$target) return;
+
+      scroll_event($target);
+    };
+
+    document.addEventListener('click', click_event);
+  }
+}
+
 const Header = {
-  init: function () {
+  init: function() {
     this.$element = document.querySelector('.header');
 
     this.animation = gsap.timeline({paused:true})
       .fadeIn(this.$element)
       .fromTo(this.$element, {yPercent:-100}, {immediateRender:false, yPercent:0, ease:'power2.out'}, '<')
-
-    this.getHeight = () => {
-      return +getComputedStyle($wrapper).getPropertyValue('--header-height').replace(/[^\d.-]/g, '');
-    } 
 
     this.checkState = () => {
       if(window.innerWidth < breakpoints.xl) return;
@@ -389,7 +509,13 @@ const Header = {
 
     window.addEventListener('scroll', this.checkState);
     this.checkState();
-  }
+  },
+  getHeight: function() {
+    return +getComputedStyle($wrapper).getPropertyValue('--header-height').replace(/[^\d.-]/g, '');
+  },
+  getFixedHeight: function() {
+    return +getComputedStyle($wrapper).getPropertyValue('--fixed-header-height').replace(/[^\d.-]/g, '');
+  },
 }
 
 const MobileSearch = {
@@ -791,5 +917,83 @@ class ProductSlider {
         this.slider.slideTo(index);
       })
     })
+  }
+}
+
+class TabHead {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this._link_ = '.tab-head__link';
+    this.$links = this.$parent.querySelectorAll(`${this._link_}`);
+
+    let is_fixed = () => {
+      return this.$parent.classList.contains('fixed');
+    }
+    
+    let check_postion = () => {
+      if (window.innerWidth < breakpoints.md) return;
+
+
+      let top = this.$parent.getBoundingClientRect().top;
+
+      if (top <= Header.getFixedHeight() && !is_fixed()) {
+        this.$parent.classList.add('fixed');
+      } else if (top > Header.getFixedHeight() && is_fixed()) {
+        this.$parent.classList.remove('fixed');
+      }
+    }
+
+    let set_active_link = ($link) => {
+      if ($link !== this.$active) {
+        if (this.$active) this.$active.classList.remove('active');
+        $link.classList.add('active');
+        this.$active = $link;
+      }
+    }
+
+    let check_active_link = () => {
+      if (window.innerWidth < breakpoints.md || this.inScroll) return;
+
+      for (let $link of this.$links) {
+        let $target = document.querySelector(`${$link.getAttribute('href')}`);
+        
+        if ($target) {
+          let ht = this.$parent.getBoundingClientRect().top + this.$parent.getBoundingClientRect().height;
+
+          let th = $target.getBoundingClientRect().height,
+              tt = $target.getBoundingClientRect().top,
+              tb = tt + th;
+
+          if (ht < tb) {
+            set_active_link($link);
+            break;
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll_to_anchor_start', (event) => {
+      for (let $link of this.$links) {
+        if ($link == event.detail.$link) {
+          set_active_link($link);
+          this.inScroll = true;
+          break;
+        }
+      }
+    })
+
+    window.addEventListener('scroll_to_anchor_end', (event) => {
+      if (this.inScroll) this.inScroll = false;
+    })
+
+    check_postion();
+    check_active_link();
+    window.addEventListener('scroll', check_postion);
+    window.addEventListener('resize', check_postion);
+    window.addEventListener('scroll', check_active_link);
+    window.addEventListener('resize', check_active_link);
   }
 }

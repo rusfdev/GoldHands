@@ -212,6 +212,16 @@
       }
     }
   }
+  @include media-breakpoint-down(xxl) {
+    &-button {
+      &-prev {
+        left: calc(var(--container-padding-x) / -1);
+      }
+      &-next {
+        right: calc(var(--container-padding-x) / -1);
+      }
+    }
+  }
   @include media-breakpoint-down(sm) {
     --button-size: 30px;
     &-button {

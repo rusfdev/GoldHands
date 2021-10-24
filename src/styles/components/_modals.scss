@@ -178,6 +178,12 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    &__block {
+      padding-top: 45px;
+      padding-bottom: 35px;
+    }
+  }
 }
 
 @keyframes success-modal_fade1 {

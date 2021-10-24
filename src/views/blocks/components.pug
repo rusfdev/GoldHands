@@ -53,7 +53,7 @@ mixin product-card(type)
           button.product-card__to-card 
             svg.icon
               use(xlink:href='./img/icons/icons.svg#shopping-cart')
-        a(href="#").product-card__reviews  
+        a(href="./product.html?anchor=product-reviews").product-card__reviews  
           +rating-list()
           span 16 
             span.d-none.d-sm-inline отзывов
@@ -135,3 +135,24 @@ mixin section-head(title, link)
         span=link
         svg.icon
           use(xlink:href='./img/icons/icons.svg#caret-right')
+
+
+mixin comment(name, text, rating)
+  .comment-element
+    .comment-element__head 
+      .comment-element__avatar 
+        span #{name[0]}
+      .comment-element__head-content 
+        .comment-element__name #{name}
+        .comment-element__date 30 марта, 17:25
+        if rating 
+          .comment-element__rating
+            +rating-list()
+    .comment-element__content 
+      | #{text}
+    .comment-element__controls 
+      button.link.link_type-2 Ответить
+      button.icon-link.comment-element__like
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#thumbs-up')
+        span 730
