@@ -20,12 +20,18 @@
   border-color: var(--border);
   color: var(--color) !important;
 
-  &:not(.button_in-progress):not(.button_is-active) {
+  &:not(.button_in-progress):not(.button_is-active):not(.active) {
     &[data-touch], &[data-hover] {
       background-color: var(--bg-hover);
       border-color: var(--border-hover);
       color: var(--color-hover) !important;
     }
+  }
+
+  &.active {
+    background-color: var(--bg-active);
+    border-color: var(--border-active);
+    color: var(--color-active) !important;
   }
 
   &__inner {
@@ -99,6 +105,17 @@
     --color: var(--button-3-color);
     --color-hover: var(--button-3-hover-color);
   }
+  &_style-4 {
+    --bg: transparent;
+    --bg-hover: var( --color-8);
+    --border: var(--color-1);
+    --border-hover: transparent;
+    --color: var(--color-text);
+    --color-hover: var(--color-text);
+    --bg-active: var(--color-4);
+    --border-active: transparent;
+    --color-active: #fff;
+  }
 
   &_in-progress {
     --bg: var(--color-3);
@@ -136,6 +153,7 @@
   @include media-breakpoint-up(sm) {
     &_large {
       font-size: 18px;
+      min-width: 300px;
     }
   }
   @include media-breakpoint-down(sm) {

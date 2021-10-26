@@ -924,7 +924,7 @@
       margin-right: 5px;
     }
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     transition: box-shadow $trs1;
     &[data-touch], &[data-hover] {
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
@@ -933,7 +933,7 @@
   @include media-breakpoint-up(xl) {
     min-height: 450px;
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     &__image {
       padding: 0;
     }
@@ -1198,6 +1198,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    font-weight: 300;
     &:not(:last-child) {
       margin-bottom: 15px;
     }
@@ -1244,12 +1245,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px 5px;
   }
-  &__pagination {
-    margin-top: 50px;
-  }
-  &__more {
-    margin-top: 40px;
-  }
   &__sorting-button {
     min-width: initial;
     width: 60px;
@@ -1292,13 +1287,11 @@
     &__sorting {
       margin-bottom: 30px;
     }
-    &__pagination {
-      margin-top: 35px;
-    }
   }
 }
 
 .visibility-info-module {
+  margin-top: 40px;
   &__text {
     font-size: 14px;
     color: var(--color-text-muted);
@@ -1415,8 +1408,10 @@
   display: flex;
   font-size: 14px;
   line-height: 20px;
+  margin-top: 50px;
   &__list {
     display: flex;
+    flex-shrink: 0;
   }
   &__item {
     &:not(:last-child) {
@@ -1438,12 +1433,12 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    justify-content: space-between;
+    margin-top: 35px;
     &__next {
-      margin-left: 5px;
+      margin-left: 20px;
     }
     &__prev {
-      margin-right: 5px;
+      margin-right: 20px;
     }
     &__item {
       &:not(:last-child) {
@@ -1763,6 +1758,75 @@
     }
     &__controls {
       margin-top: 15px;
+    }
+  }
+}
+
+.order-success {
+  margin-top: calc(var(--main-top-padding) * -1);
+  padding: var(--section-margin) 0;
+  background-color: var(--color-8);
+  text-align: center;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 2;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__buttons {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 20px;
+  &__button {
+    font-weight: 400;
+    &.active {
+      cursor: default;
+    }
+  }
+}
+
+.blog {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px var(--grid-gutter-width);
+  }
+  @include media-breakpoint-up(sm) {
+    &__more {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__pagination {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 25px var(--grid-gutter-width);
     }
   }
 }

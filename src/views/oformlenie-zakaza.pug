@@ -1,0 +1,232 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Оформление заказа'
+
+block content
+
+  section.section.order
+    .container.order__container 
+      .order__content
+        h1.mb-35 Оформление заказа
+        .order__sections
+
+          section.section 
+            h2.mb-25 Личные данные
+            .form
+              .form__element.mb-25
+                .input
+                  input(type="text" required)
+                  label Имя
+              .form__element.mb-25
+                .input
+                  input(type="text" data-validate="phone" required)
+                  label Телефон
+              .form__element.mb-25
+                .input
+                  input(type="email" required)
+                  label E-mail
+              .form__element.mb-25
+                .input
+                  input(type="text" required)
+                  label Индекс
+              .form__element.mb-25
+                .input
+                  input(type="text" required)
+                  label Адрес доставки
+              .form__element.mb-25
+                .input
+                  textarea
+                  label Комментарий к заказу
+
+          section.section 
+            h2.mb-20.mb-sm-25.mb-xl-30 Способы доставки
+            .form-cards-grid 
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/delivery-box 1.svg", alt="image").lazyload
+                .form-card__title Доставка курьером (до двери)
+                .form-card__value +350 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/image 67.png", alt="image").lazyload
+                .form-card__title Служба доставки Boxberry ПВЗ
+                .form-card__value +510 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/logo (8) 1.svg", alt="image").lazyload
+                .form-card__title ПЭК
+                .form-card__value +405 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/Russian_Post (1) 1.svg", alt="image").lazyload
+                .form-card__title Почта России (посылка стандарт)
+                .form-card__value +300 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/4a14227 1.svg", alt="image").lazyload
+                .form-card__title СДЭК (доставка курьером)
+                .form-card__value +415 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/4a14227 1.svg", alt="image").lazyload
+                .form-card__title СДЭК (постамат)
+                .form-card__value +255 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/4a14227 1.svg", alt="image").lazyload
+                .form-card__title СДЭК (самовывоз)
+                .form-card__value +255 ₽
+              label.form-card
+                input(type="radio" name='test1')
+                span.form-card__back
+                .image.image_contain.form-card__image.form-card__image_large 
+                  img(src="#" data-src="./img/order/fast (1) 1.svg", alt="image").lazyload
+                .form-card__title Срочная доставка (в день заказа)
+                .form-card__value +1 000 ₽
+              
+          section.section 
+            h2.mb-20.mb-sm-25.mb-xl-30 Способы оплаты
+            .form-cards-grid 
+              label.form-card
+                input(type="radio" name='test2')
+                span.form-card__back
+                .image.image_contain.form-card__image 
+                  img(src="#" data-src="./img/order/Money.svg", alt="image").lazyload
+                .form-card__title Доставка курьером (до двери)
+              label.form-card
+                input(type="radio" name='test2')
+                span.form-card__back
+                .image.image_contain.form-card__image 
+                  img(src="#" data-src="./img/order/cards-pay 1.svg", alt="image").lazyload
+                .form-card__title Оплата картой Visa / MasterCard / МИР
+              label.form-card
+                input(type="radio" name='test2')
+                span.form-card__back
+                .image.image_contain.form-card__image 
+                  img(src="#" data-src="./img/order/Sberbank_Logo_2020 2.svg", alt="image").lazyload
+                .form-card__title СберБанк Онлайн
+              label.form-card
+                input(type="radio" name='test2')
+                span.form-card__back
+                .image.image_contain.form-card__image 
+                  img(src="#" data-src="./img/order/Логотип_Яндекс.Денег 1.svg", alt="image").lazyload
+                .form-card__title Яндекс.Деньги
+
+          section.section.mb-0
+            h2.mb-30 Товары в заказе
+            table.products-preview-list
+              //item
+              tr.products-preview-item 
+                td.products-preview-item__item.products-preview-item__image 
+                  .image.image_contain 
+                    img(src="#" data-src="./img/product-1.png", alt="image").lazyload
+                td.products-preview-item__item.products-preview-item__text 
+                  span.products-preview-item__article Арт. 18475338
+                  a(href="#").products-preview-item__title НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе 
+                td.products-preview-item__item.products-preview-item__count 
+                  span 1 шт
+                td.products-preview-item__item.products-preview-item__pricing 
+                  .products-preview-item__cost 
+                    span 1 100 ₽
+              //item
+              tr.products-preview-item 
+                td.products-preview-item__item.products-preview-item__image 
+                  .image.image_contain 
+                    img(src="#" data-src="./img/product-3.png", alt="image").lazyload
+                td.products-preview-item__item.products-preview-item__text 
+                  span.products-preview-item__article Арт. 18475338
+                  a(href="#").products-preview-item__title Крем дневной увлажняющий 50 гр Aasha Herbals
+                td.products-preview-item__item.products-preview-item__count 
+                  span 5 шт
+                td.products-preview-item__item.products-preview-item__pricing 
+                  .products-preview-item__cost 
+                    span 1 100 ₽
+                    .products-preview-item__price 
+                      span 352 ₽ / шт
+              //item
+              tr.products-preview-item 
+                td.products-preview-item__item.products-preview-item__image 
+                  .image.image_contain 
+                    img(src="#" data-src="./img/product-1.png", alt="image").lazyload
+                td.products-preview-item__item.products-preview-item__text 
+                  span.products-preview-item__article Арт. 18475338
+                  a(href="#").products-preview-item__title НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе 
+                td.products-preview-item__item.products-preview-item__count 
+                  span 1 шт
+                td.products-preview-item__item.products-preview-item__pricing 
+                  .products-preview-item__cost 
+                    span 11 100 ₽
+              //item
+              tr.products-preview-item 
+                td.products-preview-item__item.products-preview-item__image 
+                  .image.image_contain 
+                    img(src="#" data-src="./img/product-3.png", alt="image").lazyload
+                td.products-preview-item__item.products-preview-item__text 
+                  span.products-preview-item__article Арт. 18475338
+                  a(href="#").products-preview-item__title Крем дневной увлажняющий 50 гр Aasha Herbals
+                td.products-preview-item__item.products-preview-item__count 
+                  span 1 шт
+                td.products-preview-item__item.products-preview-item__pricing 
+                  .products-preview-item__cost 
+                    span 1 100 ₽
+                    .products-preview-item__price 
+                      span 352 ₽ / шт
+
+
+
+
+        .order__final-button.mt-40.d-none.d-xl-block
+
+          button.button.button_style-2.button_large
+            span.button__inner.button__default 
+              span Оформить заказ
+              svg(style='stroke-width:2px;').icon
+                use(xlink:href='./img/icons/icons.svg#arrow-up-right')
+
+
+      .order__aside
+        .cart-detail-box.order__cart-detail-box
+          .cart-detail-box__top
+            .cart-detail-box__item 
+              span Товары (8)
+              span 77 940 ₽
+            .cart-detail-box__item 
+              span Доставка
+              span 300 ₽
+            .cart-detail-box__item 
+              span  
+                strong Скидка
+              span
+                strong 9 900 ₽
+            .cart-detail-box__item 
+              span Общий вес
+              span 12.1 кг
+          .cart-detail-box__bottom
+            .cart-detail-box__total 
+              span Итого
+              span 78 240 ₽
+            .cart-detail-box__buttons 
+              button.button.button_style-2.button_large.button_wide.d-xl-none
+                span.button__inner.button__default 
+                  span Оформить заказ
+                  svg(style='stroke-width:2px;').icon
+                    use(xlink:href='./img/icons/icons.svg#arrow-up-right')
+              a(href="korzina.html").button.button_style-3.button_wide
+                span.button__inner.button__default 
+                  span Вернуться к корзине
+                

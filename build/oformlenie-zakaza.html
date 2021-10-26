@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gold Hands - Создать профиль</title>
+    <title>Gold Hands - Оформление заказа</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png">
     <!--open graph-->
-    <meta property="og:title" content="Создать профиль">
+    <meta property="og:title" content="Оформление заказа">
     <meta property="og:site_name" content="Gold Hands">
     <meta property="og:url" content="url текущей страницы...">
     <meta property="og:description" content="Описание текущей страницы...">
@@ -503,38 +503,209 @@
         </div>
       </div>
       <main class="main">
-        <section class="section contacts">
-          <div class="container"> 
-            <div class="auth-box">
-              <h1 class="auth-box__title mt-20 mt-sm-0 mb-25 mb-sm-35">Создать профиль</h1>
-              <form class="form" action="#">
-                <div class="form__element mb-25">
-                  <div class="input">
-                    <input type="text" data-validate="phone">
-                    <label>Номер телефона</label>
+        <section class="section order">
+          <div class="container order__container"> 
+            <div class="order__content">
+              <h1 class="mb-35">Оформление заказа</h1>
+              <div class="order__sections">
+                <section class="section"> 
+                  <h2 class="mb-25">Личные данные</h2>
+                  <div class="form">
+                    <div class="form__element mb-25">
+                      <div class="input">
+                        <input type="text" required>
+                        <label>Имя</label>
+                      </div>
+                    </div>
+                    <div class="form__element mb-25">
+                      <div class="input">
+                        <input type="text" data-validate="phone" required>
+                        <label>Телефон</label>
+                      </div>
+                    </div>
+                    <div class="form__element mb-25">
+                      <div class="input">
+                        <input type="email" required>
+                        <label>E-mail</label>
+                      </div>
+                    </div>
+                    <div class="form__element mb-25">
+                      <div class="input">
+                        <input type="text" required>
+                        <label>Индекс</label>
+                      </div>
+                    </div>
+                    <div class="form__element mb-25">
+                      <div class="input">
+                        <input type="text" required>
+                        <label>Адрес доставки</label>
+                      </div>
+                    </div>
+                    <div class="form__element mb-25">
+                      <div class="input">
+                        <textarea></textarea>
+                        <label>Комментарий к заказу</label>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="section"> 
+                  <h2 class="mb-20 mb-sm-25 mb-xl-30">Способы доставки</h2>
+                  <div class="form-cards-grid"> 
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/delivery-box 1.svg" alt="image"></div>
+                      <div class="form-card__title">Доставка курьером (до двери)</div>
+                      <div class="form-card__value">+350 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/image 67.png" alt="image"></div>
+                      <div class="form-card__title">Служба доставки Boxberry ПВЗ</div>
+                      <div class="form-card__value">+510 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/logo (8) 1.svg" alt="image"></div>
+                      <div class="form-card__title">ПЭК</div>
+                      <div class="form-card__value">+405 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/Russian_Post (1) 1.svg" alt="image"></div>
+                      <div class="form-card__title">Почта России (посылка стандарт)</div>
+                      <div class="form-card__value">+300 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/4a14227 1.svg" alt="image"></div>
+                      <div class="form-card__title">СДЭК (доставка курьером)</div>
+                      <div class="form-card__value">+415 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/4a14227 1.svg" alt="image"></div>
+                      <div class="form-card__title">СДЭК (постамат)</div>
+                      <div class="form-card__value">+255 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/4a14227 1.svg" alt="image"></div>
+                      <div class="form-card__title">СДЭК (самовывоз)</div>
+                      <div class="form-card__value">+255 ₽</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test1"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image form-card__image_large"> <img class="lazyload" src="#" data-src="./img/order/fast (1) 1.svg" alt="image"></div>
+                      <div class="form-card__title">Срочная доставка (в день заказа)</div>
+                      <div class="form-card__value">+1 000 ₽</div>
+                    </label>
+                  </div>
+                </section>
+                <section class="section"> 
+                  <h2 class="mb-20 mb-sm-25 mb-xl-30">Способы оплаты</h2>
+                  <div class="form-cards-grid"> 
+                    <label class="form-card">
+                      <input type="radio" name="test2"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image"> <img class="lazyload" src="#" data-src="./img/order/Money.svg" alt="image"></div>
+                      <div class="form-card__title">Доставка курьером (до двери)</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test2"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image"> <img class="lazyload" src="#" data-src="./img/order/cards-pay 1.svg" alt="image"></div>
+                      <div class="form-card__title">Оплата картой Visa / MasterCard / МИР</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test2"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image"> <img class="lazyload" src="#" data-src="./img/order/Sberbank_Logo_2020 2.svg" alt="image"></div>
+                      <div class="form-card__title">СберБанк Онлайн</div>
+                    </label>
+                    <label class="form-card">
+                      <input type="radio" name="test2"><span class="form-card__back"></span>
+                      <div class="image image_contain form-card__image"> <img class="lazyload" src="#" data-src="./img/order/Логотип_Яндекс.Денег 1.svg" alt="image"></div>
+                      <div class="form-card__title">Яндекс.Деньги</div>
+                    </label>
+                  </div>
+                </section>
+                <section class="section mb-0">
+                  <h2 class="mb-30">Товары в заказе</h2>
+                  <table class="products-preview-list">
+                    <!--item-->
+                    <tr class="products-preview-item"> 
+                      <td class="products-preview-item__item products-preview-item__image"> 
+                        <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"></div>
+                      </td>
+                      <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#">НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе </a></td>
+                      <td class="products-preview-item__item products-preview-item__count"> <span>1 шт</span></td>
+                      <td class="products-preview-item__item products-preview-item__pricing"> 
+                        <div class="products-preview-item__cost"> <span>1 100 ₽</span></div>
+                      </td>
+                    </tr>
+                    <!--item-->
+                    <tr class="products-preview-item"> 
+                      <td class="products-preview-item__item products-preview-item__image"> 
+                        <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"></div>
+                      </td>
+                      <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#">Крем дневной увлажняющий 50 гр Aasha Herbals</a></td>
+                      <td class="products-preview-item__item products-preview-item__count"> <span>5 шт</span></td>
+                      <td class="products-preview-item__item products-preview-item__pricing"> 
+                        <div class="products-preview-item__cost"> <span>1 100 ₽</span>
+                          <div class="products-preview-item__price"> <span>352 ₽ / шт</span></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!--item-->
+                    <tr class="products-preview-item"> 
+                      <td class="products-preview-item__item products-preview-item__image"> 
+                        <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"></div>
+                      </td>
+                      <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#">НИ СЫ. Будь уверен в своих силах и не позволяй сомнениям мешать тебе </a></td>
+                      <td class="products-preview-item__item products-preview-item__count"> <span>1 шт</span></td>
+                      <td class="products-preview-item__item products-preview-item__pricing"> 
+                        <div class="products-preview-item__cost"> <span>11 100 ₽</span></div>
+                      </td>
+                    </tr>
+                    <!--item-->
+                    <tr class="products-preview-item"> 
+                      <td class="products-preview-item__item products-preview-item__image"> 
+                        <div class="image image_contain"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"></div>
+                      </td>
+                      <td class="products-preview-item__item products-preview-item__text"> <span class="products-preview-item__article">Арт. 18475338</span><a class="products-preview-item__title" href="#">Крем дневной увлажняющий 50 гр Aasha Herbals</a></td>
+                      <td class="products-preview-item__item products-preview-item__count"> <span>1 шт</span></td>
+                      <td class="products-preview-item__item products-preview-item__pricing"> 
+                        <div class="products-preview-item__cost"> <span>1 100 ₽</span>
+                          <div class="products-preview-item__price"> <span>352 ₽ / шт</span></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </div>
+              <div class="order__final-button mt-40 d-none d-xl-block">
+                <button class="button button_style-2 button_large"><span class="button__inner button__default"> <span>Оформить заказ</span>
+                    <svg class="icon" style="stroke-width:2px;">
+                      <use xlink:href="./img/icons/icons.svg#arrow-up-right"></use>
+                    </svg></span></button>
+              </div>
+            </div>
+            <div class="order__aside">
+              <div class="cart-detail-box order__cart-detail-box">
+                <div class="cart-detail-box__top">
+                  <div class="cart-detail-box__item"> <span>Товары (8)</span><span>77 940 ₽</span></div>
+                  <div class="cart-detail-box__item"> <span>Доставка</span><span>300 ₽</span></div>
+                  <div class="cart-detail-box__item"> <span> <strong>Скидка</strong></span><span><strong>9 900 ₽</strong></span></div>
+                  <div class="cart-detail-box__item"> <span>Общий вес</span><span>12.1 кг</span></div>
+                </div>
+                <div class="cart-detail-box__bottom">
+                  <div class="cart-detail-box__total"> <span>Итого</span><span>78 240 ₽</span></div>
+                  <div class="cart-detail-box__buttons"> 
+                    <button class="button button_style-2 button_large button_wide d-xl-none"><span class="button__inner button__default"> <span>Оформить заказ</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#arrow-up-right"></use>
+                        </svg></span></button><a class="button button_style-3 button_wide" href="korzina.html"><span class="button__inner button__default"> <span>Вернуться к корзине</span></span></a>
                   </div>
                 </div>
-                <div class="mb-30 mb-md-35">
-                  <button class="button button_style-2 button_wide button_large"><span class="button__inner button__default"> <span>Получить код</span>
-                      <svg class="icon" style="stroke-width:2px;">
-                        <use xlink:href="./img/icons/icons.svg#arrow-up-right"></use>
-                      </svg></span></button>
-                </div>
-                <div class="mb-20">
-                  <label class="checkbox">
-                    <input type="checkbox" checked="checked"/><span>
-                      <svg class="icon">
-                        <use xlink:href="./img/icons/icons.svg#check"></use>
-                      </svg>Получать эксклюзивные скидки в SMS-рассылке от GoldHands</span>
-                  </label>
-                </div>
-                <label class="checkbox">
-                  <input type="checkbox"/><span>
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#check"></use>
-                    </svg>Согласен с условиями <a href="#" class="color-dark">Правил пользования интернет-магазином</a></span>
-                </label>
-              </form>
+              </div>
             </div>
           </div>
         </section>

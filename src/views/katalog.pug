@@ -69,45 +69,43 @@ block content
           +product-card(3)
           +product-card(4)
 
-        .catalog__more 
-          .visibility-info-module
-            .visibility-info-module__text Отображается <span>12</span> из <span>36</span>
-            .visibility-info-module__scale
-              .visibility-info-module__scale-line(style='width:calc(12 / 36 * 100%)')
-            .visibility-info-module__button 
-              button.button.button_style-3
-                span.button__inner.button__default 
-                  span Показать больше
+        .visibility-info-module
+          .visibility-info-module__text Отображается <span>12</span> из <span>36</span>
+          .visibility-info-module__scale
+            .visibility-info-module__scale-line(style='width:calc(12 / 36 * 100%)')
+          .visibility-info-module__button 
+            button.button.button_style-3
+              span.button__inner.button__default 
+                span Показать больше
         
-        .catalog__pagination 
-          .pagination
-            a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__prev
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#caret-left')
-              span Предыдущая
-            ul.pagination__list  
-              li.pagination__item 
-                a(href="#").link.link_type-2.pagination__link 
-                  span 1
-              li.pagination__item 
-                a(href="javascript:void(0);").link.link_type-2.pagination__link.active
-                  span 2
-              li.pagination__item 
-                a(href="#").link.link_type-2.pagination__link 
-                  span 3
-              li.pagination__item 
-                a(href="#").link.link_type-2.pagination__link 
-                  span 4
-              li.pagination__item 
-                a(href="#").link.link_type-2.pagination__link 
-                  span ...
-              li.pagination__item 
-                a(href="#").link.link_type-2.pagination__link 
-                  span 15           
-            a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__next
-              span Следующая
-              svg.icon
-                use(xlink:href='./img/icons/icons.svg#caret-right')
+        .pagination
+          a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__prev
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#caret-left')
+            span Предыдущая
+          ul.pagination__list  
+            li.pagination__item 
+              a(href="#").link.link_type-2.pagination__link 
+                span 1
+            li.pagination__item 
+              a(href="javascript:void(0);").link.link_type-2.pagination__link.active
+                span 2
+            li.pagination__item 
+              a(href="#").link.link_type-2.pagination__link 
+                span 3
+            li.pagination__item 
+              a(href="#").link.link_type-2.pagination__link 
+                span 4
+            li.pagination__item 
+              a(href="#").link.link_type-2.pagination__link 
+                span ...
+            li.pagination__item 
+              a(href="#").link.link_type-2.pagination__link 
+                span 15           
+          a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__next
+            span Следующая
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#caret-right')
 
 
   include blocks/mailing-banner

@@ -1,0 +1,26 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Спасибо за заказ!'
+
+block content
+
+  section.section.order-success 
+    .container.order-success__container 
+      .success-check.mb-35
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#check')
+      h1.mb-15.mt-0 Спасибо за заказ!
+      p.mb-35.mb-sm-45 Номер вашего заказа 
+        strong.color-dark №RU 150986-000001
+      .order-success__buttons 
+        a(href="#").button.button_style-2.order-sm-2
+          span.button__inner.button__default 
+            span Статус заказа
+        a(href="#").button.button_style-3
+          span.button__inner.button__default 
+            span Вернуться в магазин
+        
+
+
+  

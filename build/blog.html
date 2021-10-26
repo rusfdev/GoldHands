@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gold Hands - Создать профиль</title>
+    <title>Gold Hands - Блог</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png">
     <!--open graph-->
-    <meta property="og:title" content="Создать профиль">
+    <meta property="og:title" content="Блог">
     <meta property="og:site_name" content="Gold Hands">
     <meta property="og:url" content="url текущей страницы...">
     <meta property="og:description" content="Описание текущей страницы...">
@@ -503,38 +503,289 @@
         </div>
       </div>
       <main class="main">
-        <section class="section contacts">
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container">
+            <ul class="breadcrumbs__list"> 
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="./">Главная
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumbs__item">Блог</li>
+            </ul>
+          </div>
+        </div>
+        <section class="section blog">
           <div class="container"> 
-            <div class="auth-box">
-              <h1 class="auth-box__title mt-20 mt-sm-0 mb-25 mb-sm-35">Создать профиль</h1>
-              <form class="form" action="#">
-                <div class="form__element mb-25">
-                  <div class="input">
-                    <input type="text" data-validate="phone">
-                    <label>Номер телефона</label>
+            <h1 class="mb-20 mb-sm-25">Блог</h1>
+            <div class="blog__head mb-30 mb-sm-35">
+              <div class="tab-buttons d-none d-sm-flex"><a class="button button_style-4 tab-buttons__button" href="#"><span class="button__inner button__default"> <span>Как выбрать товар</span></span></a><a class="button button_style-4 tab-buttons__button" href="#"><span class="button__inner button__default"> <span>Праздники</span></span></a><a class="button button_style-4 tab-buttons__button active" href="#"><span class="button__inner button__default"> <span>Обзор продукции</span></span></a><a class="button button_style-4 tab-buttons__button" href="#"><span class="button__inner button__default"> <span>Новости магазина</span></span></a><a class="button button_style-4 tab-buttons__button" href="#"><span class="button__inner button__default"> <span>Акционные предложения</span></span></a></div>
+              <div class="select d-block d-sm-none">
+                <select>
+                  <option value="Как выбрать товар" selected>Как выбрать товар</option>
+                  <option value="Праздники">Праздники</option>
+                  <option value="Обзор продукции">Обзор продукции</option>
+                  <option value="Новости магазина">Новости магазина</option>
+                  <option value="Акционные предложения">Акционные предложения</option>
+                </select>
+              </div>
+            </div>
+            <div class="blog__items"> 
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> Карты Таро и выбор колоды для начинающих</a></h4>
+                    <p class="blog-card__text"> Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="mb-30 mb-md-35">
-                  <button class="button button_style-2 button_wide button_large"><span class="button__inner button__default"> <span>Получить код</span>
-                      <svg class="icon" style="stroke-width:2px;">
-                        <use xlink:href="./img/icons/icons.svg#arrow-up-right"></use>
-                      </svg></span></button>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> Карты Таро и выбор колоды для начинающих</a></h4>
+                    <p class="blog-card__text"> Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="mb-20">
-                  <label class="checkbox">
-                    <input type="checkbox" checked="checked"/><span>
-                      <svg class="icon">
-                        <use xlink:href="./img/icons/icons.svg#check"></use>
-                      </svg>Получать эксклюзивные скидки в SMS-рассылке от GoldHands</span>
-                  </label>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog2.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> 8 вариантов подарков на Китайский Новый год</a></h4>
+                    <p class="blog-card__text"> 3 ноября в Японии отмечают День культуры.
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <label class="checkbox">
-                  <input type="checkbox"/><span>
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#check"></use>
-                    </svg>Согласен с условиями <a href="#" class="color-dark">Правил пользования интернет-магазином</a></span>
-                </label>
-              </form>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> Карты Таро и выбор колоды для начинающих</a></h4>
+                    <p class="blog-card__text"> Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog2.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> 8 вариантов подарков на Китайский Новый год</a></h4>
+                    <p class="blog-card__text"> 3 ноября в Японии отмечают День культуры.
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> Карты Таро и выбор колоды для начинающих</a></h4>
+                    <p class="blog-card__text"> Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog2.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> 8 вариантов подарков на Китайский Новый год</a></h4>
+                    <p class="blog-card__text"> 3 ноября в Японии отмечают День культуры.
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog2.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> 8 вариантов подарков на Китайский Новый год</a></h4>
+                    <p class="blog-card__text"> 3 ноября в Японии отмечают День культуры.
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--blog card END-->
+              <!--blog card START-->
+              <article class="blog-card" data-custom-interaction="data-custom-interaction">
+                <div class="blog-card__image"> <a class="image image_cover" href="#"> <img class="lazyload" src="#" data-src="./img/blog1.jpg" alt="image"/></a></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__content-top"> 
+                    <h4 class="blog-card__title"> <a href="#"> Карты Таро и выбор колоды для начинающих</a></h4>
+                    <p class="blog-card__text"> Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
+                    </p>
+                  </div>
+                  <div class="blog-card__content-bottom"><span class="blog-card__comments">19 комментариев</span>
+                    <div class="blog-card__info"> 
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon" fill="none">
+                          <use xlink:href="./img/icons/icons.svg#heart"></use>
+                        </svg><span>120</span>
+                      </div>
+                      <div class="blog-card__info-element"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#eye"></use>
+                        </svg><span>9500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--blog card END-->
+            </div>
+            <div class="visibility-info-module blog__more"> 
+              <div class="visibility-info-module__text">Отображается <span>9</span> из <span>150</span></div>
+              <div class="visibility-info-module__scale">
+                <div class="visibility-info-module__scale-line" style="width:calc(9 / 150 * 100%)"></div>
+              </div>
+              <div class="visibility-info-module__button"> 
+                <button class="button button_style-3"><span class="button__inner button__default"> <span>Показать больше</span></span></button>
+              </div>
+            </div>
+            <div class="pagination blog__pagination">
+              <ul class="pagination__list"> 
+                <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>1</span></a></li>
+                <li class="pagination__item"> <a class="link link_type-2 pagination__link active" href="javascript:void(0);"><span>2</span></a></li>
+                <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>3</span></a></li>
+                <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>4</span></a></li>
+                <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>...</span></a></li>
+                <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>15           </span></a></li>
+              </ul><a class="icon-link icon-link_type-2 pagination__link pagination__next" href="#"><span>Следующая</span>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                </svg></a>
             </div>
           </div>
         </section>

@@ -1,0 +1,85 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Блог'
+  -var breadcrumbs_links = ['Главная', page_title]
+
+block content
+  include blocks/breadcrumbs
+
+  section.section.blog
+    .container 
+      h1.mb-20.mb-sm-25 Блог
+      .blog__head.mb-30.mb-sm-35
+        .tab-buttons.d-none.d-sm-flex
+          a(href="#").button.button_style-4.tab-buttons__button
+            span.button__inner.button__default 
+              span Как выбрать товар
+          a(href="#").button.button_style-4.tab-buttons__button
+            span.button__inner.button__default 
+              span Праздники
+          a(href="#").button.button_style-4.tab-buttons__button.active
+            span.button__inner.button__default 
+              span Обзор продукции
+          a(href="#").button.button_style-4.tab-buttons__button
+            span.button__inner.button__default 
+              span Новости магазина
+          a(href="#").button.button_style-4.tab-buttons__button
+            span.button__inner.button__default 
+              span Акционные предложения
+
+        .select.d-block.d-sm-none
+          select
+            option(value='Как выбрать товар' selected) Как выбрать товар
+            option(value='Праздники') Праздники
+            option(value='Обзор продукции') Обзор продукции
+            option(value='Новости магазина') Новости магазина
+            option(value='Акционные предложения') Акционные предложения
+      
+      .blog__items 
+
+        +blog-card(1)
+        +blog-card(1)
+        +blog-card(2)
+        +blog-card(1)
+        +blog-card(2)
+        +blog-card(1)
+        +blog-card(2)
+        +blog-card(2)
+        +blog-card(1)
+
+      
+      .visibility-info-module.blog__more 
+        .visibility-info-module__text Отображается <span>9</span> из <span>150</span>
+        .visibility-info-module__scale
+          .visibility-info-module__scale-line(style='width:calc(9 / 150 * 100%)')
+        .visibility-info-module__button 
+          button.button.button_style-3
+            span.button__inner.button__default 
+              span Показать больше
+        
+       
+      .pagination.blog__pagination
+        ul.pagination__list  
+          li.pagination__item 
+            a(href="#").link.link_type-2.pagination__link 
+              span 1
+          li.pagination__item 
+            a(href="javascript:void(0);").link.link_type-2.pagination__link.active
+              span 2
+          li.pagination__item 
+            a(href="#").link.link_type-2.pagination__link 
+              span 3
+          li.pagination__item 
+            a(href="#").link.link_type-2.pagination__link 
+              span 4
+          li.pagination__item 
+            a(href="#").link.link_type-2.pagination__link 
+              span ...
+          li.pagination__item 
+            a(href="#").link.link_type-2.pagination__link 
+              span 15           
+        a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__next
+          span Следующая
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')

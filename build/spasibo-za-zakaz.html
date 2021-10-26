@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gold Hands - Создать профиль</title>
+    <title>Gold Hands - Спасибо за заказ!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Описание текущей страницы...">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png">
     <!--open graph-->
-    <meta property="og:title" content="Создать профиль">
+    <meta property="og:title" content="Спасибо за заказ!">
     <meta property="og:site_name" content="Gold Hands">
     <meta property="og:url" content="url текущей страницы...">
     <meta property="og:description" content="Описание текущей страницы...">
@@ -503,39 +503,16 @@
         </div>
       </div>
       <main class="main">
-        <section class="section contacts">
-          <div class="container"> 
-            <div class="auth-box">
-              <h1 class="auth-box__title mt-20 mt-sm-0 mb-25 mb-sm-35">Создать профиль</h1>
-              <form class="form" action="#">
-                <div class="form__element mb-25">
-                  <div class="input">
-                    <input type="text" data-validate="phone">
-                    <label>Номер телефона</label>
-                  </div>
-                </div>
-                <div class="mb-30 mb-md-35">
-                  <button class="button button_style-2 button_wide button_large"><span class="button__inner button__default"> <span>Получить код</span>
-                      <svg class="icon" style="stroke-width:2px;">
-                        <use xlink:href="./img/icons/icons.svg#arrow-up-right"></use>
-                      </svg></span></button>
-                </div>
-                <div class="mb-20">
-                  <label class="checkbox">
-                    <input type="checkbox" checked="checked"/><span>
-                      <svg class="icon">
-                        <use xlink:href="./img/icons/icons.svg#check"></use>
-                      </svg>Получать эксклюзивные скидки в SMS-рассылке от GoldHands</span>
-                  </label>
-                </div>
-                <label class="checkbox">
-                  <input type="checkbox"/><span>
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons.svg#check"></use>
-                    </svg>Согласен с условиями <a href="#" class="color-dark">Правил пользования интернет-магазином</a></span>
-                </label>
-              </form>
+        <section class="section order-success"> 
+          <div class="container order-success__container"> 
+            <div class="success-check mb-35">
+              <svg class="icon">
+                <use xlink:href="./img/icons/icons.svg#check"></use>
+              </svg>
             </div>
+            <h1 class="mb-15 mt-0">Спасибо за заказ!</h1>
+            <p class="mb-35 mb-sm-45">Номер вашего заказа <strong class="color-dark">№RU 150986-000001</strong></p>
+            <div class="order-success__buttons"> <a class="button button_style-2 order-sm-2" href="#"><span class="button__inner button__default"> <span>Статус заказа</span></span></a><a class="button button_style-3" href="#"><span class="button__inner button__default"> <span>Вернуться в магазин</span></span></a></div>
           </div>
         </section>
       </main>
