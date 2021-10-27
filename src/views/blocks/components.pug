@@ -112,13 +112,13 @@ mixin blog-card(type)
           else  
             | 3 ноября в Японии отмечают День культуры.
       .blog-card__content-bottom
-        span.blog-card__comments 19 комментариев
+        span.article-info-item.blog-card__comments 19 комментариев
         .blog-card__info 
-          .blog-card__info-element 
+          .article-info-item
             svg(fill='none').icon
               use(xlink:href='./img/icons/icons.svg#heart')
             span 120
-          .blog-card__info-element 
+          .article-info-item
             svg.icon
               use(xlink:href='./img/icons/icons.svg#eye')
             span 9500
@@ -149,7 +149,7 @@ mixin comment(name, text, rating)
           .comment-element__rating
             +rating-list()
     .comment-element__content 
-      | #{text}
+      | !{text}
     .comment-element__controls 
       button.link.link_type-2 Ответить
       button.icon-link.comment-element__like

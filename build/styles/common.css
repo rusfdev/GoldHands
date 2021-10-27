@@ -5211,14 +5211,17 @@ a {
   visibility: hidden; }
 
 /* Auto Height */
-.swiper-container-autoheight,
-.swiper-container-autoheight .swiper-slide {
-  height: auto; }
+/* .swiper-container-autoheight {
+  &,
+  .swiper-slide {
+    height: auto;
+  }
 
-.swiper-container-autoheight .swiper-wrapper {
-  align-items: flex-start;
-  transition-property: transform, height; }
-
+  .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+} */
 /* 3D Effects */
 .swiper-container-3d {
   perspective: 1200px; }
@@ -6238,6 +6241,15 @@ img {
     .tab-head {
       display: none; } }
 
+.article-info-item {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-muted); }
+  .article-info-item .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; }
+
 .rating-selection__stars {
   display: flex;
   -moz-column-gap: 0.125em;
@@ -6786,6 +6798,13 @@ img {
     .blog-slider .swiper-button-next {
       right: 10px; } }
 
+@media (max-width: 575.98px) {
+  .blog-slider .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height; }
+  .blog-slider .swiper-slide {
+    height: initial; } }
+
 .blog-card {
   border-radius: 5px;
   background-color: #fff;
@@ -6821,25 +6840,17 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-text-muted);
-    font-size: 14px; }
+    font-size: 14px;
+    gap: 12px; }
   .blog-card__comments {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-right: 12px; }
+    display: block; }
   .blog-card__info {
     display: flex;
-    align-items: center; }
-  .blog-card__info-element {
-    display: flex;
-    align-items: center; }
-    .blog-card__info-element:not(:last-child) {
-      margin-right: 12px; }
-    .blog-card__info-element .icon {
-      width: 16px;
-      height: 16px;
-      margin-right: 5px; }
+    align-items: center;
+    gap: 12px; }
   @media (min-width: 1024px) {
     .blog-card {
       transition: box-shadow 0.15s ease-out; }
@@ -7424,6 +7435,13 @@ img {
 .comments__item:not(:last-child) {
   margin-bottom: 25px; }
 
+.comments__item > .comments__list {
+  padding: 25px 0 0 20px; }
+
+@media (max-width: 575.98px) {
+  .comments__item > .comments__list {
+    padding: 25px 0 0 10px; } }
+
 .comment-element__head {
   margin-bottom: 15px;
   display: flex; }
@@ -7462,7 +7480,8 @@ img {
   font-size: 14px; }
 
 .comment-element__content {
-  font-weight: 300; }
+  font-weight: 300;
+  color: var(--color-text-dark); }
 
 .comment-element__controls {
   display: flex;
@@ -7535,6 +7554,70 @@ img {
   .blog__items {
     grid-template-columns: repeat(1, 1fr);
     gap: 25px var(--grid-gutter-width); } }
+
+.article__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 40px;
+  margin-top: 20px; }
+
+.article__control {
+  --icon-size: 24px; }
+
+@media (max-width: 575.98px) {
+  .article__back {
+    --icon-size: 10px;
+    font-size: 14px; }
+    .article__back .icon {
+      stroke-width: 1px; }
+      .article__back .icon:first-child {
+        margin-right: 7px; } }
+
+.article-head {
+  background-color: var(--color-8);
+  margin-bottom: 40px; }
+  .article-head__content {
+    max-width: 480px; }
+  .article-head__info {
+    margin-top: 50px;
+    font-size: 14px; }
+  .article-head__labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px; }
+  .article-head__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px; }
+  .article-head__container {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 30px; }
+  .article-head__image {
+    position: absolute;
+    right: var(--container-padding-x);
+    top: 0;
+    width: 620px;
+    height: 100%; }
+  @media (max-width: 1279.98px) {
+    .article-head {
+      margin-top: calc(var(--main-top-padding) * -1); }
+      .article-head__image {
+        right: initial;
+        left: calc(var(--container-padding-x) + 500px); } }
+  @media (max-width: 1023.98px) {
+    .article-head__image {
+      display: none; } }
+  @media (max-width: 575.98px) {
+    .article-head {
+      margin-bottom: 30px; }
+      .article-head__container {
+        padding-top: 25px;
+        padding-bottom: 25px; }
+      .article-head__title {
+        font-size: 24px; }
+      .article-head__info {
+        margin-top: 25px; } }
 
 /*========== Lk ==========*/
 @media (min-width: 576px) {

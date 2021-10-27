@@ -10,11 +10,15 @@
   transition: transform 0.25s ease-in-out;
   width: 100%;
   max-width: 280px;
-  color: #000; }
+  max-height: 100%;
+  color: #000;
+  display: flex; }
   .helper__trigger {
     display: block;
     position: absolute;
     left: calc(100% - 1px);
+    top: 50%;
+    transform: translateY(-50%);
     width: 40px;
     height: 40px;
     border-radius: 0 2px 2px 0;
@@ -38,6 +42,7 @@
     .helper__trigger[data-touch], .helper__trigger[data-hover] {
       color: #ca2323; }
   .helper__container {
+    max-height: 100%;
     position: relative;
     z-index: 1;
     padding: 20px 15px;
@@ -47,7 +52,8 @@
     border-radius: 0 0 2px 0;
     border-width: 1px 1px 1px 0;
     border-style: solid;
-    border-color: #D9D9DE; }
+    border-color: #D9D9DE;
+    overflow: auto; }
   .helper__section:not(:last-child) {
     margin-bottom: 15px; }
   .helper__section-title {

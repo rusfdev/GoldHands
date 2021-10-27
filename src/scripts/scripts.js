@@ -443,9 +443,9 @@ const ScrollAnchors = {
 
       scroll_event($target, $link);
 
-      if (history.pushState) {
+      /* if (history.pushState) {
         history.pushState(null, null, addParameter(window.location.href, 'anchor', attr.replace(/[#]/g, '')));
-      }
+      } */
     }
 
     let scroll_event = ($target, $link) => {
@@ -468,7 +468,7 @@ const ScrollAnchors = {
       }});
     }
 
-    window.onpopstate = function() {
+    /* window.onpopstate = function() {
       if(history.scrollRestoration) {
         history.scrollRestoration = 'manual';
       }
@@ -479,7 +479,7 @@ const ScrollAnchors = {
       if (!$target) return;
 
       scroll_event($target);
-    };
+    }; */
 
     document.addEventListener('click', click_event);
   }
@@ -832,6 +832,7 @@ class SliderConstructor {
       slidesPerView: slides_count,
       freeMode: free_mode,
       speed: animation_duration_3,
+      autoHeight: true,
       pagination: {
         el: this.$pagination,
         clickable: true,
