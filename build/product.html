@@ -530,7 +530,7 @@
             </ul>
           </div>
         </div>
-        <section class="section product">
+        <section class="section product" itemscope itemtype="http://schema.org/Product">
           <div class="container">
             <div class="product-head">
               <!--картинки-->
@@ -538,7 +538,7 @@
                 <div class="product-slider__miniatures">
                   <!--small-->
                   <div class="product-slider__miniature">
-                    <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
+                    <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image" itemprop="image"></div>
                   </div>
                   <!--small-->
                   <div class="product-slider__miniature">
@@ -574,9 +574,9 @@
                   </div>
                 </div>
               </div>
-              <div class="product-head__content"> 
+              <div class="product-head__content" itemprop="offers" itemscope itemtype="http://schema.org/Offer"> 
                 <div class="product-head__article">Арт. 18475338</div>
-                <h1 class="product-head__title">Триглав Амулет защитный Берегиня №10 Aztek</h1>
+                <h1 class="product-head__title" itemprop="name">Триглав Амулет защитный Берегиня №10 Aztek</h1>
                 <div class="product-head__info-items"><a class="product-head__rating" href="#product-reviews" data-action="scroll_to_anchor">
                     <div class="rating-list">
                       <svg class="icon active">
@@ -595,17 +595,19 @@
                         <use xlink:href="./img/icons/icons.svg#star"></use>
                       </svg>
                     </div><span>26 отзывов</span></a>
-                  <div class="availability-label availability-label_true">
+                  <div class="availability-label availability-label_true" itemprop="availability" href="http://schema.org/InStock">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons.svg#check"></use>
                     </svg><span>В наличии</span>
                   </div>
                   <!--<div class="availability-label availability-label_false"><span>Нет в наличии</span></div>-->
                 </div>
-                <div class="product-head__description">
+                <div class="product-head__description" itemprop="description">
                    Триглав олицетворяет творческую силу Сварога, законы Перуна и божественный Свет Семаргла. Он неусыпно следит за тремя царствами: Правью, Явью и Навью.</div>
                 <form class="product-head__to-cart" action="#"> 
                   <div class="product-head__pricing"> 
+                    <meta itemprop="price" content="2500.00">
+                    <meta itemprop="priceCurrency" content="RUB">
                     <div class="product-head__price">2500 ₽</div>
                     <div class="product-head__old-price">3000 ₽</div>
                   </div>

@@ -8,7 +8,7 @@ block content
 
   include blocks/breadcrumbs
   
-  section.section.product
+  section.section.product(itemscope itemtype="http://schema.org/Product")
     .container
       .product-head
         //картинки
@@ -17,7 +17,7 @@ block content
             //small
             .product-slider__miniature
               .image.image_contain
-                img(data-src="./img/image 60.jpg", alt="image").lazyload
+                img(data-src="./img/image 60.jpg", alt="image" itemprop="image").lazyload
             //small
             .product-slider__miniature
               .image.image_contain
@@ -49,9 +49,9 @@ block content
                 .image.image_contain
                   img(data-src="./img/image 60.jpg", alt="image").lazyload
 
-        .product-head__content 
+        .product-head__content(itemprop="offers" itemscope itemtype="http://schema.org/Offer") 
           .product-head__article Арт. 18475338
-          h1.product-head__title Триглав Амулет защитный Берегиня №10 Aztek
+          h1.product-head__title(itemprop="name") Триглав Амулет защитный Берегиня №10 Aztek
           .product-head__info-items
             a(href="#product-reviews" data-action="scroll_to_anchor").product-head__rating
               +rating-list()
@@ -59,18 +59,20 @@ block content
               
                 
 
-            .availability-label.availability-label_true
+            .availability-label.availability-label_true(itemprop="availability" href="http://schema.org/InStock")
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#check')
               span В наличии
 
             //<div class="availability-label availability-label_false"><span>Нет в наличии</span></div>
           
-          .product-head__description 
+          .product-head__description(itemprop="description") 
             | Триглав олицетворяет творческую силу Сварога, законы Перуна и божественный Свет Семаргла. Он неусыпно следит за тремя царствами: Правью, Явью и Навью.
           
           form(action="#").product-head__to-cart 
             .product-head__pricing 
+              meta(itemprop="price" content="2500.00")
+              meta(itemprop="priceCurrency" content="RUB")
               .product-head__price 2500 ₽
               .product-head__old-price 3000 ₽
             
