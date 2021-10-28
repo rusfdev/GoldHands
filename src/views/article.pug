@@ -4,7 +4,7 @@ block variables
   -var page_title = 'Карты Таро и выбор колоды для начинающих'
 
 block content
-  article.section.article
+  article.section.article(itemscope itemtype="http://schema.org/Article")
     .article-head 
       .container.article-head__container 
         .article-head__content 
@@ -12,7 +12,7 @@ block content
             svg.icon
               use(xlink:href='./img/icons/icons.svg#caret-left')
             span Вернуться к блогу
-          h1.article-head__title.mt-0.mb-15.mb-sm-25 Карты Таро и выбор колоды для начинающих
+          h1.article-head__title.mt-0.mb-15.mb-sm-25(itemprop="headline") Карты Таро и выбор колоды для начинающих
           .article-head__description
             | Какие карты Таро для начинающих выбрать? Какие расклады существуют, как правильно проводить гадание, делать трактовку?
           .article-head__info 
@@ -20,7 +20,7 @@ block content
               .article-info-item
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#calendar-blank')
-                span 25 апреля 2021
+                span(itemprop="datePublished" datetime="2021-04-25") 25 апреля 2021
               .article-info-item 
                 svg(fill='none').icon
                   use(xlink:href='./img/icons/icons.svg#heart')
@@ -33,9 +33,9 @@ block content
             a(href="#article-reviews" data-action="scroll_to_anchor").color-dark 19 комментариев 
         
         .image.image_contain.article-head__image
-          img(data-src="./img/Group 563.png", alt="image").lazyload
+          img(data-src="./img/Group 563.png", alt="image" itemprop="image").lazyload
     .article__container.container
-      .row 
+      .row(itemprop="articleBody") 
         .col-xl-8 
           h2 Разнообразие карт Таро
           p Сегодня на прилавках магазинов представлено немало карт Таро в самом разном авторстве – все они имеют особенный дизайн и даже трактовку. Но самое интересное, что каждый автор может преследовать свои цели – некоторые делают акцент на сугубо материальной стороне гаданий (как бизнеса), другие действительно делятся сакральными знаниями. Соответственно, посыл каждой карты будет различаться.

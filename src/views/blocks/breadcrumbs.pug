@@ -1,15 +1,15 @@
 .breadcrumbs
   .container.breadcrumbs__container
-    ul.breadcrumbs__list(itemtype="https://schema.org/BreadcrumbList")
+    ul.breadcrumbs__list(itemscope="" itemtype="http://schema.org/BreadcrumbList")
       -var index = 0
       each val in breadcrumbs_links
         if index < breadcrumbs_links.length - 1
-          li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem") 
+          li.breadcrumbs__item(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem") 
             a(href=index==0?'./':'#' itemprop="item").breadcrumbs__link
-              meta(itemprop="position" content=index)
               span(itemprop="name") #{val}
               svg.icon
                 use(xlink:href='./img/icons/icons.svg#caret-right')
+              meta(itemprop="position" content=index)
         else 
           li.breadcrumbs__item
             span=val    
