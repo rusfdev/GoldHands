@@ -77,19 +77,24 @@ mixin product-card(type)
           | Биодобавки и травы
 
     .product-card__button 
-      button.button.button_style-2.button_wide(class=type==2?'button_is-active':'' class=type==3?'button_in-progress':'')
-        span.button__inner.button__default 
-          svg.icon
-            use(xlink:href='./img/icons/icons.svg#handbag')
-          span В корзину
-        span.button__inner.button__in-progress 
-          span Секундочку
-          svg(style="stroke-width:2px;").icon
-            use(xlink:href='./img/icons/icons.svg#spinner')
-        span.button__inner.button__is-active 
-          svg.icon
-            use(xlink:href='./img/icons/icons.svg#check-round')
-          span В корзине
+      if type==3 
+        a(href="javascript:void(0);").button.button_style-5.w-100
+          span.button__inner.button__default 
+            span Под заказ
+      else 
+        button.button.button_style-2.w-100(class=type==2?'button_is-active':'')
+          span.button__inner.button__default 
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#handbag')
+            span В корзину
+          span.button__inner.button__in-progress 
+            span Секундочку
+            svg(style="stroke-width:2px;").icon
+              use(xlink:href='./img/icons/icons.svg#spinner')
+          span.button__inner.button__is-active 
+            svg.icon
+              use(xlink:href='./img/icons/icons.svg#check-round')
+            span В корзине
   //product card END
 
 mixin blog-card(type)

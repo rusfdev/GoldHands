@@ -99,7 +99,20 @@ document.addEventListener("DOMContentLoaded", function() {
     new TabHead($this).init();
   })
 
+  if (!mobile()) {
+    document.querySelectorAll('[data-image-zoom]').forEach($this => {
+      new ImageZoom($this).init();
+    })
+  }
 });
+
+function mobile() {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function getScrollBarWidth() {
   let $test = document.createElement('div');
@@ -297,15 +310,12 @@ function check_anchor() {
 
     if (!$target) return;
 
-    
-
     setTimeout(() => {
       let ty = $target.getBoundingClientRect().top + window.pageYOffset,
-          hh = Header.getFixedHeight(),
           gap = parseInt(getComputedStyle(document.documentElement)
             .getPropertyValue('--scroll-to-content-gap')
             .replace(/[^\d.-]/g, '')),
-          y = ty - hh - gap;
+          y = ty - gap;
 
       window.scrollTo(0, y);
     }, 0);
@@ -442,19 +452,16 @@ const ScrollAnchors = {
       if (!$target) return;
 
       scroll_event($target, $link);
-
-      /* if (history.pushState) {
-        history.pushState(null, null, addParameter(window.location.href, 'anchor', attr.replace(/[#]/g, '')));
-      } */
     }
 
     let scroll_event = ($target, $link) => {
       let ty = $target.getBoundingClientRect().top + window.pageYOffset,
-          hh = Header.getFixedHeight(),
           gap = parseInt(getComputedStyle(document.documentElement)
             .getPropertyValue('--scroll-to-content-gap')
             .replace(/[^\d.-]/g, '')),
-          y = ty - hh - gap;
+          y = ty - gap;
+
+      this.inScroll = true;
         
       window.dispatchEvent(new CustomEvent("scroll_to_anchor_start", {
         detail:{
@@ -463,23 +470,13 @@ const ScrollAnchors = {
         }
       }));
 
-      gsap.to(window, {scrollTo: y, duration: animation_duration_3 / 1000, onComplete: () => {
+      if (this.animation && this.animation.isActive()) this.animation.pause(); 
+
+      this.animation = gsap.to(window, {scrollTo: y, duration: animation_duration_3 / 1000, onComplete: () => {
         window.dispatchEvent(new CustomEvent("scroll_to_anchor_end"));
+        this.inScroll = false;
       }});
     }
-
-    /* window.onpopstate = function() {
-      if(history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-      }
-
-      let anchor = new URLSearchParams(location.search).get('anchor');
-      if (!anchor) return;
-      let $target = document.querySelector(`#${anchor}`);
-      if (!$target) return;
-
-      scroll_event($target);
-    }; */
 
     document.addEventListener('click', click_event);
   }
@@ -489,22 +486,33 @@ const Header = {
   init: function() {
     this.$element = document.querySelector('.header');
 
-    this.animation = gsap.timeline({paused:true})
-      .fadeIn(this.$element)
-      .fromTo(this.$element, {yPercent:-100}, {immediateRender:false, yPercent:0, ease:'power2.out'}, '<')
-
     this.checkState = () => {
-      if(window.innerWidth < breakpoints.xl) return;
 
-      if (window.pageYOffset > this.getHeight() && !this.fixed) {
-        this.fixed = true;
-        this.animation.play(0).eventCallback('onStart', () => {
-          this.$element.classList.add('header_fixed');
-        })
-      } else if (window.pageYOffset <= this.getHeight() && this.fixed) {
-        this.fixed = false;
+      let fixed = this.$element.classList.contains('header_fixed'),
+          visible = this.$element.classList.contains('header_visible'),
+          scrollTop = window.pageYOffset < this.oldScroll,
+          scrollEnough = window.pageYOffset > this.getHeight(),
+          visibleEnough = window.pageYOffset > window.innerHeight;
+
+
+
+      if (scrollEnough && !fixed) {
+        this.$element.classList.add('header_fixed');
+      } else if (!scrollEnough && fixed) {
         this.$element.classList.remove('header_fixed');
       }
+
+      if (!visible && visibleEnough && scrollTop && !ScrollAnchors.inScroll) {
+        this.$element.classList.add('header_visible');
+        document.documentElement.style.setProperty('--sticky-elements-safe-top', 'var(--fixed-header-height)');
+      } else if (visible && (!visibleEnough || !scrollTop || ScrollAnchors.inScroll)) {
+        this.$element.classList.remove('header_visible');
+        document.documentElement.style.setProperty('--sticky-elements-safe-top', '0px');
+
+        document.dispatchEvent(new CustomEvent("Header:hide"));
+      }
+
+      this.oldScroll = window.pageYOffset;
     }
 
     window.addEventListener('scroll', this.checkState);
@@ -512,10 +520,7 @@ const Header = {
   },
   getHeight: function() {
     return +getComputedStyle($wrapper).getPropertyValue('--header-height').replace(/[^\d.-]/g, '');
-  },
-  getFixedHeight: function() {
-    return +getComputedStyle($wrapper).getPropertyValue('--fixed-header-height').replace(/[^\d.-]/g, '');
-  },
+  }
 }
 
 const MobileSearch = {
@@ -555,6 +560,10 @@ const MobileSearch = {
         else this.close();
       })
     })
+
+    document.addEventListener('Header:hide', () => {
+      if (this.state()) this.close();
+    });
 
   }
 }
@@ -755,7 +764,7 @@ const ScrollTop = {
     this.check = () => {
       if(this.inScroll) return;
 
-      let h = window.innerWidth > breakpoints.xl ? Header.getHeight() : 300;
+      let h = window.innerHeight / 2;
 
       if(window.pageYOffset > h && !this.state()) {
         this.show();
@@ -899,7 +908,8 @@ class ProductSlider {
 
     this.slider = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
-      speed: animation_duration_3
+      speed: animation_duration_3,
+      allowTouchMove: mobile() ? true : false
     });
 
     this.$miniature[0].classList.add('active');
@@ -937,12 +947,15 @@ class TabHead {
     let check_postion = () => {
       if (window.innerWidth < breakpoints.md) return;
 
+      let top = this.$parent.getBoundingClientRect().top,
+          outer_top = this.$parent.parentNode.getBoundingClientRect().top,
+          sticky = top > outer_top;
 
-      let top = this.$parent.getBoundingClientRect().top;
+      
 
-      if (top <= Header.getFixedHeight() && !is_fixed()) {
+      if (sticky && !is_fixed()) {
         this.$parent.classList.add('fixed');
-      } else if (top > Header.getFixedHeight() && is_fixed()) {
+      } else if (!sticky && is_fixed()) {
         this.$parent.classList.remove('fixed');
       }
     }
@@ -996,5 +1009,40 @@ class TabHead {
     window.addEventListener('resize', check_postion);
     window.addEventListener('scroll', check_active_link);
     window.addEventListener('resize', check_active_link);
+  }
+}
+
+class ImageZoom {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$image = this.$parent.querySelector('img');
+    this.zoom = 2;
+
+    this.$parent.addEventListener('mouseleave', () => {
+      if (CustomInteractionEvents.touched) return;
+      this.$image.style.transform = 'none';
+    })
+
+    this.$parent.addEventListener('mousemove', (event) => {
+      if (CustomInteractionEvents.touched) return;
+
+      let x1 = this.$parent.getBoundingClientRect().left,
+          y1 = this.$parent.getBoundingClientRect().top,
+          h = this.$parent.getBoundingClientRect().height,
+          w = this.$parent.getBoundingClientRect().width,
+          x2 = event.clientX,
+          y2 = event.clientY,
+          top = y1 - y2,
+          left = x1 - x2,
+          valY = (top + (h / 2)) / (h / 2),
+          valX = (left + (w / 2)) / (w / 2),
+          translateY = ((h * this.zoom - h) / 2) * valY,
+          translateX = ((w * this.zoom - w) / 2) * valX;
+
+      this.$image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${this.zoom})`;
+    })
   }
 }

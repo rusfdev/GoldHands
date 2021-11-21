@@ -116,6 +116,12 @@
     --border-active: transparent;
     --color-active: #fff;
   }
+  &_style-5 {
+    --bg: var(--color-2);
+    --bg-hover: var(--color-10);
+    --color: var(--color-13);
+    --color-hover: #fff;
+  }
 
   &_in-progress {
     --bg: var(--color-3);
@@ -144,9 +150,17 @@
     height: 64px;
   }
   &_cart {
-    .icon {
-      width: 30px;
-      height: 25px;
+    .button__default {
+      .icon {
+        width: 30px;
+        height: 25px;
+      }
+    }
+    .button__is-active {
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 

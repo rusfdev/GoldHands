@@ -8,9 +8,9 @@ block content
 
   section.section 
     .container
-      h1.section__title Компоненты
+      h1.section__title.mb-40 Компоненты
       .row 
-        .col-auto.d-flex.flex-column
+        .mb-40.col-auto.d-flex.flex-column
           h2 Кнопка 1
           .mb-20
             //button
@@ -38,7 +38,7 @@ block content
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#check-round')
                 span Отправлено
-          .mb-20
+          .mb-0
             //button
             button.button.button_style-1.button_is-active
               span.button__inner.button__default 
@@ -51,7 +51,7 @@ block content
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#check-round')
                 span Отправлено
-        .col-auto.d-flex.flex-column
+        .mb-40.col-auto.d-flex.flex-column
           h2 Кнопка 2
           .mb-20
             //button
@@ -79,7 +79,7 @@ block content
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#check-round')
                 span Отправлено
-          .mb-20
+          .mb-0
             //button
             button.button.button_style-2.button_is-active
               span.button__inner.button__default 
@@ -92,8 +92,7 @@ block content
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#check-round')
                 span Отправлено
-
-        .col-auto.d-flex.flex-column
+        .mb-40.col-auto.d-flex.flex-column
           h2 Кнопка 3
           .mb-20
             //button
@@ -121,7 +120,7 @@ block content
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#check-round')
                 span Отправлено
-          .mb-20
+          .mb-0
             //button
             button.button.button_style-3.button_is-active
               span.button__inner.button__default 
@@ -133,5 +132,68 @@ block content
               span.button__inner.button__is-active 
                 svg.icon
                   use(xlink:href='./img/icons/icons.svg#check-round')
-                span Отправлено
+                span Отправлено     
+        .mb-40.col-auto.d-flex.flex-column
+          h2 Кнопка 4
+          .mb-20
+            //button
+            button.button.button_style-5
+              span.button__inner.button__default 
+                span Под заказ
+          .mb-0
+            //button
+            button.button.button_large.button_style-5
+              span.button__inner.button__default 
+                span Под заказ
+
+
         
+        .col-auto.d-flex.flex-column
+          h2 В корзину
+          .mb-20
+            //button
+            button.button.button_style-2.button_large.button_cart
+              span.button__inner.button__default 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#handbag')
+                span Добавить в корзину
+              span.button__inner.button__in-progress 
+                span Секундочку
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              span.button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span В корзине
+          
+          .mb-20
+            //button
+            button.button.button_style-2.button_large.button_in-progress.button_cart
+              span.button__inner.button__default 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#handbag')
+                span Добавить в корзину
+              span.button__inner.button__in-progress 
+                span Секундочку
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              span.button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span В корзине
+          
+          .mb-0
+            //button
+            button.button.button_style-2.button_large.button_is-active.button_cart
+              span.button__inner.button__default 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#handbag')
+                span Добавить в корзину
+              span.button__inner.button__in-progress 
+                span Секундочку
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#spinner')
+              span.button__inner.button__is-active 
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#check-round')
+                span В корзине

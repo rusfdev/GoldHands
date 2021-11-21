@@ -24,7 +24,16 @@ block content
                   else 
                     img(src="#" data-src="./img/product-1.png", alt="image").lazyload
               td.products-preview-item__item.products-preview-item__text 
-                span.products-preview-item__article Арт. 18475338
+                .products-preview-item__head
+                  span.products-preview-item__article Арт. 18475338
+                  if type == 2
+                    .products-preview-item__labels 
+                      .product-label.product-label_type-new Новинка
+                      .product-label.product-label_type-low-price Цена снижена
+                  else if type == 3 
+                    .products-preview-item__labels 
+                      .product-label.product-label_type-bestseller Хит продаж
+
                 a(href="#").products-preview-item__title 
                   if type == 2
                     | Крем дневной увлажняющий 50 гр Aasha Herbals
@@ -55,11 +64,11 @@ block content
 
           +item(2)
           +item(1)
-          +item(2)
+          +item(3)
           +item(1)
           +item(2)
           +item(1)
-          +item(2)
+          +item(1)
           +item(1)
           
       .cart__aside

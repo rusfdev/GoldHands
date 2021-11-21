@@ -542,34 +542,18 @@
                   </div>
                   <!--small-->
                   <div class="product-slider__miniature">
-                    <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
-                  </div>
-                  <!--small-->
-                  <div class="product-slider__miniature">
-                    <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
-                  </div>
-                  <!--small-->
-                  <div class="product-slider__miniature">
-                    <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
+                    <div class="image image_contain"><img class="lazyload" data-src="./img/blog2.jpg" alt="image"></div>
                   </div>
                 </div>
                 <div class="swiper-container"> 
                   <div class="swiper-wrapper">
                     <!--large-->
                     <div class="swiper-slide">
-                      <div class="image image_contain"> <img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
+                      <div class="image image_contain" data-image-zoom> <img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
                     </div>
                     <!--large-->
                     <div class="swiper-slide">
-                      <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
-                    </div>
-                    <!--large-->
-                    <div class="swiper-slide">
-                      <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
-                    </div>
-                    <!--large-->
-                    <div class="swiper-slide">
-                      <div class="image image_contain"><img class="lazyload" data-src="./img/image 60.jpg" alt="image"></div>
+                      <div class="image image_contain" data-image-zoom><img class="lazyload" data-src="./img/blog2.jpg" alt="image"></div>
                     </div>
                   </div>
                 </div>
@@ -600,7 +584,11 @@
                       <use xlink:href="./img/icons/icons.svg#check"></use>
                     </svg><span>В наличии</span>
                   </div>
-                  <!--<div class="availability-label availability-label_false"><span>Нет в наличии</span></div>-->
+                  <div class="availability-label availability-label_false">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#box"></use>
+                    </svg><span>Под заказ</span>
+                  </div>
                 </div>
                 <div class="product-head__description" itemprop="description">
                    Триглав олицетворяет творческую силу Сварога, законы Перуна и божественный Свет Семаргла. Он неусыпно следит за тремя царствами: Правью, Явью и Навью.</div>
@@ -611,10 +599,19 @@
                     <div class="product-head__price">2500 ₽</div>
                     <div class="product-head__old-price">3000 ₽</div>
                   </div>
-                  <button class="button button_style-2 button_large button_cart product-head__to-cart-button"><span class="button__inner button__default"> 
-                      <svg class="icon">
-                        <use xlink:href="./img/icons/icons.svg#handbag"></use>
-                      </svg><span>Добавить в корзину</span></span></button>
+                  <!--контейнер для кнопки-->
+                  <div class="product-head__to-cart-button">
+                    <!--любая кнопка-->
+                    <!--Все кнопки и их состояния на странице компоненты-->
+                    <button class="button button_large button_style-5"><span class="button__inner button__default"> <span>Под заказ</span></span></button>
+                    <!--button.button.button_style-2.button_large.button_cart
+                    span.button__inner.button__default 
+                      svg.icon
+                        use(xlink:href='./img/icons/icons.svg#handbag')
+                      span Добавить в корзину
+                    
+                    -->
+                  </div>
                   <div class="product-calculator" data-custom-interaction>
                     <button class="product-calculator__button product-calculator__button_minus" type="button">
                       <svg class="icon"> 
@@ -768,7 +765,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -827,7 +824,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -889,17 +886,7 @@
                             <div class="product-card__category-label"> Саморазвитие
                             </div>
                           </div>
-                          <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
-                                <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#handbag"></use>
-                                </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                                <svg class="icon" style="stroke-width:2px;">
-                                  <use xlink:href="./img/icons/icons.svg#spinner"></use>
-                                </svg></span><span class="button__inner button__is-active"> 
-                                <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#check-round"></use>
-                                </svg><span>В корзине</span></span></button>
+                          <div class="product-card__button"> <a class="button button_style-5 w-100" href="javascript:void(0);"><span class="button__inner button__default"> <span>Под заказ</span></span></a>
                           </div>
                         </div>
                         <!--product card END-->
@@ -949,7 +936,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1008,7 +995,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1094,7 +1081,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1153,7 +1140,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1215,17 +1202,7 @@
                             <div class="product-card__category-label"> Саморазвитие
                             </div>
                           </div>
-                          <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
-                                <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#handbag"></use>
-                                </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                                <svg class="icon" style="stroke-width:2px;">
-                                  <use xlink:href="./img/icons/icons.svg#spinner"></use>
-                                </svg></span><span class="button__inner button__is-active"> 
-                                <svg class="icon">
-                                  <use xlink:href="./img/icons/icons.svg#check-round"></use>
-                                </svg><span>В корзине</span></span></button>
+                          <div class="product-card__button"> <a class="button button_style-5 w-100" href="javascript:void(0);"><span class="button__inner button__default"> <span>Под заказ</span></span></a>
                           </div>
                         </div>
                         <!--product card END-->
@@ -1275,7 +1252,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1334,7 +1311,7 @@
                             </div>
                           </div>
                           <div class="product-card__button"> 
-                            <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                            <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
                                 <svg class="icon">
                                   <use xlink:href="./img/icons/icons.svg#handbag"></use>
                                 </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1774,7 +1751,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1833,7 +1810,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -1895,17 +1872,7 @@
                         <div class="product-card__category-label"> Саморазвитие
                         </div>
                       </div>
-                      <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide button_in-progress"><span class="button__inner button__default"> 
-                            <svg class="icon">
-                              <use xlink:href="./img/icons/icons.svg#handbag"></use>
-                            </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
-                            <svg class="icon" style="stroke-width:2px;">
-                              <use xlink:href="./img/icons/icons.svg#spinner"></use>
-                            </svg></span><span class="button__inner button__is-active"> 
-                            <svg class="icon">
-                              <use xlink:href="./img/icons/icons.svg#check-round"></use>
-                            </svg><span>В корзине</span></span></button>
+                      <div class="product-card__button"> <a class="button button_style-5 w-100" href="javascript:void(0);"><span class="button__inner button__default"> <span>Под заказ</span></span></a>
                       </div>
                     </div>
                     <!--product card END-->
@@ -1955,7 +1922,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -2014,7 +1981,7 @@
                         </div>
                       </div>
                       <div class="product-card__button"> 
-                        <button class="button button_style-2 button_wide button_is-active"><span class="button__inner button__default"> 
+                        <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
                             <svg class="icon">
                               <use xlink:href="./img/icons/icons.svg#handbag"></use>
                             </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
@@ -2220,7 +2187,7 @@
                     </label>
                   </div>
                   <div class="form__element">
-                    <button class="button button_style-2 d-flex"><span class="button__inner button__default"> <span>Отправить</span></span></button>
+                    <button class="button button_style-2 w-100 w-sm-auto"><span class="button__inner button__default"> <span>Отправить</span></span></button>
                   </div>
                 </form>
               </div>

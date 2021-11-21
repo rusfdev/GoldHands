@@ -22,6 +22,7 @@
   --page-min-width: 320px;
   --content-min-width: var(--page-min-width);
   --content-max-width: calc(max(100vw, var(--page-min-width)) - var(--scrollbar-width));
+  --sticky-elements-safe-top: 0px;
 
   //header
   --header-height: 268px;

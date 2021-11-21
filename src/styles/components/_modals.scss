@@ -24,6 +24,17 @@
     display: flex;
     padding: 60px var(--container-padding-x);
   }
+  @include media-breakpoint-up(lg) {
+    &-block {
+      transition: transform var(--trs-2);
+      transform: scale(0.9);
+    }
+    &.d-block {
+      .modal-block {
+        transform: scale(1);
+      }
+    }
+  }
   @include media-breakpoint-down(sm) {
     &__inner {
       padding: 40px var(--container-padding-x);
@@ -44,6 +55,9 @@
     right: 40px;
     width: 32px;
     height: 32px;
+  }
+  @include media-breakpoint-up(lg) {
+
   }
   @include media-breakpoint-down(sm) {
     padding: 30px 25px;

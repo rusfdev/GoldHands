@@ -41,6 +41,10 @@ img {
   }
 }
 
+[data-image-zoom] {
+  overflow: hidden;
+}
+
 .logo {
   display: block;
   &__image {
