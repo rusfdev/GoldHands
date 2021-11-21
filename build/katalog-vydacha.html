@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Gold Hands - Амулеты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Описание текущей страницы...">
+    <!--theme-->
+    <meta name="theme-color" content="#fff">
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ruslanmmr.github.io/GoldHands/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/GoldHands/img/favicons/favicon-16x16.png">
+    <!--open graph-->
+    <meta property="og:title" content="Амулеты">
+    <meta property="og:site_name" content="Gold Hands">
+    <meta property="og:url" content="url текущей страницы...">
+    <meta property="og:description" content="Описание текущей страницы...">
+    <meta property="og:image" content="https://ruslanmmr.github.io/GoldHands/build/img/logos/logo.png">
+    <!--fonts--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="stylesheet" href="./styles/common.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top"> 
+          <div class="container header__top-container"> 
+            <ul class="header__top-left-list">
+              <li class="header__top-left-item"><a class="icon-link header__icon-link" href="#location-modal" data-action="modal_open">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#navigation-arrow"></use>
+                  </svg><span>Санкт-Петербург</span></a></li>
+              <li class="header__top-left-item"><a class="header__phone" href="tel:88001000750">8 800 1000 750</a></li>
+            </ul>
+            <ul class="header__top-right-list">
+              <li class="header__top-right-item"><a href="#">Доставка и оплата</a></li>
+              <li class="header__top-right-item"><a href="#">Об “Gold Hands”</a></li>
+              <li class="header__top-right-item"><a href="#">Блог</a></li>
+              <li class="header__top-right-item"><a href="#">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__center">
+          <div class="container header__center-container"> 
+            <div class="header__center-left">
+              <div class="header__center-left-container"> 
+                <div class="header__mobile-buttons-left-list d-xl-none"><a class="header__mobile-button header__mobile-button-item" href="#mobile-nav" data-action="side_modal_open">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#equals"></use>
+                    </svg></a>
+                  <button class="header__mobile-button header__mobile-button-item header__icon-link" aria-label="Поиск" data-action="mobile-search_toggle">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#magnifying-glass"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="button button_style-1 header__catalog-button" data-action="catalog-modal_open" aria-label="Открыть каталог">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
+                  </svg><span>Каталог товаров</span>
+                </button><a class="icon-link header__icon-link header__sale-link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#percent"></use>
+                  </svg><span>Распродажа</span></a>
+                <div class="header__search">
+                  <div class="container">
+                    <form class="search"> 
+                      <div class="input search__input">
+                        <svg class="icon"> 
+                          <use xlink:href="./img/icons/icons.svg#magnifying-glass"></use>
+                        </svg>
+                        <input type="text" placeholder="Поиск">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div><a class="logo header__logo" href="./"><img class="logo__image d-none d-xl-block" src="./img/logos/logo.png" alt="logo"><img class="logo__image d-xl-none" src="./img/logos/logo_small.png" alt="logo"></a>
+            <div class="header__center-right">
+              <ul class="header__center-right-list"> 
+                <li class="header__center-right-item d-none d-xl-block"> <a class="icon-link header__icon-link" href="#">
+                    <svg class="icon" fill="none">
+                      <use xlink:href="./img/icons/icons.svg#heart"></use>
+                    </svg><span>Избранное</span></a></li>
+                <li class="header__center-right-item header__mobile-button-item"><a class="icon-link header__icon-link header__mobile-button" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#user"></use>
+                    </svg><span>Профиль</span></a></li>
+                <li class="header__center-right-item header__mobile-button-item"><a class="icon-link header__icon-link header__mobile-button header__cart" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                    </svg><span>Корзина</span><span class="header__cart-count">8</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__categories">
+          <ul class="header__categories-list container"> 
+            <li class="header__categories-item"><a href="#">Благовония</a></li>
+            <li class="header__categories-item"><a href="#">Свечи </a></li>
+            <li class="header__categories-item"><a href="#">Таро и руны </a></li>
+            <li class="header__categories-item"><a href="#">Здоровое питание </a></li>
+            <li class="header__categories-item"><a href="#">Ароматерапия </a></li>
+            <li class="header__categories-item"><a href="#">Инструменты биолокации </a></li>
+            <li class="header__categories-item"><a href="#">Натуральная косметика </a></li>
+            <li class="header__categories-item"><a href="#">Книги </a></li>
+            <li class="header__categories-item"><a href="#">Чай </a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="side-modal mobile-nav" id="mobile-nav">
+        <div class="side-modal__container mobile-nav__container" data-scroll-lock-scrollable>
+          <div class="side-modal__head">
+            <button class="close-element side-modal__close" data-action="side_modal_close" aria-label="Закрыть мобильное меню">
+              <svg class="icon">
+                <use xlink:href="./img/icons/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="side-modal__content">
+            <ul class="mobile-nav__list"> 
+              <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#location-modal" data-action="modal_open">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#navigation-arrow"></use>
+                  </svg><span>Санкт-Петербург</span></a></li>
+            </ul>
+            <ul class="mobile-nav__list"> 
+              <li class="mobile-nav__item">
+                <button class="icon-link mobile-nav__icon-link" data-action="catalog-modal_open" aria-label="Открыть каталог">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#dots-nine"></use>
+                  </svg><span>Каталог товаров</span>
+                </button>
+              </li>
+              <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#">
+                  <svg class="icon" fill="none">
+                    <use xlink:href="./img/icons/icons.svg#heart"></use>
+                  </svg><span>Избранное</span></a></li>
+              <li class="mobile-nav__item"><a class="icon-link mobile-nav__icon-link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#percent"></use>
+                  </svg><span>Распродажа</span></a></li>
+            </ul>
+            <ul class="mobile-nav__list"> 
+              <li class="mobile-nav__item"><a href="#">Доставка и оплата</a></li>
+              <li class="mobile-nav__item"><a href="#">Об “Gold Hands”</a></li>
+              <li class="mobile-nav__item"><a href="#">Блог</a></li>
+              <li class="mobile-nav__item"><a href="#">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-modal" data-scroll-lock-scrollable>
+        <div class="catalog-modal__head">
+          <div class="container catalog-modal__head-container">
+            <div class="catalog-modal__head-left"> <a class="logo catalog-modal__logo" href="./"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a><a class="catalog-modal__head-phone" href="tel:88001000750">8 800 1000 750</a></div>
+            <button class="close-element catalog-modal__close" data-action="catalog-modal_close" aria-label="Закрыть каталог">
+              <svg class="icon">
+                <use xlink:href="./img/icons/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="catalog-modal__content"> 
+          <div class="container"> 
+            <div class="catalog-modal-block d-block" id="vse-kategorii">
+              <h2 class="h1 catalog-modal-block__title">Каталог</h2>
+              <div class="catalog-modal-block__content">
+                <div class="catalog-modal-block__boxes row">
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#blagovoniya" data-action="catalog-modal_trigger"><span>Благовония</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Индийские благовония</span></a>
+                            </li>
+                            <li><a href="#tibetskie-blagovoniya" data-action="catalog-modal_trigger"><span>Тибетские благовония (рабочая ссылка)</span></a>
+                            </li>
+                            <li><a href="#"><span>Бутанские благовония</span></a>
+                            </li>
+                            <li><a href="#"><span>Японские благовония</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#blagovoniya" data-action="catalog-modal_trigger"><strong>Ещё 5</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#blagovoniya" data-action="catalog-modal_trigger">Индийские благовония, Тибетские благовония, Бутанские благовония, Японские благовония и Ещё 5</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Свечи</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Свечи цветные</span></a>
+                            </li>
+                            <li><a href="#"><span>Ритуальные свечи</span></a>
+                            </li>
+                            <li><a href="#"><span>Свечи из вощины</span></a>
+                            </li>
+                            <li><a href="#"><span>Ароматические</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 3</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Свечи цветные, Ритуальные свечи, Свечи из вощины, Ароматические и Ещё 3</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Таро и руны</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Все колоды таро</span></a>
+                            </li>
+                            <li><a href="#"><span>Таро для начинающих</span></a>
+                            </li>
+                            <li><a href="#"><span>Тематические колоды Таро</span></a>
+                            </li>
+                            <li><a href="#"><span>Подарочные наборы Таро</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 10</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Все колоды таро, Таро для начинающих, Тематические колоды Таро, Подарочные наборы Таро и Ещё 10</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Здоровое питание</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Быстрое приготовление</span></a>
+                            </li>
+                            <li><a href="#"><span>Соусы, масла и укусы</span></a>
+                            </li>
+                            <li><a href="#"><span>Вегетарианская колбаса</span></a>
+                            </li>
+                            <li><a href="#"><span>Полезные сладости</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 13</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Быстрое приготовление, Соусы, масла и укусы, Вегетарианская колбаса, Полезные сладости и Ещё 13</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Ароматерапия</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Масла</span></a>
+                            </li>
+                            <li><a href="#"><span>Аромалампы</span></a>
+                            </li>
+                            <li><a href="#"><span>Аромакулоны</span></a>
+                            </li>
+                            <li><a href="#"><span>Ароматизаторы</span></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Масла, Аромалампы, Аромакулоны и Ароматизаторы</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Инструменты биолокации</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Биолокационные рамки</span></a>
+                            </li>
+                            <li><a href="#"><span>Маятники</span></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Биолокационные рамки и Маятники</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Натуральная косметика</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Уход за лицом</span></a>
+                            </li>
+                            <li><a href="#"><span>Уход за телом</span></a>
+                            </li>
+                            <li><a href="#"><span>Уход за волосами</span></a>
+                            </li>
+                            <li><a href="#"><span>Уход за полостью рта</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 6</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Уход за лицом, Уход за телом, Уход за волосами, Уход за полостью рта и Ещё 6</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Книги</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Духовные традиции мира</span></a>
+                            </li>
+                            <li><a href="#"><span>Учения и мастера</span></a>
+                            </li>
+                            <li><a href="#"><span>Эзотерика</span></a>
+                            </li>
+                            <li><a href="#"><span>Самопознание</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 7</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Духовные традиции мира, Учения и мастера, Эзотерика, Самопознание и Ещё 7</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Чай</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Посуда для чая</span></a>
+                            </li>
+                            <li><a href="#"><span>Мате</span></a>
+                            </li>
+                            <li><a href="#"><span>Японский чай</span></a>
+                            </li>
+                            <li><a href="#"><span>Бирюзовый чай</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 8</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Посуда для чая, Мате, Японский чай, Бирюзовый чай и Ещё 8</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Предметы для алтаря</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Буддистские</span></a>
+                            </li>
+                            <li><a href="#"><span>Индуистские</span></a>
+                            </li>
+                            <li><a href="#"><span>Четки</span></a>
+                            </li>
+                            <li><a href="#"><span>Тханки</span></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Буддистские, Индуистские, Четки и Тханки</a>
+                        </div>
+                        <div class="catalog-modal-block__box col-sm-6 col-md-4 col-lg-3">
+                          <h4 class="catalog-modal-block__box-title"><a href="#"><span>Фэн-шуй</span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                              </svg></a>
+                          </h4>
+                          <ul class="catalog-modal-block__box-list list">
+                            <li><a href="#"><span>Божества фэн-шуй</span></a>
+                            </li>
+                            <li><a href="#"><span>Животные фэн-шуй</span></a>
+                            </li>
+                            <li><a href="#"><span>Талисманы фэн-шуй</span></a>
+                            </li>
+                            <li><a href="#"><span>Ловцы снов</span></a>
+                            </li>
+                            <li><a class="catalog-modal-block__more-link" href="#"> <strong>Ещё 7</strong></a>
+                            </li>
+                          </ul><a class="catalog-modal-block__box-mobile-link" href="#">Божества фэн-шуй, Животные фэн-шуй, Талисманы фэн-шуй, Ловцы снов и Ещё 7</a>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-modal-block" id="tibetskie-blagovoniya"><a class="icon-link icon-link_type-2 catalog-modal-block__back" href="#blagovoniya" data-action="catalog-modal_trigger">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#caret-left"></use>
+                </svg><span>Благовония</span></a>
+              <h2 class="h1 catalog-modal-block__title"><a href="#">Тибетские благовония</a></h2>
+              <div class="catalog-modal-block__content">
+                <div class="catalog-modal-block__items row">
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Уточки-мандаринки</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Трехлапая жаба</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Слоны и носороги</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Собачки Фу</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Манэко-кот</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Карпы</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Черепахи</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Драконы</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Пи Яо</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Совы и филины</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Три обезьяны</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Лошади и быки</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-modal-block" id="blagovoniya"><a class="icon-link icon-link_type-2 catalog-modal-block__back" href="#vse-kategorii" data-action="catalog-modal_trigger">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#caret-left"></use>
+                </svg><span>Все категории</span></a>
+              <h2 class="h1 catalog-modal-block__title"><a href="#">Благовония</a></h2>
+              <div class="catalog-modal-block__content">
+                <div class="catalog-modal-block__items row">
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Индийские благовония</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#tibetskie-blagovoniya" data-action="catalog-modal_trigger"><span>Тибетские благовония (рабочая ссылка)</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Бутанские благовония</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Японские благовония</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 5</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 6</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 7</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 8</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                        <div class="catalog-modal-block__item col-sm-6 col-md-4 col-lg-3"><a href="#"><span>Категория 9</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                            </svg></a>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="main">
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container">
+            <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"> <a class="breadcrumbs__link" href="./" itemprop="item"><span itemprop="name">Главная</span>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  </svg>
+                  <meta itemprop="position" content="0"></a></li>
+              <li class="breadcrumbs__item" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"> <a class="breadcrumbs__link" href="#" itemprop="item"><span itemprop="name">Каталог</span>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  </svg>
+                  <meta itemprop="position" content="1"></a></li>
+              <li class="breadcrumbs__item"><span>Амулеты</span></li>
+            </ul>
+          </div>
+        </div>
+        <section class="section catalog">
+          <div class="container">
+            <h1 class="mb-20 mb-sm-25">Амулеты</h1>
+          </div>
+          <div class="swiper slider-constructor catalog-categories-slider catalog__categories" data-slides="auto" data-free-mode="true">
+            <div class="container">
+              <div class="swiper-container"> 
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label1.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Славянские амулеты</h5></a></div>
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label2.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Кельтские и скандинавские амулеты</h5></a></div>
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label3.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Сакральные символы и знаки</h5></a></div>
+                  <div class="swiper-slide"><a class="category-label catalog-category-label" href="#">
+                      <div class="image image_contain catalog-category-label__image"><img class="lazyload" src="#" data-src="./img/label4.png" alt="img"></div>
+                      <h5 class="category-label__title catalog-category-label__title">Животные-покровители амулеты и знаки</h5></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container catalog__container"> 
+            <aside class="catalog__aside">
+              <div class="side-modal filter" id="filter">
+                <div class="side-modal__container filter__container" data-scroll-lock-scrollable>
+                  <div class="side-modal__head filter__head">
+                    <button class="close-element side-modal__close" data-action="side_modal_close" aria-label="Закрыть фильтр">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <form class="side-modal__content filter__content" action="#">
+                    <div class="filter-box"> 
+                      <h6 class="filter-box__title">Цена</h6>
+                      <div class="filter-box__inputs"> 
+                        <div class="input filter-input"><span>от</span>
+                          <input type="number" placeholder="999">
+                        </div>
+                        <div class="input filter-input"><span>до</span>
+                          <input type="number" placeholder="9000" value="9000">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-box"> 
+                      <h6 class="filter-box__title">Тип товара</h6>
+                      <div class="filter-box__items">
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox" checked="checked"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Славянские амулеты <span class="color-dark fw-normal">(112)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Тибетские амулеты <span class="color-dark fw-normal">(65)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Китайские амулеты <span class="color-dark fw-normal">(31)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Сакральные символы и знаки <span class="color-dark fw-normal">(9)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__more" data-collapse="parent">
+                          <div class="filter-box__more-content active" data-collapse="content">
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Кельтские и скандинавские амулеты <span class="color-dark fw-normal">(179)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Восточные амулеты <span class="color-dark fw-normal">(100)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Египетские амулеты <span class="color-dark fw-normal">(28)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Индейские амулеты <span class="color-dark fw-normal">(3)</span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <button class="icon-link filter-box__more-toggle active" type="button" data-collapse="toggle"><span>Свернуть</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-box"> 
+                      <h6 class="filter-box__title">Назначение</h6>
+                      <div class="filter-box__items">
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Здоровье <span class="color-dark fw-normal">(112)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Карьера <span class="color-dark fw-normal">(65)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Богатство <span class="color-dark fw-normal">(31)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Гармония <span class="color-dark fw-normal">(9)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__more" data-collapse="parent">
+                          <div class="filter-box__more-content" data-collapse="content">
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Жизненная энергия <span class="color-dark fw-normal">(179)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Защита от негатива <span class="color-dark fw-normal">(100)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Молодость и красота <span class="color-dark fw-normal">(28)</span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <button class="icon-link filter-box__more-toggle" type="button" data-collapse="toggle"><span>Развернуть</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-box"> 
+                      <h6 class="filter-box__title">Материал</h6>
+                      <div class="filter-box__items">
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Металл <span class="color-dark fw-normal">(112)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Кость <span class="color-dark fw-normal">(65)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Латунь <span class="color-dark fw-normal">(31)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Медь <span class="color-dark fw-normal">(9)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Мельхиор <span class="color-dark fw-normal">(112)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Олово <span class="color-dark fw-normal">(65)</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-box"> 
+                      <h6 class="filter-box__title">Преимущества покупки</h6>
+                      <div class="filter-box__items">
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Для спасения <span class="color-dark fw-normal">(112)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Нумерологический оберег <span class="color-dark fw-normal">(65)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Дополнительные свойства <span class="color-dark fw-normal">(31)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__item">
+                          <label class="checkbox">
+                            <input type="checkbox"/><span>
+                              <svg class="icon">
+                                <use xlink:href="./img/icons/icons.svg#check"></use>
+                              </svg>Материалы из космоса <span class="color-dark fw-normal">(9)</span></span>
+                          </label>
+                        </div>
+                        <div class="filter-box__more" data-collapse="parent">
+                          <div class="filter-box__more-content" data-collapse="content">
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Жизненная энергия <span class="color-dark fw-normal">(179)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Защита от негатива <span class="color-dark fw-normal">(100)</span></span>
+                              </label>
+                            </div>
+                            <div class="filter-box__item">
+                              <label class="checkbox">
+                                <input type="checkbox"/><span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                                  </svg>Молодость и красота <span class="color-dark fw-normal">(28)</span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <button class="icon-link filter-box__more-toggle" type="button" data-collapse="toggle"><span>Развернуть</span>
+                            <svg class="icon">
+                              <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </aside>
+            <div class="catalog__content">
+              <div class="catalog__sorting"><a class="button button_style-3 catalog__sorting-button d-xl-none" href="#filter" data-action="side_modal_open">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#funnel"></use>
+                  </svg></a>
+                <div class="select flex-grow-1 flex-sm-grow-0">
+                  <select>
+                    <option value="Цена (по возрастанию)" selected>Цена (по возрастанию)</option>
+                    <option value="Цена (по убыванию)">Цена (по убыванию)</option>
+                    <option value="По популярности" disabled>По популярности</option>
+                  </select>
+                </div>
+              </div>
+              <div class="catalog__items"> 
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image">
+                    <div class="product-labels product-card__labels">
+                      <div class="product-label product-label_type-bestseller">Хит продаж</div>
+                      <div class="product-label product-label_type-new">Новинка</div>
+                    </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                    </div>
+                    <div class="product-card__category-label"> Биодобавки и травы
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок (Dashamoola Powder) натуральный травяной</a>
+                    </div>
+                    <div class="product-card__category-label"> Косметические (базовые) масла
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image">
+                    <div class="product-labels product-card__labels">
+                      <div class="product-label product-label_type-low-price">Цена снижена</div>
+                    </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">1100 ₽</div>
+                          <div class="product-card__old-price">1 490 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Косметическое масло-баттер МАНГО, Крымская роза, 100 г.</a>
+                    </div>
+                    <div class="product-card__category-label"> Саморазвитие
+                    </div>
+                  </div>
+                  <div class="product-card__button"> <a class="button button_style-5 w-100" href="javascript:void(0);"><span class="button__inner button__default"> <span>Под заказ</span></span></a>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite is-active">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                    </div>
+                    <div class="product-card__category-label"> Биодобавки и травы
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image">
+                    <div class="product-labels product-card__labels">
+                      <div class="product-label product-label_type-bestseller">Хит продаж</div>
+                      <div class="product-label product-label_type-new">Новинка</div>
+                    </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                    </div>
+                    <div class="product-card__category-label"> Биодобавки и травы
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок (Dashamoola Powder) натуральный травяной</a>
+                    </div>
+                    <div class="product-card__category-label"> Косметические (базовые) масла
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image">
+                    <div class="product-labels product-card__labels">
+                      <div class="product-label product-label_type-low-price">Цена снижена</div>
+                    </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">1100 ₽</div>
+                          <div class="product-card__old-price">1 490 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Косметическое масло-баттер МАНГО, Крымская роза, 100 г.</a>
+                    </div>
+                    <div class="product-card__category-label"> Саморазвитие
+                    </div>
+                  </div>
+                  <div class="product-card__button"> <a class="button button_style-5 w-100" href="javascript:void(0);"><span class="button__inner button__default"> <span>Под заказ</span></span></a>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite is-active">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                    </div>
+                    <div class="product-card__category-label"> Биодобавки и травы
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image">
+                    <div class="product-labels product-card__labels">
+                      <div class="product-label product-label_type-bestseller">Хит продаж</div>
+                      <div class="product-label product-label_type-new">Новинка</div>
+                    </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-1.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                    </div>
+                    <div class="product-card__category-label"> Биодобавки и травы
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-2.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок (Dashamoola Powder) натуральный травяной</a>
+                    </div>
+                    <div class="product-card__category-label"> Косметические (базовые) масла
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100 button_is-active"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image">
+                    <div class="product-labels product-card__labels">
+                      <div class="product-label product-label_type-low-price">Цена снижена</div>
+                    </div><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-3.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">1100 ₽</div>
+                          <div class="product-card__old-price">1 490 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Косметическое масло-баттер МАНГО, Крымская роза, 100 г.</a>
+                    </div>
+                    <div class="product-card__category-label"> Саморазвитие
+                    </div>
+                  </div>
+                  <div class="product-card__button"> <a class="button button_style-5 w-100" href="javascript:void(0);"><span class="button__inner button__default"> <span>Под заказ</span></span></a>
+                  </div>
+                </div>
+                <!--product card END-->
+                <!--product card START-->
+                <div class="product-card" data-custom-interaction="data-custom-interaction">
+                  <div class="product-card__image"><a class="image image_contain" href="#"> <img class="lazyload" src="#" data-src="./img/product-4.png" alt="image"/></a>
+                    <button class="product-favourite product-card__favourite is-active">
+                      <svg class="icon" fill="currentColor">
+                        <use xlink:href="./img/icons/icons.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__content">
+                    <div class="product-card__content-top"> 
+                      <div class="product-card__top-content"> 
+                        <div class="product-card__pricing"> 
+                          <div class="product-card__price">250 ₽</div>
+                        </div>
+                        <button class="product-card__to-card"> 
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#shopping-cart"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product-card__reviews" href="./product.html?anchor=product-reviews"> 
+                        <div class="rating-list">
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon active">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div><span>16 <span class="d-none d-sm-inline">отзывов</span></span></a><a class="product-card__title" href="#">Дасамула порошок</a>
+                    </div>
+                    <div class="product-card__category-label"> Биодобавки и травы
+                    </div>
+                  </div>
+                  <div class="product-card__button"> 
+                    <button class="button button_style-2 w-100"><span class="button__inner button__default"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#handbag"></use>
+                        </svg><span>В корзину</span></span><span class="button__inner button__in-progress"> <span>Секундочку</span>
+                        <svg class="icon" style="stroke-width:2px;">
+                          <use xlink:href="./img/icons/icons.svg#spinner"></use>
+                        </svg></span><span class="button__inner button__is-active"> 
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check-round"></use>
+                        </svg><span>В корзине</span></span></button>
+                  </div>
+                </div>
+                <!--product card END-->
+              </div>
+              <div class="visibility-info-module">
+                <div class="visibility-info-module__text">Отображается <span>12</span> из <span>36</span></div>
+                <div class="visibility-info-module__scale">
+                  <div class="visibility-info-module__scale-line" style="width:calc(12 / 36 * 100%)"></div>
+                </div>
+                <div class="visibility-info-module__button"> 
+                  <button class="button button_style-3"><span class="button__inner button__default"> <span>Показать больше</span></span></button>
+                </div>
+              </div>
+              <div class="pagination"><a class="icon-link icon-link_type-2 pagination__link pagination__prev" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-left"></use>
+                  </svg><span>Предыдущая</span></a>
+                <ul class="pagination__list"> 
+                  <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>1</span></a></li>
+                  <li class="pagination__item"> <a class="link link_type-2 pagination__link active" href="javascript:void(0);"><span>2</span></a></li>
+                  <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>3</span></a></li>
+                  <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>4</span></a></li>
+                  <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>...</span></a></li>
+                  <li class="pagination__item"> <a class="link link_type-2 pagination__link" href="#"> <span>15           </span></a></li>
+                </ul><a class="icon-link icon-link_type-2 pagination__link pagination__next" href="#"><span>Следующая</span>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#caret-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="mailing-banner"> 
+          <div class="container mailing-banner__container"><img class="lazyload mailing-banner__image" src="#" data-src="./img/phone.png" alt="image">
+            <div class="mailing-banner__text-content"> 
+              <h2 class="mailing-banner__title">Подпишитесь на нашу рассылку и получайте бонусы!</h2>
+              <div class="mailing-banner__text">
+                <p>Для всех подписчиков действуют премиальные скидки и закрытые распродажи!<br> Мы не спамим и отправляем всего по 1 письму в неделю!</p>
+              </div><a class="button button_style-2 mailing-banner__button" href="#"><span class="button__inner button__default"> <span>Подписаться</span></span></a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="footer__top"> 
+            <div class="footer__info"> <a class="logo footer__logo" href="./"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a>
+              <p>Интернет-магазин ”Gold Hands” Эзотерические товары со всего света</p>
+            </div>
+            <div class="footer__box"> 
+              <h5 class="footer__box-title">Категории</h5>
+              <ul class="footer__items footer__nav-items"> 
+                <li class="footer__item"> <a class="footer__link" href="#">Благовония</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Натуральная косметика</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Таро и руны</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Книги</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Здоровое питание</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Инструменты биолокации</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Ароматерапия</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#"> <strong>Распродажа</strong></a></li>
+              </ul>
+            </div>
+            <div class="footer__box"> 
+              <h5 class="footer__box-title">Помощь</h5>
+              <ul class="footer__items footer__nav-items">
+                <li class="footer__item"> <a class="footer__link" href="#">Доставка</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Инструкции</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Оплата</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Отзывы</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Возврат</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Контакты</a></li>
+                <li class="footer__item"> <a class="footer__link" href="#">Гарантии</a></li>
+              </ul>
+            </div>
+            <div class="footer__box"> 
+              <h5 class="footer__box-title">Контакты</h5>
+              <ul class="footer__items"> 
+                <li class="footer__item"> <a class="footer__link" href="tel:78002365555">+7 800 236 55 55</a></li>
+                <li class="footer__item"> <a class="footer__link" href="tel:74952555544">+7 495 255 55 44</a></li>
+                <li class="footer__item"> <a class="footer__link" href="mailto:info@goldhands.ru">info@goldhands.ru</a></li>
+              </ul>
+              <div class="socials footer__socials">
+                <ul class="socials__list">
+                  <li class="socials__item"> <a class="socials__link" href="#">instagram
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/socials.svg#instagram"></use>
+                      </svg></a></li>
+                  <li class="socials__item"> <a class="socials__link" href="#">youtube
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/socials.svg#youtube"></use>
+                      </svg></a></li>
+                  <li class="socials__item"> <a class="socials__link" href="#">vk
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/socials.svg#vk"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__payment"> <img src="./img/icons/mastercard.svg" alt="mastercard" style="--width:32px;"><img src="./img/icons/visa.svg" alt="visa" style="--width:49px;"><img src="./img/icons/paypal.svg" alt="paypal" style="--width:67px;"><img src="./img/icons/yandex_cash.svg" alt="yandex" style="--width:78px;"><img src="./img/icons/sberbank.svg" alt="sberbank" style="--width:80px;"></div>
+          </div>
+          <div class="footer__bottom"><span class="footer__bottom-item footer__copyright">GoldHands © 2021 Все права защищены.</span><a class="footer__bottom-item" href="#">Политика конфиденциальности </a></div>
+        </div>
+      </footer>
+      <!--scroll-top-->
+      <button class="scroll-top button button_style-2" data-action="scroll-top" aria-label="Прокрутить вверх">
+        <svg class="icon">
+          <use xlink:href="./img/icons/icons.svg#caret-top"></use>
+        </svg>
+      </button>
+      <!--modals-->
+      <div class="modal modal-location" id="location-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block modal-location__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container"> 
+                <h2 class="h1">Выберите город</h2>
+                <form class="search modal-location__search"> 
+                  <div class="input search__input">
+                    <svg class="icon"> 
+                      <use xlink:href="./img/icons/icons.svg#magnifying-glass"></use>
+                    </svg>
+                    <input class="modal-location" type="text" placeholder="Поиск">
+                  </div>
+                </form>
+                <ul class="modal-location__list">
+                  <li class="modal-location__item"><a href="#">Москва</a></li>
+                  <li class="modal-location__item"><a href="#">Волгоград</a></li>
+                  <li class="modal-location__item"><a href="#">Санкт-Петербург</a></li>
+                  <li class="modal-location__item"><a href="#">Волгоград</a></li>
+                  <li class="modal-location__item"><a href="#">Воронеж</a></li>
+                  <li class="modal-location__item"><a href="#">Домодедово</a></li>
+                  <li class="modal-location__item"><a href="#">Волгоград</a></li>
+                  <li class="modal-location__item"><a href="#">Екатеринбург</a></li>
+                  <li class="modal-location__item"><a href="#">Иркутск</a></li>
+                  <li class="modal-location__item"><a href="#">Казань</a></li>
+                  <li class="modal-location__item"><a href="#">Краснодар</a></li>
+                  <li class="modal-location__item"><a href="#">Красноярск</a></li>
+                  <li class="modal-location__item"><a href="#">Люберцы</a></li>
+                  <li class="modal-location__item"><a href="#">Мытищи</a></li>
+                  <li class="modal-location__item"><a href="#">Нижний Новгород</a></li>
+                  <li class="modal-location__item"><a href="#">Новосибирск</a></li>
+                  <li class="modal-location__item"><a href="#">Одинцово</a></li>
+                  <li class="modal-location__item"><a href="#">Омск</a></li>
+                  <li class="modal-location__item"><a href="#">Пермь</a></li>
+                  <li class="modal-location__item"><a href="#">Пушкино</a></li>
+                  <li class="modal-location__item"><a href="#">Раменское</a></li>
+                  <li class="modal-location__item"><a href="#">Ростов-на-Дону</a></li>
+                  <li class="modal-location__item"><a href="#">Самара</a></li>
+                  <li class="modal-location__item"><a href="#">Саратов</a></li>
+                  <li class="modal-location__item"><a href="#">Тверь</a></li>
+                  <li class="modal-location__item"><a href="#">Тольятти</a></li>
+                  <li class="modal-location__item"><a href="#">Тула</a></li>
+                  <li class="modal-location__item"><a href="#">Тюмень</a></li>
+                  <li class="modal-location__item"><a href="#">Уфа</a></li>
+                  <li class="modal-location__item"><a href="#">Хабаровск</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal review-modal" id="review-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block review-modal__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container"> 
+                <h2 class="h1 text-center">Оставить отзыв</h2>
+                <form class="form">
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="review-modal__rating"><span class="review-modal__rating-title">Оцените товар</span>
+                      <div class="rating-selection">
+                        <div class="rating-selection__stars">
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                          <svg class="icon rating-selection__star">
+                            <use xlink:href="./img/icons/icons.svg#star"></use>
+                          </svg>
+                        </div>
+                        <input class="rating-selection__input" type="text" name="" value="" hidden>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="input">
+                      <input type="text" required>
+                      <label>Ваше имя</label>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="input">
+                      <input type="email" required>
+                      <label>E-mail</label>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <div class="input">
+                      <textarea required></textarea>
+                      <label>Текст отзыва</label>
+                    </div>
+                  </div>
+                  <div class="form__element mb-20 mb-sm-25">
+                    <label class="checkbox">
+                      <input type="checkbox" checked="checked"/><span>
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons.svg#check"></use>
+                        </svg>Отправляя отзыв, вы соглашаетесь с нашей <a href="#" class="color-dark">политикой обработки персональных данных<span class="color-red">*</span></a></span>
+                    </label>
+                  </div>
+                  <div class="form__element">
+                    <button class="button button_style-2 w-100 w-sm-auto"><span class="button__inner button__default"> <span>Отправить</span></span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal success-modal" id="success-review-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block success-modal__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container text-center">
+                <div class="success-check success-modal__check">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                  </svg>
+                </div>
+                <h2 class="h1 mb-15 mt-30 mt-sm-35">Мы получили ваш отзыв!</h2>
+                <p class="mb-25 mb-sm-35">В ближайшее время наша служба поддержки проверит отзыв и разместит его на сайте.</p>
+                <button class="button button_style-3" data-action="modal_close" aria-label="Закрыть модальное окно"><span class="button__inner button__default"><span>Вернуться к товару</span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal success-modal" id="success-message-modal">
+        <div class="modal__wrapper" data-scroll-lock-scrollable>
+          <div class="modal__inner">
+            <div class="modal-block success-modal__block">
+              <button class="close-element modal-block__close" data-action="modal_close" aria-label="Закрыть модальное окно">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#close"></use>
+                </svg>
+              </button>
+              <div class="modal-block__container text-center">
+                <div class="success-check success-modal__check"> 
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons.svg#check"></use>
+                  </svg>
+                </div>
+                <h2 class="h1 mb-15 mt-30 mt-sm-35">Мы получили ваше сообщение!</h2>
+                <p class="mb-25 mb-sm-35">В ближайшее время наша служба поддержки свяжется с вами следуя деталям, указанным в соответствующих полях</p>
+                <button class="button button_style-3" data-action="modal_close" aria-label="Закрыть модальное окно"><span class="button__inner button__default"><span>Вернуться к сайту</span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--libs-->
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/libs/validate.min.js"></script>
+    <script src="./scripts/libs/inputmask.min.js"></script>
+    <script src="./scripts/libs/gsap.min.js"></script>
+    <script src="./scripts/libs/ScrollToPlugin.min.js"></script>
+    <script src="./scripts/libs/swiper-bundle.min.js"></script>
+    <script src="./scripts/libs/slim-select.min.js"></script>
+    <!--scripts-->
+    <script src="./scripts/scripts.js"> </script>
+    <!--preview only-->
+    <link rel="stylesheet" href="./styles/helper.css">
+    <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
+        <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M94,39.7h-4c-3.2,0-5.9-2.8-5.9-6.1c0-1.7,0.7-3.2,2-4.3l2.6-2.5c2.5-2.5,2.5-6.6,0-9.1L82.8,12c-1.1-1.1-2.8-1.8-4.6-1.8      c-1.7,0-3.4,0.7-4.6,1.8l-2.5,2.4c-1.2,1.3-2.7,2-4.4,2c-3.3,0-6.1-2.7-6.1-5.9v-4C60.6,3,57.8,0,54.2,0h-7.9C42.8,0,40,3,40,6.5v4      c0,3.2-2.8,5.9-6.1,5.9c-1.7,0-3.2-0.7-4.3-1.9L27,12c-1.1-1.2-2.8-1.8-4.6-1.8c-1.7,0-3.4,0.7-4.6,1.8L12,17.7      c-2.5,2.5-2.5,6.6,0,9.1l2.5,2.4c1.3,1.2,2,2.7,2,4.4c0,3.3-2.7,6.1-5.9,6.1h-4C3,39.7,0,42.5,0,46v4v4c0,3.5,3,6.3,6.6,6.3h4      c3.2,0,5.9,2.8,5.9,6.1c0,1.7-0.7,3.2-2,4.4L12,73.2c-2.5,2.5-2.5,6.6,0,9.1l5.8,5.8c1.1,1.2,2.8,1.8,4.6,1.8c1.7,0,3.4-0.7,4.6-1.8      l2.5-2.5c1.1-1.2,2.7-1.9,4.3-1.9c3.3,0,6.1,2.7,6.1,5.9v4c0,3.5,2.8,6.5,6.4,6.5h7.9c3.5,0,6.4-3,6.4-6.5v-4c0-3.2,2.8-5.9,6.1-5.9      c1.7,0,3.2,0.7,4.4,2l2.5,2.4c1.2,1.1,2.8,1.8,4.6,1.8s3.4-0.7,4.6-1.8l5.8-5.8c2.5-2.5,2.5-6.6,0-9.1L86,70.7c-1.3-1.1-2-2.7-2-4.3      c0-3.3,2.7-6.1,5.9-6.1h4c3.5,0,6.1-2.8,6.1-6.3v-4v-4C100.1,42.5,97.5,39.7,94,39.7z M71.1,50L71.1,50c0,11.5-9.3,20.8-20.9,20.8      S29.4,61.5,29.4,50l0,0l0,0c0-11.5,9.3-20.8,20.9-20.8S71.1,38.5,71.1,50L71.1,50z"></path>
+        </svg></a>
+      <div class="helper__container">
+        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Всплывающие окна:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="#location-modal" data-action="modal_open">Выбор города</a><a class="helper__section-button" href="#review-modal" data-action="modal_open">Оставить отзыв</a><a class="helper__section-button" href="#success-review-modal" data-action="modal_open">Отзыв отправлен</a><a class="helper__section-button" href="#success-message-modal" data-action="modal_open">Сообщение отправлено</a></div>
+        </div>
+        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Страницы:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="katalog-vydacha.html">Каталог - выдача</a><a class="helper__section-button" href="product.html">Продукт</a><a class="helper__section-button" href="korzina.html">Корзина</a><a class="helper__section-button" href="oformlenie-zakaza.html">Оформление заказа</a><a class="helper__section-button" href="spasibo-za-zakaz.html">Спасибо за заказ!</a><a class="helper__section-button" href="blog.html">Блог</a><a class="helper__section-button" href="article.html">Статья</a><a class="helper__section-button" href="info.html">Гарантии и возврат</a><a class="helper__section-button" href="kontakty.html">Контакты</a><a class="helper__section-button" href="components.html">Компоненты</a></div>
+        </div>
+        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Личный кабинет:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="lk-auth.html">Войти в профиль</a><a class="helper__section-button" href="lk-registration.html">Создать профиль</a><a class="helper__section-button" href="lk-confirm.html">Подтверждение кода</a><a class="helper__section-button" href="lk-zakazy.html">Мои заказы</a><a class="helper__section-button" href="lk-profile.html">Профиль</a><a class="helper__section-button" href="lk-favorites.html">Избранное</a><a class="helper__section-button" href="lk-zakaz.html">Заказ</a></div>
+        </div>
+        <div class="helper__section"><span class="helper__section-title">Спрайты:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="./img/icons/icons-demo.html">Основные</a><a class="helper__section-button" href="./img/icons/socials-demo.html">Соц сети</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/helper.js"></script>
+  </body>
+</html>

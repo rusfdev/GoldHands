@@ -1,111 +1,80 @@
 extends layout/layout
 
 block variables
-  -var page_title = 'Амулеты'
-  -var breadcrumbs_links = ['Главная', 'Каталог', page_title]
+  -var page_title = 'Каталог'
+  -var breadcrumbs_links = ['Главная', 'Каталог']
 
 block content
-
   include blocks/breadcrumbs
-  
-  section.section.catalog
+
+  section.section.catalogue-categories
     .container
-      h1.mb-20.mb-sm-25 Амулеты
-    
-    .swiper.slider-constructor.catalog-categories-slider.catalog__categories(data-slides='auto' data-free-mode='true')
-      .container
-        .swiper-container 
-          .swiper-wrapper
-            .swiper-slide
-              a(href="#").category-label.catalog-category-label
-                .image.image_contain.catalog-category-label__image
-                  img(src='#' data-src="./img/label1.png", alt="img").lazyload
-                h5.category-label__title.catalog-category-label__title Славянские амулеты
-            .swiper-slide
-              a(href="#").category-label.catalog-category-label
-                .image.image_contain.catalog-category-label__image
-                  img(src='#' data-src="./img/label2.png", alt="img").lazyload
-                h5.category-label__title.catalog-category-label__title Кельтские и скандинавские амулеты
-            .swiper-slide
-              a(href="#").category-label.catalog-category-label
-                .image.image_contain.catalog-category-label__image
-                  img(src='#' data-src="./img/label3.png", alt="img").lazyload
-                h5.category-label__title.catalog-category-label__title Сакральные символы и знаки
-            .swiper-slide
-              a(href="#").category-label.catalog-category-label
-                .image.image_contain.catalog-category-label__image
-                  img(src='#' data-src="./img/label4.png", alt="img").lazyload
-                h5.category-label__title.catalog-category-label__title Животные-покровители амулеты и знаки
-            
+      h1.mb-25.mb-sm-30.mb-lg-40 Каталог
+      .catalogue-categories__grid
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/1.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Благовония
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/2.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Свечи
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/3.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Таро и руны
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/4.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Здоровое питание
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/5.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Ароматерапия
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/6.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Инструменты биолокации
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/7.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Натуральная косметика
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/8.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Книги
+        .catalogue-categories__item
+          a(href="#").category-label.large-category-label
+            img(src='#' data-src="./img/catalogue/9.png", alt="img").lazyload.large-category-label__image
+            h5.category-label__title.large-category-label__title Чай
 
-    .container.catalog__container 
 
-      aside.catalog__aside
-        include blocks/filter
 
-      .catalog__content
-
-        .catalog__sorting
-          a(href="#filter" data-action="side_modal_open").button.button_style-3.catalog__sorting-button.d-xl-none
-            svg.icon
-              use(xlink:href='./img/icons/icons.svg#funnel')
-          .select.flex-grow-1.flex-sm-grow-0
-            select
-              option(value='Цена (по возрастанию)' selected) Цена (по возрастанию)
-              option(value='Цена (по убыванию)') Цена (по убыванию)
-              option(value='По популярности' disabled) По популярности
+  section.section
+    .container 
+      +section-head('Последнее из блога', 'Читать всё')
+      .swiper.blog-slider.slider-constructor(data-slides='1' data-sm-slides='2' data-xl-slides='3')
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-left')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-right')
+        .swiper-container
+          .swiper-wrapper 
+            //slide
+            .swiper-slide 
+              +blog-card(1)
+            //slide
+            .swiper-slide 
+              +blog-card(2)
+            //slide
+            .swiper-slide 
+              +blog-card(1)
+            //slide
+            .swiper-slide 
+              +blog-card(2)
         
-        .catalog__items 
-          +product-card(1)
-          +product-card(2)
-          +product-card(3)
-          +product-card(4)
-          +product-card(1)
-          +product-card(2)
-          +product-card(3)
-          +product-card(4)
-          +product-card(1)
-          +product-card(2)
-          +product-card(3)
-          +product-card(4)
-
-        .visibility-info-module
-          .visibility-info-module__text Отображается <span>12</span> из <span>36</span>
-          .visibility-info-module__scale
-            .visibility-info-module__scale-line(style='width:calc(12 / 36 * 100%)')
-          .visibility-info-module__button 
-            button.button.button_style-3
-              span.button__inner.button__default 
-                span Показать больше
-        
-        .pagination
-          a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__prev
-            svg.icon
-              use(xlink:href='./img/icons/icons.svg#caret-left')
-            span Предыдущая
-          ul.pagination__list  
-            li.pagination__item 
-              a(href="#").link.link_type-2.pagination__link 
-                span 1
-            li.pagination__item 
-              a(href="javascript:void(0);").link.link_type-2.pagination__link.active
-                span 2
-            li.pagination__item 
-              a(href="#").link.link_type-2.pagination__link 
-                span 3
-            li.pagination__item 
-              a(href="#").link.link_type-2.pagination__link 
-                span 4
-            li.pagination__item 
-              a(href="#").link.link_type-2.pagination__link 
-                span ...
-            li.pagination__item 
-              a(href="#").link.link_type-2.pagination__link 
-                span 15           
-          a(href="#").icon-link.icon-link_type-2.pagination__link.pagination__next
-            span Следующая
-            svg.icon
-              use(xlink:href='./img/icons/icons.svg#caret-right')
-
-
-  include blocks/mailing-banner
+      .d-block.d-md-none.mt-25
+        a(href="#").button.button_style-3.d-flex Читать всё
+             
