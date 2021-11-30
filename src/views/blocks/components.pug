@@ -50,7 +50,7 @@ mixin product-card(type)
             if type == 3
               .product-card__old-price 1 490 ₽
           
-          button.product-card__to-card 
+          button.product-card__to-card(class=type==3?'active':'')
             svg.icon
               use(xlink:href='./img/icons/icons.svg#shopping-cart')
         a(href="./product.html?anchor=product-reviews").product-card__reviews  

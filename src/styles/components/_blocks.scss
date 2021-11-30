@@ -664,7 +664,7 @@
       width: 100%;
       height: 100%;
     }
-    &[data-touch], &[data-hover] {
+    &[data-touch], &[data-hover], &.active {
       color: var(--color-3);
     }
   }

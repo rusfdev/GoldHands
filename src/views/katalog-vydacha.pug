@@ -37,7 +37,6 @@ block content
                   img(src='#' data-src="./img/label4.png", alt="img").lazyload
                 h5.category-label__title.catalog-category-label__title Животные-покровители амулеты и знаки
             
-
     .container.catalog__container 
 
       aside.catalog__aside
@@ -54,7 +53,17 @@ block content
               option(value='Цена (по возрастанию)' selected) Цена (по возрастанию)
               option(value='Цена (по убыванию)') Цена (по убыванию)
               option(value='По популярности' disabled) По популярности
-        
+          
+          .links-select.flex-grow-1.flex-sm-grow-0
+            button.links-select-selected 
+              span Цена (по возрастанию)
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#caret-bottom')
+            .links-select-list
+              a(href="javascript:void(0);").links-select-list__link.selected Цена (по убыванию)
+              a(href="#ссылка").links-select-list__link Цена (по убыванию)
+              a(href="javascript:void(0);").links-select-list__link.disabled По популярности
+
         .catalog__items 
           +product-card(1)
           +product-card(2)

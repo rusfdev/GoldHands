@@ -237,3 +237,14 @@
     }
   }
 }
+
+.lk-profile-head {
+  display: flex;
+  align-items: center;
+  gap: 10px var(--grid-gutter-width);
+  &__edit-button {
+    .icon {
+      stroke-width: 2px;
+    }
+  }
+}

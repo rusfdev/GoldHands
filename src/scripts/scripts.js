@@ -91,8 +91,12 @@ document.addEventListener("DOMContentLoaded", function() {
     new ProductSlider($this).init();
   })
 
-  document.querySelectorAll('.select select').forEach($this => {
+  document.querySelectorAll('.select').forEach($this => {
     new Select($this).init();
+  })
+
+  document.querySelectorAll('.links-select').forEach($this => {
+    new LinksSelect($this).init();
   })
 
   document.querySelectorAll('.tab-head').forEach($this => {
@@ -487,14 +491,11 @@ const Header = {
     this.$element = document.querySelector('.header');
 
     this.checkState = () => {
-
       let fixed = this.$element.classList.contains('header_fixed'),
           visible = this.$element.classList.contains('header_visible'),
           scrollTop = window.pageYOffset < this.oldScroll,
           scrollEnough = window.pageYOffset > this.getHeight(),
           visibleEnough = window.pageYOffset > window.innerHeight;
-
-
 
       if (scrollEnough && !fixed) {
         this.$element.classList.add('header_fixed');
@@ -875,11 +876,13 @@ class SliderConstructor {
 }
 
 class Select {
-  constructor($select) {
-    this.$select = $select;
+  constructor($parent) {
+    this.$parent = $parent;
   }
 
   init() {
+    this.$select = this.$parent.querySelector('select');
+
     this.select = new SlimSelect({
       select: this.$select,
       showSearch: false,
@@ -890,10 +893,47 @@ class Select {
 
     //add custom arrow
     $arrow.insertAdjacentHTML('afterbegin', `
-      <svg class="icon" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-        <path d="M13,5.5l-5,5l-5-5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg class="icon" fill="none" stroke='currentColor' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="caret-bottom">
+        <path vector-effect="non-scaling-stroke" d="M16.3,6.9L10,13.1L3.8,6.9" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     `);
+  }
+}
+
+class LinksSelect {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this._toggle_ = '.links-select-selected';
+    this._list_ = '.links-select-list';
+    this.$toggle = this.$parent.querySelector(this._toggle_);
+    this.$list = this.$parent.querySelector(this._list_);
+
+    this.open = () => {
+      this.opened = true;
+      this.$toggle.classList.add('active');
+      this.$list.classList.add('opened');
+    }
+
+    this.close = () => {
+      this.opened = false;
+      this.$toggle.classList.remove('active');
+      this.$list.classList.remove('opened');
+    }
+
+    document.addEventListener('click', (event) => {
+      const $toggle = event.target.closest(this._toggle_);
+      const $list = event.target.closest(this._list_);
+
+      if (($toggle || !$list) && this.opened) {
+        this.close();
+      } else if ($toggle && !this.opened) {
+        this.open();
+      }
+    })
+
   }
 }
 

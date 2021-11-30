@@ -12,7 +12,12 @@ block content
         .col-xl-3
           include blocks/lk-nav
         .col-xl-9 
-          h1.lk__title Профиль
+
+          .lk__title.lk-profile-head
+            h1.mb-0 Профиль
+            button.edit-button.lk-profile-head__edit-button
+              svg.icon 
+                use(xlink:href="./img/icons/icons.svg#edit")
 
           .lk-user-information
             .lk-user-information__box 

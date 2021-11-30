@@ -200,3 +200,98 @@ img {
     top: 15px;
   }
 }
+
+.links-select {
+  position: relative;
+  --text-size: 16px;
+  --line-height: 24px;
+  --py: 12px;
+  --px: 16px;
+  --radius: 4px;
+  --pr: 42px;
+  &-selected {
+    display: block;
+    width: 100%;
+    padding: var(--py) var(--pr) var(--py) var(--px);
+    border: 1px solid var(--color-1);
+    border-radius: var(--radius);
+    font-size: var(--text-size);
+    line-height: var(--line-height);
+    background-color: var(--color-background-1);
+    text-align: left;
+    user-select: none;
+    min-width: 250px;
+    position: relative;
+    .icon {
+      position: absolute;
+      right: var(--px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      transition: transform var(--trs-1);
+      .icon {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    &.active {
+      .icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  &-list {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--color-1);
+    border-radius: var(--radius);
+    padding: var(--py) var(--px);
+    top: calc(100% + 10px);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+    z-index: 1000;
+    &.opened {
+      opacity: 1;
+      visibility: visible;
+    }
+    &__link {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &[data-touch], &[data-hover] {
+        color: var(--color-text-accent);
+      }
+      &.selected {
+        color: var(--color-text-accent);
+        cursor: default;
+      }
+      &.disabled {
+        color: var(--color-text-muted);
+        cursor: default;
+      }
+    }
+  }
+}
+
+.edit-button {
+  padding: 8px;
+  margin: -8px;
+  display: flex;
+  transition: color var(--trs-1);
+  width: 40px;
+  height: 40px;
+  .icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &[data-touch], &[data-hover] {
+    color: var(--color-text-accent);
+  }
+}
