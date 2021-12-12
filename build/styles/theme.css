@@ -20,6 +20,7 @@
   --color-13: #ECECEC;
   --color-modal-overlay: rgba(19, 19, 19, 0.35);
   --color-side-modal-overlay: rgba(19, 19, 19, 0.5);
+  --color-image-placeholder: #F9F9F9;
   --button-1-bg: var(--color-3);
   --button-1-hover-bg: var(--color-4);
   --button-2-bg: var(--color-4);

@@ -593,10 +593,10 @@
     flex: 0 0 auto;
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
     .image {
       display: block;
       height: var(--product-card-image-height);
+      border-radius: 15px;
     }
   }
   &__content {
@@ -753,6 +753,9 @@
     overflow: hidden;
     &__image {
       margin-bottom: 15px;
+      .image {
+        border-radius: 5px;
+      }
     }
     &__labels {
       left: 0;

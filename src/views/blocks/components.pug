@@ -32,8 +32,14 @@ mixin product-card(type)
         .product-labels.product-card__labels
           .product-label.product-label_type-low-price Цена снижена
 
-      a(href="#").image.image_contain 
-        img(src='#' data-src=`./img/product-${type}.png`, alt="image").lazyload
+      if type == 3
+        //Если картинки нет
+        a(href="#").image.image_cover
+          img(src='#' data-src=`./img/noimage.svg`, alt="image").lazyload
+        //Если картинки нет 
+      else 
+        a(href="#").image.image_contain 
+          img(src='#' data-src=`./img/product-${type}.png`, alt="image").lazyload
 
       button.product-favourite.product-card__favourite(class=type==4?'is-active':'')
         svg(fill='currentColor').icon

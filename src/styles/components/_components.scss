@@ -29,7 +29,7 @@ img {
   }
   &_cover {
     overflow: hidden;
-    background-color: var(--color-1);
+    background-color: var(--color-image-placeholder);
     img {
       object-fit: cover;
     }
